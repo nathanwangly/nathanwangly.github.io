@@ -1,6 +1,6 @@
 ---
 permalink: /cv/
-layout: single
+layout: single_custom
 title: CV
 excerpt: CV
 author_profile: true
