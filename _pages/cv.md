@@ -42,6 +42,8 @@ Research projects I have contributed to/supported include:
 * Testing hypotheses about why customers simultaneously hold credit card debt and liquid savings
 * Exploring customers' budgeting and mental accounting behaviours
 
+You can read more about the Financial Wellbeing team's work [here](https://commbank.com.au/fwbresearch). 
+
 **2017-2018: Summer Intern, Ernst & Young (People Advisory Services)**
 * Performed data transformation and analysis using Excel and Python
 * Produced insights such as poor inventory management and ineffective contract KPIs, resulting in significant savings for a $300+ million contract
