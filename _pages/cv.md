@@ -1,8 +1,8 @@
 ---
 permalink: /cv/
 layout: single
-title: About Me
-excerpt: About me
+title: CV
+excerpt: CV
 author_profile: true
 published: true
 ---
