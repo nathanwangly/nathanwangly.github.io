@@ -7,7 +7,7 @@ author_profile: true
 published: true
 ---
 
-Publications
+## Publications
 ======
 
 *Coming soon*
