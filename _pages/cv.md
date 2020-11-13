@@ -8,7 +8,7 @@ published: true
 ---
 
 Click [here](/assets/documents/NWL Resume.pdf) for a PDF copy of my latest resume.  
-_Last update: 13.11.20_
+_Last updated: 13.11.20_
 
 ## Education
 
