@@ -14,7 +14,8 @@ published: true
 ## Research in progress
 
 **How Consumers Budget**  
-(with Jennifer K. Lyu, Abigail B. Sussman, and C. Yiwei Zhang)
+Working Paper, 2020  
+(with C. Yiwei Zhang, Abigail B. Sussman, and Jennifer K. Lyu)  
 
 ## Non peer-reviewed work
 
