@@ -1,5 +1,5 @@
 ---
-permalink: /about/
+permalink: /
 layout: single
 title: About Me
 excerpt: About me
