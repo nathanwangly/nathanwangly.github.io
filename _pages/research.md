@@ -19,7 +19,7 @@ Working Paper, 2020
 
 ## Non peer-reviewed work
 
-[**Financial Health Solutions: Using tax refunds for debt repayments**](https://finhealthnetwork.org/research/financial-health-solutions-using-tax-refunds-for-debt-repayment/)  
+**Financial Health Solutions: Using tax refunds for debt repayments**  
 Research Paper, 2020  
 (with Heidi Johnson)  
 [[PDF]](/assets/documents/FHN_TaxTime2019_Report.pdf)  
