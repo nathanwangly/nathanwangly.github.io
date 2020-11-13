@@ -97,11 +97,8 @@ author:
   avatar           : "/assets/images/profile_photo.jpg"
   bio              : "Behavioural Scientist at CBA. PhD Candidate at UNSW."
   location         : "Sydney, Australia"
-  email            :
+  email            : nathanwangly@gmail.com
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "mailto:nathanwangly@gmail.com"
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/nathanwangly"
