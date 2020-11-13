@@ -1,5 +1,4 @@
 ---
-permalink: /aboutme/
 layout: single_custom
 title: About Me
 excerpt: About me
