@@ -18,4 +18,7 @@ published: true
 
 ## Non peer-reviewed work
 
-Johnson, H., & Wang-Ly, N. (2020). Using tax refunds for debt repayment: A study with Commonwealth Bank of Australia. [[PDF]](/assets/documents/FHN_TaxTime2019_Report.pdf)
+[**Financial Health Solutions: Using tax refunds for debt repayments**](https://finhealthnetwork.org/research/financial-health-solutions-using-tax-refunds-for-debt-repayment/)
+Research Paper, 2020
+(with Heidi Johnson)
+[[PDF]](/assets/documents/FHN_TaxTime2019_Report.pdf)
