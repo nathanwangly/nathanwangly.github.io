@@ -7,6 +7,8 @@ author_profile: true
 published: true
 ---
 
+For a copy of my latest resume, click [here](/assets/document/NWL Resume.pdf).
+
 ## Education
 
 **2020-Present: PhD Candidate, University of New South Wales**
@@ -31,7 +33,7 @@ Working within the Behavioural Economics team at CBA, my overarching purpose is 
 My role as a Behavioural Research Manager involves two components: supporting the design and delivery of business initiatives, and collaborating on academic research projects with universities.
 
 My business delivery responsibilities have included:
-* Adding scientific rigour to business initiatives (e.g. by developing robust experimental designs or producing literature reviews)
+* Adding scientific rigour to business initiatives (e.g., by developing robust experimental designs or producing literature reviews)
 * Performing data analysis (using R, SQL) to evaluate the effectiveness of interventions, and to produce insights that inform key strategic and prioritisation decisions
 * Collaborating within an Agile environment to deliver as part of a multidisciplinary digital design team; including UX designers, developers, and data scientists
 
