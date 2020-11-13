@@ -57,6 +57,8 @@ During my final year of university, I led [Enactus UNSW](https://enactusunsw.org
 </p>
 <div align='center'><i>The UNSW team at the 2018 Enactus Australia National Conference</i></div>
 
+<br>
+
 **2016: Bootcamp Participant, Austern International**
 
 At the end of my second year at university, I spent a few weeks in Singapore as part of the Austern program. The program consisted of two week-long sprints where we were introduced to two startups (ReFUEL4 and Caterspot), heard their problems, and scrambled to put together presentation decks with our proposed solutions. The experience taught me about how I handle pressure and tight deadlines, but I remember it for the lifelong friends I made and the fun of exploring a new country.
