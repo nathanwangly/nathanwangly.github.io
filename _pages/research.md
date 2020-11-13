@@ -8,12 +8,12 @@ published: true
 ---
 
 ## Publications
-======
+---
 
 *Coming soon*
 
-Working Papers
-======
+## Working Papers
+---
 
 *Coming soon*
 
