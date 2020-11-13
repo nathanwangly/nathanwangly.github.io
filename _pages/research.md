@@ -7,15 +7,15 @@ author_profile: true
 published: true
 ---
 
-## Publications
+## Published work
 
 *Coming soon*
 
-## Working Papers
-
-*Coming soon*
-
-## Research in Progress
+## Research in progress
 
 **How Consumers Budget**  
 (with Jennifer K. Lyu, Abigail B. Sussman, and C. Yiwei Zhang)
+
+## Non peer-reviewed work
+
+Johnson, H., & Wang-Ly, N. (2020). Using tax refunds for debt repayment: A study with Commonwealth Bank of Australia. [[PDF]](/assets/documents/FHN_TaxTime2019_Report.pdf)
