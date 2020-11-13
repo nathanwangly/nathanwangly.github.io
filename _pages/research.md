@@ -1,6 +1,6 @@
 ---
 permalink: /research/
-layout: single
+layout: single_custom
 title: Research
 excerpt: Research
 author_profile: true
