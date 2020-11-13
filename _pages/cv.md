@@ -7,7 +7,8 @@ author_profile: true
 published: true
 ---
 
-For a copy of my latest resume, click [here](/assets/documents/NWL Resume.pdf).
+Click [here](/assets/documents/NWL Resume.pdf) for a PDF copy of my latest resume.  
+_Last update: 13.11.20_
 
 ## Education
 
