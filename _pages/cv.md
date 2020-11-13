@@ -59,7 +59,7 @@ Other experiences
 During my final year of university, I led [Enactus UNSW](https://enactusunsw.org/) - a non-profit student organisation consisting of over 80 members across 12 teams. The purpose of the organisation is to bring together like-minded students who are passionate about developing social enterprises that can tackle problems faced by our communities. I owe a lot of what I know today to this experience, which taught me about leadership, design thinking, and stakeholder management.
 
 <p align="center">
-  <img src="/images/enactus_conference.jpg" width="650" height="450"/>
+  <img src="/assets/images/enactus_conference.jpg" width="650" height="450"/>
 </p>
 <div align='center'><i>The UNSW team at the 2018 Enactus Australia National Conference</i></div>
 
@@ -68,6 +68,6 @@ During my final year of university, I led [Enactus UNSW](https://enactusunsw.org
 At the end of my second year at university, I spent a few weeks in Singapore as part of the Austern program. The program consisted of two week-long sprints where we were introduced to two startups (ReFUEL4 and Caterspot), heard their problems, and scrambled to put together presentation decks with our proposed solutions. The experience taught me about how I handle pressure and tight deadlines, but I remember it for the lifelong friends I made and the fun of exploring a new country.
 
 <p align="center">
-  <img src="/images/austern_refuel4.jpg" width="650" height="450"/>
+  <img src="/assets/images/austern_refuel4.jpg" width="650" height="450"/>
 </p>
 <div align='center'><i>After the ReFUEL4 presentation</i></div>
