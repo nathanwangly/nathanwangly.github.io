@@ -14,12 +14,12 @@ For a copy of my latest resume, click [here](/assets/document/NWL Resume.pdf).
 **2020-Present: PhD Candidate, University of New South Wales**
 * Research Areas: Risky intertemporal choices, financial decision-making, computational modelling
 * Supervisor: Professor Ben Newell
-* Research Proposal: _The role of uncertainty in risky intertemporal choices_ [[pdf]](/assets/documents/NWL Research Proposal.pdf)
+* Research Proposal: _The role of uncertainty in risky intertemporal choices_ [[PDF]](/assets/documents/NWL Research Proposal.pdf)
 
 **2015-2018: Bachelor of Psychology (Honours), University of New South Wales**
 * First Class Honours
 * High Distinction average results (88.67 WAM)
-* Honours Project: _Do people care about being nudged? The acceptability and effectiveness of transparent nudges_ [[pdf]](/assets/documents/Honours Thesis.pdf)
+* Honours Project: _Do people care about being nudged? The acceptability and effectiveness of transparent nudges_ [[PDF]](/assets/documents/Honours Thesis.pdf)
 
 <br>
 
