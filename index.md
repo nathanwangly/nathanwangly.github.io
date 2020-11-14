@@ -14,4 +14,4 @@ While completing my PhD, I am currently working at the Commonwealth Bank of Aust
 
 I aspire to become an effective research-practitioner - someone who can bring innovative ideas and rigour from research, and who possesses the practical experience to implement these ideas to solve challenging societal problems.
 
-If you would be interested in connecting, feel free to reach out via [email](mailto:nathanwangly@gmail.com) or [Linkedin](linkedin.com/in/nathanwangly)!
+If you would be interested in connecting, feel free to reach out via [email](mailto:nathanwangly@gmail.com) or [Linkedin](https://linkedin.com/in/nathanwangly)!
