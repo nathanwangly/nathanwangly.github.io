@@ -20,7 +20,7 @@ title                    : "NWL"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Nathan Wang-Ly"
-description              : "An amazing website."
+description              :
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -96,7 +96,7 @@ author:
   name             : "Nathan Wang-Ly"
   avatar           : "/assets/images/profile_photo.jpg"
   bio              : "Behavioural Scientist at CBA. PhD Candidate at UNSW."
-  location         : "Sydney, Australia"
+  location         : "Sydney, AU"
   email            : nathanwangly@gmail.com
   links:
     - label: "Linkedin"
