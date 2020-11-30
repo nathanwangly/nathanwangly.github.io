@@ -16,6 +16,7 @@ published: true
 **How Consumers Budget**  
 Working Paper, 2020  
 (with C. Yiwei Zhang, Abigail B. Sussman, and Jennifer K. Lyu)  
+[[PDF]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3739543)  
 
 ## Non peer-reviewed work
 
