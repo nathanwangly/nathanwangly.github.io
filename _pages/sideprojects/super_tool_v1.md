@@ -110,7 +110,6 @@ published: true
               </div>
             </div>
           </div>
-        </form>
 
         <h6><b>Years Until Retirement</b></h6>
 
