@@ -9,7 +9,7 @@ The idea for this tool came after I spent some time deliberating over my choice 
 
 On top of this, I struggled to put into perspective how much the differences in expected returns or fees mattered.
 
-* Sure, we know that higher returns are better - but what difference does an average return of 5.5% p.a. make compared to 6.0% p.a.? Would I be willing to trade off a lower long-term return on my superannuation balance if it meant my money was allocated towards ethical investments?
+* Sure, we know that higher returns are better - but what difference does an average return of *5.5%* p.a. make compared to *6.0%* p.a.? Would I be willing to trade off a lower long-term return on my superannuation balance if it meant my money was allocated towards ethical investments?
 * Likewise, some super funds charge flat fees, while others charge percentages of your balance. How much of a difference does this make in the long run?
 
 With this in mind, I sought to create a tool that would help me visualise and understand the answers to these types of questions. Best case - I create something that others find helpful in making their own super decisions. Worst case - I have a useful resource I can always return to and get to learn more JavaScript and HTML along the way.
