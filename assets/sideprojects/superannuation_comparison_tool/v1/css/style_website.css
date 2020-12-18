@@ -13,9 +13,6 @@
     margin-bottom: 1em;
     font-size: 150%;
 }
-body {
-  font-size: 80%;
-}
 #headimg {
     display: block;
     max-width: 70%;
@@ -43,4 +40,8 @@ body {
 .extranote {
     font-size: 90%;
     color: #444;
+}
+
+.form-group {
+  font-size: 20%;
 }

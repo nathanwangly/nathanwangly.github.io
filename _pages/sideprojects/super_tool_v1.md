@@ -20,7 +20,7 @@ published: true
   <body>
     <div class="container">
       <div class="subcontainer">
-        <h1>Superannuation Comparison Tool</h1>
+        <h1>Superannuation Comparison Tool (V1)</h1>
         <form id="supercalc" onSubmit="return false;">
 
           <h6><b>Contributions</b></h6>
