@@ -16,4 +16,4 @@ With this in mind, I sought to create a tool that would help me visualise and un
 
 The remainder of this post details my journey in learning to build the comparison tool and iterating through versions as I pieced the core functionality together. If you aren't interested in any of that, feel free to skip the rest of this post and check out the different versions!
 
-* V1: A basic calculator that projects your future superannuation balance based on your starting balance, contributions, expected returns, and fees [LINK](/assets/sideprojects/superannuation_comparison_tool/v1/super_tool_v1.html)
+* V1: A basic calculator that projects your future superannuation balance based on your starting balance, contributions, expected returns, and fees [(LINK)](/assets/sideprojects/superannuation_comparison_tool/v1/super_tool_v1.html)
