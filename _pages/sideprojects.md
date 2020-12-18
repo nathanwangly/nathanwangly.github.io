@@ -1,6 +1,6 @@
 ---
 title: Side Projects
-layout: collection
+layout: collection_custom
 permalink: /sideprojects/
 collection: sideprojects
 author_profile: true
