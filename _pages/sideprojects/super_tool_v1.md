@@ -23,7 +23,7 @@ published: true
         <h1>Superannuation Comparison Tool</h1>
         <form id="supercalc" onSubmit="return false;">
 
-          <h3><b>Contributions</b></h3>
+          <h6><b>Contributions</b></h6>
 
           <!-- Starting super balance -->
           <div class="form-group row">
@@ -60,7 +60,7 @@ published: true
             </div>
           </div>
 
-          <h3><b>Fund Performance</b></h3>
+          <h6><b>Fund Performance</b></h6>
 
           <!-- Estimated investment returns per annum -->
           <div class="form-group row">
@@ -73,7 +73,7 @@ published: true
             </div>
           </div>
 
-          <h3><b>Fees</b></h3>
+          <h6><b>Fees</b></h6>
 
           <!-- Flat fee frequency -->
           <div class="form-group row">
@@ -112,7 +112,7 @@ published: true
           </div>
         </form>
 
-        <h3><b>Years Until Retirement</b></h3>
+        <h6><b>Years Until Retirement</b></h6>
 
         <!-- Number of years -->
         <div class="form-group row">
