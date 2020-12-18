@@ -13,6 +13,9 @@
     margin-bottom: 1em;
     font-size: 150%;
 }
+body {
+  font-size: 80%;
+}
 #headimg {
     display: block;
     max-width: 70%;
