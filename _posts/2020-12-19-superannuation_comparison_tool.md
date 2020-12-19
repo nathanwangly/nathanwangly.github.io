@@ -22,7 +22,7 @@ The remainder of this post details my journey in learning to build the compariso
 
 ## Version 1: A Simple Calculator
 
-Although I was excited to get started, the truth was that I didn't really know where to begin. I had some prior experience working with the [jsPsych library](https://www.jspsych.org/) to build my PhD experiments, but had little experience with building something from scratch. Fortunately, I remembered a [calculator tool](https://investcalc.github.io/) I had previously come across, which helps users calculate the optimal frequency with which they should invest. I used the original source code as my foundation (in other words, copied it entirely to start with) and began tweaking it for my purposes.
+Although I was excited to get started, the truth was that I didn't really know where to begin. I had some prior experience working with the jsPsych library to build my PhD experiments, but had little experience with building something from scratch. Fortunately, I remembered a [calculator tool](https://investcalc.github.io/) I had previously come across, which helps users calculate the optimal frequency with which they should invest. I used the original source code as my foundation (in other words, copied it entirely to start with) and began tweaking it for my purposes.
 
 While I had grander plans for the finished tool, I needed to start simple: create a tool that can take user inputs and then perform a calculation. The natural first step was to decide on what inputs were important and how they would impact the final calculation. After a couple of rounds of iteration, I landed on the following inputs:
 
