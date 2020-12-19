@@ -6,4 +6,4 @@ collection: posts
 author_profile: true
 ---
 
-See below for my previous posts, which describe my recent work or mini-projects that I have tinkered with.
+See below for previous posts about my research or mini-projects that I have tinkered with.
