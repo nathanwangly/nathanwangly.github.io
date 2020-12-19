@@ -2,6 +2,7 @@
 title: "Superannuation Comparison Tool"
 excerpt: "Iterating towards a tool to compare superannuation funds (and learn JS/HTML along the way)."
 date: "2020-12-19"
+last_modified_at: "2020-12-25"
 ---
 
 ## Background
