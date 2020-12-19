@@ -34,7 +34,7 @@ While I had grander plans for the finished tool, I needed to start simple: creat
 
 The immediate challenge that I encountered was balancing accuracy and flexibility. I wanted to build a general-purpose tool that could be used by most people (who might vary in how frequently they contribute to their super) but would also be able to later compare between different superannuation funds (which might vary in fee structures). Achieving this goal meant that I needed to make a series of simplifying assumptions which means the final projected balance may not be exactly accurate; however, the hope is that it will at least facilitate a relative comparison of super options.
 
-Some of the simplifying assumptions I've made (and the thought process behind them)
+**Some simplifying assumptions I've made (and the thought process behind them)**
 
 | Assumption | Rationale |
 | ---------- | --------- |
