@@ -1,0 +1,100 @@
+.grid-container-heading {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 0rem;
+  justify-items: center;
+}
+
+.grid-container-input-form {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  column-gap: 5%;
+  row-gap: 2%;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  font-size: 0.8rem;
+  align-items: center;
+}
+
+.grid-container-chart {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.grid-container-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3%;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 10rem;
+}
+
+@media (min-width: 48em) {
+  .grid-container-heading {
+      max-width: 60rem;
+  }
+    .grid-container-input-form {
+        max-width: 60rem;
+    }
+    .grid-container-chart {
+        max-width: 60rem;
+    }
+    .grid-container-about {
+        max-width: 60rem;
+    }
+}
+
+.grid-1col-row {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  justify-items: center;
+}
+
+.grid-3col-row {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  justify-items: center;
+}
+
+.grid-4col-row {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  justify-items: center;
+}
+
+.form-control {
+  font-size: 0.8rem;
+  height: calc(2rem + 2px);
+}
+
+.input-group-text {
+  font-size: 0.8rem;
+}
+
+.chart-container {
+  width: 100%
+}
+
+
+/* Remove arrows on number input form */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
