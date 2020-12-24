@@ -54,7 +54,6 @@ function updateCalc() {
     if (checkValidValue(investment_return_rate, 2) == false) {
       return;
     }
-    var annual_compounding_rate = 1 + investment_return_rate / 100
 
     // subtract annual percentage fee
     var annual_percentage_fee = parseFloat($('#percfee-' + n).val());
@@ -65,22 +64,13 @@ function updateCalc() {
     var net_investment_return_rate = investment_return_rate - annual_percentage_fee - inflation_rate
     var net_compounding_rate = 1 + net_investment_return_rate / 100
 
-    // calculate final balance
-    if (net_investment_return_rate == 0) {
-      final_balance = current_balance + annual_net_contribution * years
-    } else {
-      var original_balance_w_interest = current_balance * Math.pow(net_compounding_rate, years)
-      var total_annuity = annual_net_contribution * (Math.pow(net_compounding_rate, years + 1) - 1) / (net_investment_return_rate / 100)
-      var final_balance = original_balance_w_interest + total_annuity
-    }
-
     // calculate yearly balances
     var yearly_balances = [];
     for (var year = 0; year <= years; year++) {
       if (net_investment_return_rate == 0) {
         yearly_balances.push(current_balance + annual_net_contribution * year)
       } else {
-        yearly_balances.push(current_balance + annual_net_contribution * (Math.pow(net_compounding_rate, year) - 1) / (net_investment_return_rate / 100))
+        yearly_balances.push(current_balance * Math.pow(net_compounding_rate) + annual_net_contribution * (Math.pow(net_compounding_rate, year) - 1) / (net_investment_return_rate / 100))
       }
     };
 
