@@ -16,7 +16,7 @@ On top of this, I struggled to put into perspective how much the differences bet
 
 With this in mind, I sought to create a tool that would help me visualise and understand the answers to these types of questions. The problem is I knew exactly what I wanted to build but no idea how to build it. I had previously dabbled in JavaScript and HTML for some of my psychology experiments, but hadn't really needed to build something from scratch. Fortunately, I was able to draw inspiration from a [different calculator tool](https://investcalc.github.io) I had previously come across (meaning I "borrowed" lots of its code to get me started) and went through a long process of trial-and-error to land upon a workable version!
 
-The remainder of this post dives a bit deeper into the design of the tool, but if that is not of interest, feel free to skip right ahead to the tool itself: [Superannuation Comparison Tool](/assets/posts/superannuation_comparison_tool/v1/super_tool_v1.html)
+The remainder of this post dives a bit deeper into the design of the tool, but if that is not of interest, feel free to skip right ahead to the tool itself: [Superannuation Comparison Tool](/assets/posts/superannuation_comparison_tool/super_tool.html)
 
 ## About the Tool
 
