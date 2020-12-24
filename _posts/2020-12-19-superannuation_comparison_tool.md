@@ -35,7 +35,7 @@ After making these assumptions, the underlying formula to calculate a projected 
 
 1. Calculate the total amount of contributions made per year based on the amount and frequency.
 2. Tax this contribution by 15% and then subtract any flat fees (annualised). This gives the **net annual contribution amount**.
-3. Calculate the **annual growth rate** by subtracting any percentage fees from the estimated investment return rates.
+3. Calculate the **annual growth rate** by subtracting any percentage fees and the inflation rate from the estimated investment return rates.
 4. Calculate the total value of these contributions using the annuity formula.
 5. Add the starting balance.
 
