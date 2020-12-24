@@ -18,27 +18,18 @@ With this in mind, I sought to create a tool that would help me visualise and un
 
 The remainder of this post dives a bit deeper into the design of the tool, but if that is not of interest, feel free to skip right ahead to the tool itself: [Superannuation Comparison Tool](/assets/posts/superannuation_comparison_tool/v1/super_tool_v1.html)
 
-## Version 1: A Simple Calculator
+## About the Tool
 
-Although I was excited to get started, the truth was that I didn't really know where to begin. I had some prior experience working with the jsPsych library to build my PhD experiments, but had little experience with building something from scratch. Fortunately, I remembered a [calculator tool](https://investcalc.github.io/) I had previously come across, which helps users calculate the optimal frequency with which they should invest. I used its source code as my foundation (in other words, copied it entirely to start with) and began tweaking it for my purposes.
+The main challenge in building this tool was balancing accuracy and flexibility. I wanted to build a general-purpose tool that could be used by most people (who might vary in how frequently they contribute to their super) but could also compare between different superannuation funds (which might vary in fee structures). Achieving this goal meant that I needed to make a series of simplifying assumptions, meaning the final projected balance may not be exactly accurate; however, the hope is that the tool would at least facilitate a relative comparison of super options.
 
-While I had grander plans for the finished tool, I needed to start simple: create a tool that can take user inputs and then perform a calculation. The natural first step was to decide on what inputs were important and how they would impact the final calculation. After a couple of rounds of iteration, I landed on the following inputs:
-
-* Starting superannuation balance
-* Contributions - amount and frequency
-* Estimated rate of investment returns
-* Fees - flat and/or percentage fees
-* Number of years to project
-
-The immediate challenge that I encountered was balancing accuracy and flexibility. I wanted to build a general-purpose tool that could be used by most people (who might vary in how frequently they contribute to their super) but would also be able to later compare between different superannuation funds (which might vary in fee structures). Achieving this goal meant that I needed to make a series of simplifying assumptions which means the final projected balance may not be exactly accurate; however, the hope is that it will at least facilitate a relative comparison of super options.
-
-**Some simplifying assumptions I've made (and the thought process behind them)**
+**Assumptions that I've made (and the thought process behind them)**
 
 | Assumption | Rationale |
 | ---------- | --------- |
 | Investment returns are calculated once per year at the end of the year | While this will lead to systematic underestimation of super balances (compared to a daily compounding rate), it avoids the need for complicated calculations when users have contributions and fees of varying frequencies (e.g., monthly contributions and weekly flat fees). |
 | Percentage fees are applied at the same time as your investment returns are calculated. In other words, they are deducted from the inputted estimated return to calculate the growth rate. | Similar to above, it keeps the calculation simple. It also avoids instances where having the same investment return rate and fee rate actually lead to a slightly smaller balance (e.g., 10% returns and 10% fees would lead to $100 x 1.1 x 0.9 = $99). |
 | All super contributions fall under the concessional cap (i.e., they are taxed at 15%). | This is true for the first $25,000 of contributions made per financial year; otherwise, they are taxed at the user's marginal rate. That would overly complicate things as I don't know your tax situation! Fortunately (or unfortunately?), this shouldn't be an issue for *most* Australians as you would need to be earning around $260,000 (25,000 / 9.5%) to reach the cap, assuming no voluntary contributions are made. |
+| Inflation occurs at an average rate of 2% p.a. | Allows the tool to estimate balances in real terms and keeps things simple! |
 
 After making these assumptions, the underlying formula to calculate a projected balance becomes fairly straightforward.
 
@@ -53,3 +44,8 @@ In a single formula, it looks like:
 INSERT FORMULA
 
 And just like that, we have a working calculator! (And an accompanying graph thanks to the Chart.js library). With this, I can compare two super fund options by entering in their details individually. Let's say I want to compare Hostplus' Indexed Balanced option (a fan favourite thanks to The Barefoot Investor) and the Australian Super counterpart - XXX.
+
+Sidenote: it is worth noting that there are two scenarios that I have not designed the tool to be able to handle, again for simplicity.
+
+1. **Insurance costs:** These could be factored into the tool manually by adding it to the fees section (e.g., additional weekly fee of $10). However, insurance costs will increase over your lifetime - and the rate of increase will depend largely on your personal circumstances - which makes it difficult to include in a calculator.
+2. **Stepped fee structures:** Some super funds charge different fees based on your balance. To avoid overcomplicating things, I have not incorporated this into the calculator.
