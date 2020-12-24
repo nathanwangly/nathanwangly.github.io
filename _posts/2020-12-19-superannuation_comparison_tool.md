@@ -7,18 +7,16 @@ last_modified_at: "2020-12-20"
 
 ## Background
 
-The idea for this tool came after I spent some time deliberating over my choice of superannuation fund and wondering whether the fund (and its investment option) was the right one for me. I found this process incredibly painful; the time and effort required to read through different Product Disclosure Statements left me frustrated and no closer to being confident in my choice.
+The idea for this tool came after I recently spent some time deliberating over my choice of superannuation fund and wondering whether the fund (and its investment option) was the right one for me. I found this process incredibly painful; the time and effort required to read through different Product Disclosure Statements left me frustrated and no closer to being confident in my choice.
 
-On top of this, I struggled to put into perspective how much the differences in expected returns or fees mattered.
+On top of this, I struggled to put into perspective how much the differences between funds mattered. For example:
 
-* Sure, we know that higher returns are better - but what difference does an average return of 5.5% p.a. make compared to 6.0% p.a.? Would I be willing to trade off a lower long-term return on my superannuation balance if it meant my money was allocated towards ethical investments?
+* We know that higher returns are better, but what difference does an average return of 5.5% p.a. make compared to 6.0% p.a.? Would I be willing to trade off a lower long-term return on my superannuation balance if it meant my money was allocated towards ethical investments?
 * Likewise, some super funds charge flat fees, while others charge a percentage of your balance. How much of a difference does this make in the long run?
 
-With this in mind, I sought to create a tool that would help me visualise and understand the answers to these types of questions. Best case - I create something that others find helpful in making their own super decisions. Worst case - this idea goes nowhere, but I at least get some more experience working with JavaScript and HTML (a personal goal of mine)!
+With this in mind, I sought to create a tool that would help me visualise and understand the answers to these types of questions. The problem is I knew exactly what I wanted to build but no idea how to build it. I had previously dabbled in JavaScript and HTML for some of my psychology experiments, but hadn't really needed to build something from scratch. Fortunately, I was able to draw inspiration from a [different calculator tool](https://investcalc.github.io) I had previously come across (meaning I "borrowed" lots of its code to get me started) and went through a long process of trial-and-error to land upon a workable version!
 
-The remainder of this post details my journey in learning to build the comparison tool and iterating through versions as I pieced the core functionality together. If you aren't interested in any of that, feel free to skip the rest of this post and check out the different versions!
-
-* V1: A basic calculator that projects your future superannuation balance based on your starting balance, contributions, expected returns, and fees [(LINK)](/assets/posts/superannuation_comparison_tool/v1/super_tool_v1.html)
+The remainder of this post dives a bit deeper into the design of the tool, but if that is not of interest, feel free to skip right ahead to the tool itself: [Superannuation Comparison Tool](/assets/posts/superannuation_comparison_tool/v1/super_tool_v1.html)
 
 ## Version 1: A Simple Calculator
 
