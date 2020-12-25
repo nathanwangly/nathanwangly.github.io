@@ -49,7 +49,7 @@ function updateCalc() {
 
     // investment return rate
     var investment_return_rate = parseFloat($('#investreturns-' + n).val());
-    if (checkValidValue(investment_return_rate, -10, 10, 2) == false) {
+    if (checkValidValue(investment_return_rate, -15, 15, 2) == false) {
       return;
     }
 
