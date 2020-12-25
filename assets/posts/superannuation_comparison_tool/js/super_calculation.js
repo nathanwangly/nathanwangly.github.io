@@ -148,6 +148,7 @@ function updateCalc() {
         }
       },
       tooltips: {
+        mode: 'index',
         callbacks: {
           title: function(tooltipItem, data) {
             return 'Year ' + tooltipItem[0].xLabel
