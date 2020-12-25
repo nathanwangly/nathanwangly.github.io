@@ -14,7 +14,7 @@ On top of this, I struggled to put into perspective how much the differences bet
 * We know that higher returns are better, but what difference does an average return of 5.5% p.a. make compared to 6.0% p.a.? Would I be willing to trade off a lower long-term return on my superannuation balance if it meant my money was allocated towards ethical investments?
 * Likewise, some super funds charge flat fees, while others charge a percentage of your balance. How much of a difference does this make in the long run?
 
-With this in mind, I sought to create a tool that would help me visualise and understand the answers to these types of questions. The problem is I knew exactly what I wanted to build but no idea how to build it. I had previously dabbled in JavaScript and HTML for some of my psychology experiments, but hadn't really needed to build something from scratch. Fortunately, I was able to draw inspiration from a [different calculator tool](https://investcalc.github.io) I had previously come across (meaning I "borrowed" lots of its code to get me started) and went through a long process of trial-and-error to land upon a workable version!
+With this in mind, I sought to create a tool that would help me visualise and understand the answers to these types of questions. The problem is I knew exactly what I wanted to build but no idea how to build it. I had previously dabbled in JavaScript and HTML for some of my PhD experiments, but hadn't really needed to build something from scratch. Fortunately, I was able to draw inspiration from a [different calculator tool](https://investcalc.github.io) I had previously come across (meaning I "borrowed" lots of its code to get me started) and went through a long process of trial-and-error to land upon a workable version!
 
 The remainder of this post dives a bit deeper into the design of the tool, but if that is not of interest, feel free to skip right ahead to the tool itself: [Superannuation Comparison Tool](/assets/posts/superannuation_comparison_tool/super_tool.html)
 
@@ -47,7 +47,7 @@ After making these assumptions, the underlying formula to calculate a projected 
 
 In a single formula, it looks like this:
 
-<img src="http://www.sciweavers.org/tex2img.php?eq=B_n%20%3D%20%28B_0%20%5Ctimes%20r_%7Bgrowth%7D%5En%29%20%2B%20%28C_%7Bannual%7D%20%5Ctimes%20%5Cfrac%7Br_%7Bgrowth%7D%5En%20-%201%7D%7Br_%7Bgrowth%7D%20-%201%7D%29%0A&bc=White&fc=Black&im=png&fs=12&ff=modern&edit=0" align="center" border="0" alt="B_n = (B_0 \times r_{growth}^n) + (C_{annual} \times \frac{r_{growth}^n - 1}{r_{growth} - 1})" width="321" height="42" />
+![Equation](/assets/posts/superannuation_comparison_tool/calculation_formula.png)
 
 Where:
 
@@ -64,3 +64,7 @@ It is worth noting that there are two scenarios that I have not designed the too
 
 1. *Insurance costs:* These could be factored into the tool manually by adding it to the fees section (e.g., additional weekly fee of $10). However, insurance costs will increase over your lifetime - and the rate of increase will depend largely on your personal circumstances - which makes it difficult to include in a calculator.
 2. *Stepped fee structures:* Some super funds charge different fees based on your balance. To avoid overcomplicating things, I have not incorporated this into the calculator.
+
+## Example
+
+Suppose now that you
