@@ -73,14 +73,8 @@ To conclude this post, I've included an example use case for where this tool cou
 
 You currently have $5,000 in your super account after working some part-time jobs while studying, and you are trying to decide whether or not to change funds before you start your new job.
 
-**Option 1: UniSuper - Balanced**
-
-Your first option is to stick with your current super fund. When you first started working, you had no idea what superannuation was and went with the default option you were presented.
-
-**Option 2: HostPlus - Indexed Balanced**
-
-Having read The Barefoot Investor, you felt that a compelling case had been made to invest your super in the index and to keep fees to a minimum.
-
-**Option 3: AustralianSuper - Socially Aware**
-
-You are also interested in investing in a super option that meets some level of ESG criteria, and find that the AustralianSuper product suits what you are looking for.
+| Option | Rationale | Estimated Returns* | Fees |
+| ------ | --------- | ------------------ | ---- |
+| UniSuper - Balanced | When you first started working, you had no idea what superannuation was and went with the default option offered by your employer. Sticking with this option could reduce the hassle of switching. | 8.50% p.a. | Fees |
+| HostPlus - Indexed Balanced | Having read The Barefoot Investor, you felt that a compelling case had been made to invest in the index and keep fees to a minimum. | 8.40% p.a. | Fees | 
+| AustralianSuper - Socially Aware | You like the idea of 'ethical investing' and support the ESG criteria used by AustralianSuper. | 8.23% p.a. | Fees |
