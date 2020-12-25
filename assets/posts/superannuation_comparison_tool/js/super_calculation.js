@@ -70,7 +70,7 @@ function updateCalc() {
       if (net_investment_return_rate == 0) {
         yearly_balances.push(current_balance + annual_net_contribution * year)
       } else {
-        yearly_balances.push(current_balance * Math.pow(net_compounding_rate) + annual_net_contribution * (Math.pow(net_compounding_rate, year) - 1) / (net_investment_return_rate / 100))
+        yearly_balances.push(current_balance * Math.pow(net_compounding_rate, year) + annual_net_contribution * (Math.pow(net_compounding_rate, year) - 1) / (net_investment_return_rate / 100))
       }
     };
 

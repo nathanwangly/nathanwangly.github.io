@@ -31,6 +31,8 @@ The main challenge in building this tool was balancing accuracy and flexibility.
 | All super contributions fall under the concessional cap (i.e., they are taxed at 15%). | This is true for the first $25,000 of contributions made per financial year; otherwise, they are taxed at the user's marginal rate. That would overly complicate things as I don't know your tax situation! Fortunately (or unfortunately?), this shouldn't be an issue for *most* Australians as you would need to be earning around $260,000 (25,000 / 9.5%) to reach the cap, assuming no voluntary contributions are made. |
 | Inflation occurs at an average rate of 2% p.a. | Allows the tool to estimate balances in real terms and keeps things simple! |
 
+**Calculating projected balances**
+
 After making these assumptions, the underlying formula to calculate a projected balance becomes fairly straightforward.
 
 1. Calculate the total amount of contributions made per year based on the amount and frequency.
