@@ -69,4 +69,18 @@ It is worth noting that there are three scenarios that I have not designed the t
 
 ## Example Use Case
 
-To conclude this post, I've included an example use case for where this tool could be helpful. Suppose that you are a fresh graduate who is earning an initial salary $60,000
+To conclude this post, I've included an example use case for where this tool could be helpful. Suppose that you are a fresh graduate who is about to start a new job that will pay $70,000 per year. This means that each year, you can expect to contribute $6,650 to your super (9.5% of your annual salary).
+
+You currently have $5,000 in your super account after working some part-time jobs while studying, and you are trying to decide whether or not to change funds before you start your new job.
+
+**Option 1: UniSuper - Balanced**
+
+Your first option is to stick with your current super fund. When you first started working, you had no idea what superannuation was and went with the default option you were presented.
+
+**Option 2: HostPlus - Indexed Balanced**
+
+Having read The Barefoot Investor, you felt that a compelling case had been made to invest your super in the index and to keep fees to a minimum.
+
+**Option 3: AustralianSuper - Socially Aware**
+
+You are also interested in investing in a super option that meets some level of ESG criteria, and find that the AustralianSuper product suits what you are looking for.
