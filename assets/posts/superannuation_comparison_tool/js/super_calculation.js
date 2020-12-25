@@ -26,7 +26,6 @@ function updateCalc() {
 
     // starting balances
     var current_balance = parseFloat($('#currbal-' + n).val());
-      // check if greater than 0 and up to 2 decimal places
     if (checkValidValue(current_balance, 0, infinity, 2) == false) {
       return;
     }
@@ -35,7 +34,6 @@ function updateCalc() {
     var contribution_amount = parseFloat($('#savamount-' + n).val());
     var contributions_per_year = parseFloat($('#savefreq-' + n).val());
     var total_annual_contribution = contribution_amount * contributions_per_year;
-      // check if greater than 0 and up to 2 decimal places
     if (checkValidValue(total_annual_contribution, 0, infinity, 2) == false) {
       return;
     }
@@ -44,7 +42,6 @@ function updateCalc() {
     // subtract annualised flat fee
     var feeFreq = parseFloat($('#flatfeefreq-' + n).val());
     var annual_flat_fee = parseFloat($('#flatfeeamount-' + n).val()) * feeFreq;
-      // check if greater than 0 and up to 2 decimal places
     if (checkValidValue(annual_flat_fee, 0, infinity, 2) == false) {
       return;
     }
@@ -52,14 +49,12 @@ function updateCalc() {
 
     // investment return rate
     var investment_return_rate = parseFloat($('#investreturns-' + n).val());
-      // check if greater than 0 and up to 2 decimal places
     if (checkValidValue(investment_return_rate, -10, 10, 2) == false) {
       return;
     }
 
     // subtract annual percentage fee
     var annual_percentage_fee = parseFloat($('#percfee-' + n).val());
-      // check if greater than 0 and up to 2 decimal places
     if (checkValidValue(annual_percentage_fee, 0, 100, 2) == false) {
       return;
     }
@@ -185,7 +180,7 @@ function clearOldChart() {
   $('#chart-container').append('<canvas id="chart" style="display: none"></canvas>')
 }
 
-// function to check whether value is greater than 0 and up to 2 decimal places
+// function to check whether value is valid based on min value, max value, number of decimal places
 function checkValidValue(input_variable, min_value, max_value, decimal_places) {
   if (input_variable < min_value || input_variable > max_value || !Number.isInteger(Math.pow(10, decimal_places) * input_variable)) {
     return false;
