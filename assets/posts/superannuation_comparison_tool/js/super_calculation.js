@@ -10,7 +10,7 @@ function updateCalc() {
   var inflation_rate = 2;
   var years = parseInt($('#numyears').val());
     // check if greater than 0 and up to 0 decimal places
-  if (checkValidValue(years, min_value=1, max_value=60, decimal_places=0) == false) {
+  if (checkValidValue(years, 1, 60, 0) == false) {
     return;
   }
 
@@ -27,7 +27,7 @@ function updateCalc() {
     // starting balances
     var current_balance = parseFloat($('#currbal-' + n).val());
       // check if greater than 0 and up to 2 decimal places
-    if (checkValidValue(current_balance, min_value=0, max_value=infinity, decimal_places=2) == false) {
+    if (checkValidValue(current_balance, 0, infinity, 2) == false) {
       return;
     }
 
@@ -36,7 +36,7 @@ function updateCalc() {
     var contributions_per_year = parseFloat($('#savefreq-' + n).val());
     var total_annual_contribution = contribution_amount * contributions_per_year;
       // check if greater than 0 and up to 2 decimal places
-    if (checkValidValue(total_annual_contribution, min_value=0, max_value=infinity, decimal_places=2) == false) {
+    if (checkValidValue(total_annual_contribution, 0, infinity, 2) == false) {
       return;
     }
     var total_annual_contribution_posttax = total_annual_contribution * (1 - concessional_tax_rate);
@@ -45,7 +45,7 @@ function updateCalc() {
     var feeFreq = parseFloat($('#flatfeefreq-' + n).val());
     var annual_flat_fee = parseFloat($('#flatfeeamount-' + n).val()) * feeFreq;
       // check if greater than 0 and up to 2 decimal places
-    if (checkValidValue(annual_flat_fee, min_value=0, max_value=infinity, decimal_places=2) == false) {
+    if (checkValidValue(annual_flat_fee, 0, infinity, 2) == false) {
       return;
     }
     var annual_net_contribution = total_annual_contribution_posttax - annual_flat_fee
@@ -53,14 +53,14 @@ function updateCalc() {
     // investment return rate
     var investment_return_rate = parseFloat($('#investreturns-' + n).val());
       // check if greater than 0 and up to 2 decimal places
-    if (checkValidValue(investment_return_rate, min_value=-10, max_value=10, decimal_places=2) == false) {
+    if (checkValidValue(investment_return_rate, -10, 10, 2) == false) {
       return;
     }
 
     // subtract annual percentage fee
     var annual_percentage_fee = parseFloat($('#percfee-' + n).val());
       // check if greater than 0 and up to 2 decimal places
-    if (checkValidValue(annual_percentage_fee, min_value=0, max_value=100, decimal_places=2) == false) {
+    if (checkValidValue(annual_percentage_fee, 0, 100, 2) == false) {
       return;
     }
     var net_investment_return_rate = investment_return_rate - annual_percentage_fee - inflation_rate
