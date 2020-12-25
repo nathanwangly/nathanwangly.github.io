@@ -73,8 +73,8 @@ To conclude this post, I've included an example use case for where this tool cou
 
 You currently have $5,000 in your super account after working some part-time jobs while studying, and you are trying to decide whether or not to change funds before you start your new job.
 
-| Option | Rationale | Estimated Returns* | Fees |
-| ------ | --------- | ------------------ | ---- |
-| UniSuper - Balanced | When you first started working, you had no idea what superannuation was and went with the default option offered by your employer. Sticking with this option could reduce the hassle of switching. | 8.50% p.a. | Fees |
-| HostPlus - Indexed Balanced | Having read The Barefoot Investor, you felt that a compelling case had been made to invest in the index and keep fees to a minimum. | 8.40% p.a. | $78 p.a. administration fees, 0.02% p.a. investment fees, 0.04% p.a. other fees |
-| AustralianSuper - Socially Aware | You like the idea of 'ethical investing' and support the ESG criteria used by AustralianSuper. | 8.23% p.a. | Fees |
+| Option | Rationale | Estimated Returns* | Flat Fees | Percentage Fees |
+| ------ | --------- | ------------------ | --------- | --------------- |
+| UniSuper - Balanced | When you first started working, you had no idea what superannuation was and went with the default option offered by your employer. Sticking with this option could reduce the hassle of switching. | 8.50% p.a. | $96 p.a. admin fee | 0.40% investment fees, 0.06% other fees |
+| HostPlus - Indexed Balanced | Having read The Barefoot Investor, you felt that a compelling case had been made to invest in the index and keep fees to a minimum. | 8.40% p.a. | $78 p.a. admin fee | 0.02% p.a. investment fees, 0.04% p.a. other fees |
+| AustralianSuper - Socially Aware | You like the idea of 'ethical investing' and support the ESG criteria used by AustralianSuper. | 8.23% p.a. | $117 p.a. admin fee | 0.11% p.a. admin fee, 0.67% investment fee | 
