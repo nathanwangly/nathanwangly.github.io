@@ -49,9 +49,10 @@ In a single formula, it looks like this:
 
 Where:
 
-* B <sub>n</sub> is the projected balance after n years
-* C <sub>annual</sub> is the net annual contribution
-* r <sub>growth</sub> is the annual growth rate (as a multiplier; e.g., 5% returns would correspond to a 1.05 growth rate)
+* B<sub>n</sub> is the projected balance after n years
+* C<sub>annual</sub> is the net annual contribution
+* r<sub>growth</sub> is the annual growth rate (as a multiplier; e.g., 5% returns would correspond to a 1.05 growth rate)
+* n is the number of years from today
 
 &nbsp;  
 
