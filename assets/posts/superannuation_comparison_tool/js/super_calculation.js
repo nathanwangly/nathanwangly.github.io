@@ -187,7 +187,7 @@ function clearOldChart() {
 
 // function to check whether value is greater than 0 and up to 2 decimal places
 function checkValidValue(input_variable, min_value, max_value, decimal_places) {
-  if (input_variable < min_value || input_variable > max_value || !Number.isInteger(Math.pow(10 * decimal_places) * input_variable)) {
+  if (input_variable < min_value || input_variable > max_value || !Number.isInteger(Math.pow(10, decimal_places) * input_variable)) {
     return false;
   }
 }
