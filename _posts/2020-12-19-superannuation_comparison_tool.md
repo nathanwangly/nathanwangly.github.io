@@ -31,7 +31,7 @@ The main challenge in building this tool was balancing accuracy and flexibility.
 | All super contributions fall under the concessional cap (i.e., they are taxed at 15%). | This is true for the first $25,000 of contributions made per financial year; otherwise, they are taxed at the user's marginal rate. That would overly complicate things as I don't know your tax situation! Fortunately (or unfortunately?), this shouldn't be an issue for *most* Australians as you would need to be earning around $260,000 (25,000 / 9.5%) to reach the cap, assuming no voluntary contributions are made. |
 | Inflation occurs at an average rate of 2% p.a. | Allows the tool to estimate balances in real terms and keeps things simple! |
 
-&nbsp; 
+&nbsp;  
 
 **Calculating projected balances**
 
@@ -46,6 +46,8 @@ After making these assumptions, the underlying formula to calculate a projected 
 In a single formula, it looks like:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=B_n&space;=&space;B_0&space;\times&space;r_{growth}^n&space;&plus;&space;C_{annual}&space;\times&space;\frac{r_{growth}^n&space;-&space;1}{r_{growth}-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?B_n&space;=&space;B_0&space;\times&space;r_{growth}^n&space;&plus;&space;C_{annual}&space;\times&space;\frac{r_{growth}^n&space;-&space;1}{r_{growth}-1}" title="B_n = B_0 \times r_{growth}^n + C_{annual} \times \frac{r_{growth}^n - 1}{r_{growth}-1}" /></a>
+
+<img src="http://www.sciweavers.org/tex2img.php?eq=B_n%20%3D%20%28B_0%20%5Ctimes%20r_%7Bgrowth%7D%5En%29%20%2B%20%28C_%7Bannual%7D%20%5Ctimes%20%5Cfrac%7Br_%7Bgrowth%7D%5En%20-%201%7D%7Br_%7Bgrowth%7D%20-%201%7D%29%0A&bc=White&fc=Black&im=png&fs=12&ff=modern&edit=0" align="center" border="0" alt="B_n = (B_0 \times r_{growth}^n) + (C_{annual} \times \frac{r_{growth}^n - 1}{r_{growth} - 1})" width="321" height="42" />
 
 And just like that, we have a working calculator! (And an accompanying graph thanks to the Chart.js library). With this, I can compare two super fund options by entering in their details individually. Let's say I want to compare Hostplus' Indexed Balanced option (a fan favourite thanks to The Barefoot Investor) and the Australian Super counterpart - XXX.
 
