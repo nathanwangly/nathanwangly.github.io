@@ -43,7 +43,7 @@ After making these assumptions, the underlying formula to calculate a projected 
 
 In a single formula, it looks like:
 
-INSERT FORMULA
+<a href="https://www.codecogs.com/eqnedit.php?latex=B_n&space;=&space;B_0&space;\times&space;r_{growth}^n&space;&plus;&space;C_{annual}&space;\times&space;\frac{r_{growth}^n&space;-&space;1}{r_{growth}-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?B_n&space;=&space;B_0&space;\times&space;r_{growth}^n&space;&plus;&space;C_{annual}&space;\times&space;\frac{r_{growth}^n&space;-&space;1}{r_{growth}-1}" title="B_n = B_0 \times r_{growth}^n + C_{annual} \times \frac{r_{growth}^n - 1}{r_{growth}-1}" /></a>
 
 And just like that, we have a working calculator! (And an accompanying graph thanks to the Chart.js library). With this, I can compare two super fund options by entering in their details individually. Let's say I want to compare Hostplus' Indexed Balanced option (a fan favourite thanks to The Barefoot Investor) and the Australian Super counterpart - XXX.
 
