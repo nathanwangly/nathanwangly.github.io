@@ -79,6 +79,10 @@ You currently have $5,000 in your super account after working some part-time job
 | HostPlus - Indexed Balanced | Having read The Barefoot Investor, you felt that a compelling case had been made to invest in the index and keep fees to a minimum. | 8.40% p.a. | $78 p.a. admin fee | 0.02% p.a. investment fees, 0.04% p.a. other fees |
 | AustralianSuper - Socially Aware | You like the idea of 'ethical investing' and support the ESG criteria used by AustralianSuper. | 8.23% p.a. | $117 p.a. admin fee | 0.11% p.a. admin fee, 0.67% investment fee |
 
-\* Estimated returns determined by looking at the average performance over the previous 10 years. Note that past performance may not necessarily indicate future performance.
+*\* Estimated returns determined by looking at the average performance over the previous 10 years. Note that past performance may not necessarily indicate future performance.*
 
 Putting these values into the calculator, we can see how different the projections would be over 40 years of working.
+
+![Inputs](/assets/posts/superannuation_comparison_tool/calculation_input.png)
+
+![Projected Balances](/assets/posts/superannuation_comparison_tool/projected_balances.png)
