@@ -2,7 +2,7 @@
 title: "Superannuation Comparison Tool"
 excerpt: "A tool for comparing different super funds or contribution amounts."
 date: "2020-12-19"
-last_modified_at: "2020-12-20"
+last_modified_at: "2020-12-25"
 ---
 
 ## Background
@@ -28,6 +28,7 @@ The main challenge in building this tool was balancing accuracy and flexibility.
 
 | Assumption | Rationale |
 | ---------- | --------- |
+| Contribution amounts remain consistent across your working life. | This is unlikely to be the case, as your contributions will (hopefully) increase as your salary increases further into your career. However, making this assumption keeps the calculation simple. If you were to enter your current contributions (with the expectation that your income will increase in the future), then you can think of the calculated result as the lower bound projection. |
 | Investment returns are calculated once per year at the end of the year. | While this will lead to systematic underestimation of super balances (compared to a daily compounding rate), it avoids the need for complicated calculations when users have contributions and fees of varying frequencies (e.g., monthly contributions and weekly flat fees). |
 | Percentage fees are applied at the same time as your investment returns are calculated. In other words, they are deducted from the inputted estimated return to calculate the growth rate. | Similar to above, it keeps the calculation simple. It also avoids instances where having the same investment return rate and fee rate actually lead to a slightly smaller balance (e.g., 10% returns and 10% fees would lead to $100 x 1.1 x 0.9 = $99). |
 | All super contributions fall under the concessional cap (i.e., they are taxed at 15%). | This is true for the first $25,000 of contributions made per financial year; otherwise, they are taxed at the user's marginal rate. That would overly complicate things as I don't know your tax situation! Fortunately (or unfortunately?), this shouldn't be an issue for *most* Australians as you would need to be earning around $260,000 (25,000 / 9.5%) to reach the cap, assuming no voluntary contributions are made. |
@@ -60,11 +61,12 @@ Where:
 
 **Sidenote**
 
-It is worth noting that there are two scenarios that I have not designed the tool to be able to handle, again for simplicity.
+It is worth noting that there are three scenarios that I have not designed the tool to be able to handle, again for simplicity.
 
+1. *Changing contribution amounts*:
 1. *Insurance costs:* These could be factored into the tool manually by adding it to the fees section (e.g., additional weekly fee of $10). However, insurance costs will increase over your lifetime - and the rate of increase will depend largely on your personal circumstances - which makes it difficult to include in a calculator.
 2. *Stepped fee structures:* Some super funds charge different fees based on your balance. To avoid overcomplicating things, I have not incorporated this into the calculator.
 
-## Example
+## Example Use Case
 
-Suppose now that you
+To conclude this post, I've included an example use case for where this tool could be helpful. Suppose that you are a fresh graduate who is earning an initial salary $60,000
