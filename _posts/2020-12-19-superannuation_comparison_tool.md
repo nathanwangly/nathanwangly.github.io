@@ -86,3 +86,19 @@ Putting these values into the calculator, we can see how different the projectio
 ![Inputs](/assets/posts/superannuation_comparison_tool/calculation_input.png)
 
 ![Projected Balances](/assets/posts/superannuation_comparison_tool/projected_balances.png)
+
+&nbsp;  
+
+**Final results!**
+
+* HostPlus Indexed Balanced: $998,507
+* UniSuper Balanced: $920,839
+* AustralianSuper Socially Aware: $788,643
+
+Based on the values we've inputted, it appears that HostPlus' Indexed Balanced option would result in the highest future balance. This is not too surprising given the three options we compared had similar estimated returns, but the HostPlus option had significantly lower fees.
+
+AustralianSuper's Socially Aware option performs the worst because of the 0.78% p.a. percentage fees. This makes a huge difference over the 40-year period; you would potentially end up with $200,000 less in super. If you really wanted to invest in an ethical super option, you would potentially want to look elsewhere for a lower-fee fund (or choose this one if you are willing to trade off the future returns).
+
+## Conclusion
+
+The motivation behind this post was to create a tool that others might find useful in navigating their super decisions (and to teach myself some JS/HTML along the way!). In its current state, I personally find it helpful to visualise the trajectories of my future super under different potential scenarios. In saying that, the tool is by no means perfect, so I am always open to suggestions for how it can be improved!
