@@ -17,6 +17,8 @@ function updateCalc() {
   var balances_array = new Array(3);
   var fund_name_array = new Array(3);
 
+  var infinity = Number.POSITIVE_INFINITY;
+
   for (var n = 1; n < 4; n++) {
 
     // fund names
@@ -25,7 +27,7 @@ function updateCalc() {
     // starting balances
     var current_balance = parseFloat($('#currbal-' + n).val());
       // check if greater than 0 and up to 2 decimal places
-    if (checkValidValue(current_balance, min_value=0, decimal_places=2) == false) {
+    if (checkValidValue(current_balance, min_value=0, max_value=infinity, decimal_places=2) == false) {
       return;
     }
 
@@ -34,7 +36,7 @@ function updateCalc() {
     var contributions_per_year = parseFloat($('#savefreq-' + n).val());
     var total_annual_contribution = contribution_amount * contributions_per_year;
       // check if greater than 0 and up to 2 decimal places
-    if (checkValidValue(total_annual_contribution, min_value=0, decimal_places=2) == false) {
+    if (checkValidValue(total_annual_contribution, min_value=0, max_value=infinity, decimal_places=2) == false) {
       return;
     }
     var total_annual_contribution_posttax = total_annual_contribution * (1 - concessional_tax_rate);
@@ -43,7 +45,7 @@ function updateCalc() {
     var feeFreq = parseFloat($('#flatfeefreq-' + n).val());
     var annual_flat_fee = parseFloat($('#flatfeeamount-' + n).val()) * feeFreq;
       // check if greater than 0 and up to 2 decimal places
-    if (checkValidValue(annual_flat_fee, min_value=0, decimal_places=2) == false) {
+    if (checkValidValue(annual_flat_fee, min_value=0, max_value=infinity, decimal_places=2) == false) {
       return;
     }
     var annual_net_contribution = total_annual_contribution_posttax - annual_flat_fee
@@ -58,7 +60,7 @@ function updateCalc() {
     // subtract annual percentage fee
     var annual_percentage_fee = parseFloat($('#percfee-' + n).val());
       // check if greater than 0 and up to 2 decimal places
-    if (checkValidValue(annual_percentage_fee, min_value=0, decimal_places=2) == false) {
+    if (checkValidValue(annual_percentage_fee, min_value=0, max_value=100, decimal_places=2) == false) {
       return;
     }
     var net_investment_return_rate = investment_return_rate - annual_percentage_fee - inflation_rate
@@ -185,22 +187,8 @@ function clearOldChart() {
 
 // function to check whether value is greater than 0 and up to 2 decimal places
 function checkValidValue(input_variable, min_value, max_value, decimal_places) {
-  if (min_value) {
-    if (input_variable < min_value) {
-      return false;
-    }
-  }
-
-  if (max_value) {
-    if (input_variable > max_value) {
-      return false;
-    }
-  }
-
-  if (decimal_places) {
-    if (!Number.isInteger(Math.pow(10 * decimal_places) * input_variable)) {
-      return false;
-    }
+  if (input_variable < min_value || input_variable > max_value || !Number.isInteger(Math.pow(10 * decimal_places) * input_variable)) {
+    return false;
   }
 }
 
