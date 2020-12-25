@@ -53,8 +53,11 @@ Where:
 * C <sub>annual</sub> is the net annual contribution
 * r <sub>growth</sub> is the annual growth rate (as a multiplier; e.g., 5% returns would correspond to a 1.05 growth rate)
 
+&nbsp;  
 
-Sidenote: it is worth noting that there are two scenarios that I have not designed the tool to be able to handle, again for simplicity.
+**Sidenote**
 
-1. **Insurance costs:** These could be factored into the tool manually by adding it to the fees section (e.g., additional weekly fee of $10). However, insurance costs will increase over your lifetime - and the rate of increase will depend largely on your personal circumstances - which makes it difficult to include in a calculator.
-2. **Stepped fee structures:** Some super funds charge different fees based on your balance. To avoid overcomplicating things, I have not incorporated this into the calculator.
+It is worth noting that there are two scenarios that I have not designed the tool to be able to handle, again for simplicity.
+
+1. *Insurance costs:* These could be factored into the tool manually by adding it to the fees section (e.g., additional weekly fee of $10). However, insurance costs will increase over your lifetime - and the rate of increase will depend largely on your personal circumstances - which makes it difficult to include in a calculator.
+2. *Stepped fee structures:* Some super funds charge different fees based on your balance. To avoid overcomplicating things, I have not incorporated this into the calculator.
