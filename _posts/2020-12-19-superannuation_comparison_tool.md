@@ -38,14 +38,12 @@ The main challenge in building this tool was balancing accuracy and flexibility.
 After making these assumptions, the underlying formula to calculate a projected balance becomes fairly straightforward.
 
 1. Calculate the total amount of contributions made per year based on the amount and frequency.
-2. Tax this contribution by 15% and then subtract any flat fees (annualised). This gives the **net annual contribution amount**.
-3. Calculate the **annual growth rate** by subtracting any percentage fees and the inflation rate from the estimated investment return rates.
+2. Tax this contribution by 15% and then subtract any flat fees (annualised). This gives the *net annual contribution amount*.
+3. Calculate the *annual growth rate* by subtracting any percentage fees and the inflation rate from the estimated investment return rates.
 4. Calculate the total value of these contributions using the annuity formula.
-5. Add the starting balance.
+5. Add the starting balance (factoring in the annual growth rate).
 
 In a single formula, it looks like:
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=B_n&space;=&space;B_0&space;\times&space;r_{growth}^n&space;&plus;&space;C_{annual}&space;\times&space;\frac{r_{growth}^n&space;-&space;1}{r_{growth}-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?B_n&space;=&space;B_0&space;\times&space;r_{growth}^n&space;&plus;&space;C_{annual}&space;\times&space;\frac{r_{growth}^n&space;-&space;1}{r_{growth}-1}" title="B_n = B_0 \times r_{growth}^n + C_{annual} \times \frac{r_{growth}^n - 1}{r_{growth}-1}" /></a>
 
 <img src="http://www.sciweavers.org/tex2img.php?eq=B_n%20%3D%20%28B_0%20%5Ctimes%20r_%7Bgrowth%7D%5En%29%20%2B%20%28C_%7Bannual%7D%20%5Ctimes%20%5Cfrac%7Br_%7Bgrowth%7D%5En%20-%201%7D%7Br_%7Bgrowth%7D%20-%201%7D%29%0A&bc=White&fc=Black&im=png&fs=12&ff=modern&edit=0" align="center" border="0" alt="B_n = (B_0 \times r_{growth}^n) + (C_{annual} \times \frac{r_{growth}^n - 1}{r_{growth} - 1})" width="321" height="42" />
 
