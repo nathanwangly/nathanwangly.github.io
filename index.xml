@@ -31,5 +31,18 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
 While completing my PhD, I am currently working at the Commonwealth Bank of Australia as a behavioural scientist in their Financial Wellbeing team.</description>
     </item>
     
+    <item>
+      <title>CV</title>
+      <link>https://nathanwangly.github.io/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nathanwangly.github.io/cv/</guid>
+      <description>Click here for a PDF copy of my most recently updated resume.
+Last updated: XX/XX/XX
+Education2020-Present: PhD Candidate, University of New South Wales
+Research Areas: Risky intertemporal choices, financial decision-making, computational modellingSupervisor: Professor Ben NewellResearch Proposal: The role of uncertainty in risky intertemporal choices [PDF]2015-2018: Bachelor of Psychology (Honours), University of New South Wales
+First Class HonoursHigh Distinction average results (88.</description>
+    </item>
+    
   </channel>
 </rss>
