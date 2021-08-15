@@ -22,6 +22,16 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
     </item>
     
     <item>
+      <title>Tax Time 2019</title>
+      <link>https://nathanwangly.github.io/post/2020-10-27-tax-time-2019/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nathanwangly.github.io/post/2020-10-27-tax-time-2019/</guid>
+      <description>SummaryAs part of my work at CBA, we designed a digital intervention which aimed to encourage customers to use their tax refunds to pay down high-interest debts. The intervention increased repayments shortly after customers received the tax refund (but not by the end of the statement cycle), reduced missed repayments, and increased subsequent spending.
+See below for an outline of this project, or find the full report here.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://nathanwangly.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -43,6 +53,7 @@ Education2020-Present: PhD Candidate, University of New South Wales
 Research Areas: Risky intertemporal choices, financial decision-making, computational modellingSupervisor: Professor Ben NewellResearch Proposal: The role of uncertainty in risky intertemporal choices PDF2015-2018: Bachelor of Psychology (Honours), University of New South Wales
 First Class HonoursHigh Distinction average results (88.</description>
     </item>
+    
     
     <item>
       <title>Research</title>
