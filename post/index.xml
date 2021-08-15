@@ -9,26 +9,14 @@
       <link>https://nathanwangly.github.io/47</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://nathanwangly.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hello R Markdown</title>
-      <link>https://nathanwangly.github.io/post/2020-12-01-r-rmarkdown/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      
-      <guid>https://nathanwangly.github.io/post/2020-12-01-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nathanwangly.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tax Time 2019</title>
       <link>https://nathanwangly.github.io/post/2020-10-27-tax-time-2019/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://nathanwangly.github.io/post/2020-10-27-tax-time-2019/</guid>
-      <description>SummaryAs part of my work at CBA, we designed a digital intervention which aimed to encourage customers to use their tax refunds to pay down high-interest debts. The intervention increased repayments shortly after customers received the tax refund (but not by the end of the statement cycle), reduced missed repayments, and increased subsequent spending.
-See below for an outline of this project, or find the full report here.</description>
+      <description>Encouraging customers to reduce their high-interest debts at tax time.</description>
     </item>
     
   </channel>

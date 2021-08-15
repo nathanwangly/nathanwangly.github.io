@@ -8,16 +8,6 @@
       <url>https://nathanwangly.github.io/47</url>
       <link>https://nathanwangly.github.io/47</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://nathanwangly.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>R</title>
-      <link>https://nathanwangly.github.io/categories/r/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      
-      <guid>https://nathanwangly.github.io/categories/r/</guid>
-      <description></description>
-    </item>
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://nathanwangly.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
