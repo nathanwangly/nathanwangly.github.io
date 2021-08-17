@@ -1,0 +1,155 @@
+---
+title: Predicting Outcomes in "Best Of Series" - Part 1
+author: Nathan Wang-Ly
+date: '2021-08-18'
+description: Why 3-2 series outcomes are so unlikely.
+slug: []
+categories: []
+tags: []
+---
+
+```{r, setup, echo=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(kableExtra)
+```
+
+Across all types of head-to-head competitions, winners are determined through "Best of" series, where competitors must win the majority of the games in the series. For example, e-sports competitions (e.g., League of Legends, Valorant) commonly use Best of 5 series, where the team that first reaches 3 wins is considered the winner.
+
+Before the start of a series, it is typical for analysts to be asked for their predictions. In the case of a Best of 5 series, analysts can predict three possible series scores: 3-0, 3-1, or 3-2 (assuming they know the stronger team/player). These predictions often strike me as being based on some form of intuition; for example, analysts frequently predict a 3-2 score because two teams seem relatively evenly matched.
+
+This got me thinking - when should you expect a series to go 3-0, 3-1, or 3-2? If you expect a team to have an X% chance of winning each game (or on average, they will win Y out of 10 games), what series score should you predict?
+
+### Calculating the probability of each series outcomes
+
+Let's start by making three assumptions:
+
+1. First, of the two players/teams, you know which team is better.
+2. Second, you know (or can estimate) the percentage of games they should win against the other team. For example, Team A should beat Team B 70% of the time.
+3. Third (and most critically for these calculations), the likelihood of the team winning each game is independent<sup id="a1">[1](#f1)</sup>.
+
+With these assumptions, we can calculate the probability of each series outcome!
+
+Suppose that you have two teams competing in a Best of 5 series: Team A and Team B. You believe that Team A is the better team, and that their (independent) probability of winning each game is $p$.
+
+#### Outcome 1: 3-0
+
+The first possible series outcome is a 3-0. Expressed in wins (W) and losses (L), this would be a *WWW* series. The probability of Team A winning all 3 games would be $p \times p \times p = p^3$.
+
+#### Outcome 2: 3-1
+
+What about a 3-1 series? Those familiar with binomial theory will recall that the probability of 3 wins and 1 loss would be $p^3 \times (1-p)$. However, we also need to multiply this by the number of ways in which a series could go 3-1.
+
+There happen to be 3 ways that this can happen: *LWWW*, *WLWW*, or *WWLW*. Keep in mind that the series *WWWL* is not possible, as the series would have ended 3-0.
+
+So then, the probability of a 3-1 series is $3p^3(1-p)$.
+
+#### Outcome 3: 3-2
+
+Finally, the series could go 3-2. The probably of 3 wins and 2 losses would be $p^3 \times (1-p)^2$. 
+
+There are 6 ways a series could go 3-2: *LLWWW*, *LWLWW*, *LWWLW*, *WLLWW*, *WLWLW*, *WWLLW*.
+
+Therefore, the probability of a 3-2 series is $6p^3(1-p)^2$.
+
+#### Example
+
+To make these probabilities tangible, let's input in a value for $p$. Let's say that you think Team A has a 75% chance of winning each game. The respective probabilities of the three series outcomes would be:
+
+* 3-0: $0.75^3 = 0.422$, or a 42.2% chance
+* 3-1: $3 \times 0.75^3 \times 0.25 = 0.316$, or a 31.6% chance
+* 3-2: $6 \times 0.75^3 \times 0.25^2 = 0.158$ or a 15.8% chance
+
+This would mean the most likely series outcome is a 3-0 for Team A! Note that the probabilities here do not sum to 1 (they sum to 0.896) because there is an 11.4% chance that Team A would lose the series, either 0-3, 1-3, or 2-3. 
+
+### Comparing the probabilities of each series outcomes
+
+Now that we know the probability of each outcome as a function of $p$, we can calculate it for all values between 0.5 and 1 (since we assume that the team we have chosen is more likely to win).
+
+This can easily be done in R.
+
+First, create a dataframe with the series scores and probabilities.
+
+```{r}
+data <- data.frame(
+  # repeat each outcome 51 times
+  score = rep(c('3-0', '3-1', '3-2'), each = 51),
+  # repeat the sequence of probabilities from 0.5-1 (in 0.01 increments) once for each outcome
+  p_win = rep(seq(0.5, 1, 0.01), times = 3)
+)
+
+# Preview of first few rows
+data %>% 
+  head(5)
+```
+
+Next, we can apply the probabilities from the earlier section.
+
+```{r}
+data <- data %>% 
+  mutate(p_outcome = case_when(
+    # If 3-0
+    score == '3-0' ~ (p_win**3),
+    # If 3-1
+    score == '3-1' ~ 3*(p_win**3)*(1-p_win),
+    # If 3-2
+    score == '3-2' ~ 6*(p_win**3)*((1-p_win)**2)
+  ))
+
+# Probabilities when p = 0.75
+data %>% 
+  filter(p_win == 0.75)
+```
+
+We can see that the probabilities match what we calculated earlier!
+
+Finally, we can create a plot to help us visualise how these probabilities change.
+
+```{r}
+data %>% 
+  ggplot(aes(x = p_win, y = p_outcome, colour = score)) + 
+  geom_path() + 
+  scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) + 
+  labs(x = 'Probability of Team A winning each game',
+       y = 'Probability of series outcome',
+       colour = 'Series outcome') + 
+  theme_bw()
+```
+
+### Takeaways
+
+What can we take away from this plot?
+
+When $p$ is 0.50 (you think both teams are exactly evenly matched), it is equally likely that the series will go 3-1 or 3-2. There's an 18.8% chance of each, which beats the 12.5% chance of a 3-0.
+
+```{r}
+data %>% 
+  filter(p_win == 0.5)
+```
+
+If you think the chances of Team A winning each game are between 50% and 66%, the most likely outcome is a 3-1.
+
+* If Team A has a 66% chance of winning, the probability of a 3-1 series (29.3%) is slightly higher than a 3-0 series (28.7%).
+* If this increases to 67%, the probability of a 3-0 series (30.1%) overtakes the probability of a 3-1 series (29.8%).
+
+```{r}
+data %>% 
+  filter(p_win %in% c(0.66, 0.67))
+```
+
+If you think Team A has anything higher than a 67% chance of winning, the most likely outcome is a 3-0 series. 
+
+Interestingly, this means, that a 3-2 series is never the single-most likely outcome. Even if you believe that two teams are perfectly matched, it only becomes equally likely as a 3-1 series. (Perhaps this may have been intuitive to others, but it came as a surprise to me!)
+
+### Concluding thoughts
+
+This was an interesting exercise for myself to understand how I should expect a Best of series to go based on my estimates of team/player strengths. It definitely came as a surprise to learn how unlikely 3-2 series are (though this may have been intuitive to others)!
+
+Naturally, the calculations are only specific to a Best of 5 series, and they also assume that your goal is to predict the most likely outcome (which it would be, if you were an analyst).
+
+In the next two parts, we'll expand in two directions:
+
+1. How would we generalise these probability calculations to other (odd) Best of series? E.g., a Best of 3, Best of 7, etc.
+2. Would we choose differently if our goal was not to predict the outcome, but maximise our expected value in betting on the right outcome? 
+
+<b id="f1">1</b> In reality, this is unlikely to be the case. Momentum often seems to play a pivotal role in the outcome of a series. For example, if a team loses a long, drawn out game, this may affect their mentality and performance in the subsequent games. [↩](#a1)
