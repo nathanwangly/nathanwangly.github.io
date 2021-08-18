@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Predicting Outcomes in &#34;Best Of&#34; Series - Part 2 | Nathan Wang-Ly</title>
+<meta name="keywords" content="" />
+<meta name="description" content="XXX.">
+<meta name="author" content="Nathan Wang-Ly">
+<link rel="canonical" href="https://nathanwangly.github.io/post/2021-08-18-predicting-outcomes-in-best-of-series-part-2/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.6e80bd6394a4c444579a121285e0db06671d69c036f96745f781f10a8989fd32.css" integrity="sha256-boC9Y5SkxERXmhISheDbBmcdacA2&#43;WdF94HxComJ/TI=" rel="preload stylesheet" as="style">
+<link rel="preload" href="/images/profile_photo.jpg" as="image">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://nathanwangly.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nathanwangly.github.io/favicon-16x16.png">
+<link rel="mask-icon" href="https://nathanwangly.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.87.0" />
+<meta property="og:title" content="Predicting Outcomes in &#34;Best Of&#34; Series - Part 2" />
+<meta property="og:description" content="XXX." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nathanwangly.github.io/post/2021-08-18-predicting-outcomes-in-best-of-series-part-2/" /><meta property="og:image" content="https://nathanwangly.github.io/47"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-08-18T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-08-18T00:00:00&#43;00:00" /><meta property="og:site_name" content="ExampleSite" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nathanwangly.github.io/47"/>
+
+<meta name="twitter:title" content="Predicting Outcomes in &#34;Best Of&#34; Series - Part 2"/>
+<meta name="twitter:description" content="XXX."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://nathanwangly.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Predicting Outcomes in \"Best Of\" Series - Part 2",
+      "item": "https://nathanwangly.github.io/post/2021-08-18-predicting-outcomes-in-best-of-series-part-2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Predicting Outcomes in \"Best Of\" Series - Part 2",
+  "name": "Predicting Outcomes in \u0022Best Of\u0022 Series - Part 2",
+  "description": "XXX.",
+  "keywords": [
+    
+  ],
+  "articleBody": "\r\rIn the previous post, we looked at the probability of different outcomes of a Best of 5 series. In this post, we’ll formulate a general solution to the probability of a series outcome regardless of its length (e.g., Best of 99, if they existed). We’ll then use this to create corresponding plots for Best of 3 and Best of 7 series.\nRecap: Best of 5\rWe previously calculated the probability of a Best of 5 series going 3-0, 3-1, or 3-2 as a function of the probability, \\(p\\), that the stronger team would win each game.\n\r3-0: \\(p^3\\)\r3-1: \\(3p^3(1-p)\\)\r3-2: \\(6p^3(1-p)^2\\)\r\rThe key insight was that, assuming you knew \\(p\\), you could calculate the probability of the series outcome by multiplying two components: the probability of the desired wins and losses (using binomial probability) and the number of unique ways in which the series outcome could be achieved.\nIn the case of the a 3-2 series outcome, for example, the probability of 3 wins and 2 losses would be \\(p^3 \\times (1-p)^2\\). We would then need to know how many ways a series could end 3-2. While we counted them individually in the previous post, the number of unique possibilities would quickly grow as the length of the series increased.\nA better way would be to think of it as a permutations and combinations (“perms and combs”) problem. We want to know how many combinations of WWWLL there are. However, we want to exclude the combinations that aren’t possible. This would occur if the winning team won 3 games before losing 2. As it turns out, the only way the series can go 3-2 (or any other series outcome, for that matter), is if the final game is won by the winning team.\nIn other words, we aren’t interested in the number of combinations of WWWLL. We can take one W away (since it has to go at the end of the sequence), and ask ourselves how many combinations of WWLL there are.\nThere are \\(4!=24\\) ways to arrange 4 elements (i.e., W or L). However, if we swap the position of two W’s or two L’s, the sequence is not unique. So we have to divide this by the number of ways we can rearrange the W’s (\\(2!\\)) and the L’s (\\(2!\\) as well). Thus, the final number of unique combinations is \\(\\frac{4!}{2! \\times 2!} = 6\\), which matches what we counted before1.\n\rFinding a general solution\rLet’s now generalise this to any series length and outcome. Suppose that we want a series with \\(n_{win}\\) wins and \\(n_{loss}\\) losses. For now, we’ll focus on series where our team of interest is the winner – so \\(n_{win}  n_{loss}\\). We also assume that the series has an odd length (e.g., 3, 5, or 7)).\nThe binomial probability component of this outcome would be:\n\\[p^{n_{win}} \\times (1-p)^{n_{loss}}\\]\nWhat about the number of unique (valid) combinations of the series outcome? Just like in the example earlier, we know that the last match would have to be a win. So we are really interested in the number of unique combinations that can be formed with a sequence of \\(n_{win}-1\\) wins and \\(n_{loss}\\) losses.\nAgain, following the earlier example, we would need to start with the factorial of the total number of wins and losses: \\((n_{win} + n_{loss} - 1)!\\). We would then need to divide by the number of ways the wins and losses could be rearranged amongst themselves: \\((n_{win}-1)!\\) and \\(n_{loss}!\\) respectively.\nThis leaves us with:\n\\[\\frac{(n_{win} + n_{loss} - 1)!}{(n_{win}-1)! \\times n_{loss}!}\\]\nMultiplying this with the binomial probability component gives us our final answer:\r\\[\\frac{(n_{win} + n_{loss} - 1)!}{(n_{win}-1)! \\times n_{loss}!} \\times p^{n_{win}} \\times (1-p)^{n_{loss}}\\].\nWe can easily test whether this formula makes sense by substituting \\(n_{win} = 3\\) and \\(n_{loss} = 2\\).\nWe would get:\n\\[\\frac{(3+2-1)!}{3! \\times 2!} \\times p^{3-1} \\times (1-p)^2 = \\frac{4!}{2! \\times 2!} \\times p^3 \\times (1-p)^2 = 6p^3(1-p)^2\\]\nExactly what we had previously calculated!\n\rApplying this to Best of 3 series\rNow that we have this formula, let’s apply it to a Best of 3 series. The formula tells us that we only need to specify how many wins and losses occur in the series.\rAs with the previous post, we’ll create and plot the dataset using R.\nFirst, create the dataframe of series outcomes and probabilities, \\(p\\), of interest.\ndata % # extract the number of wins and losses per series score\rmutate(n_win = as.numeric(substring(score, 1, 1)),\rn_loss = as.numeric(substring(score, 3, 3)))\r# Preview of first few rows\rdata %% head(5)\r## score p_win n_win n_loss\r## 1 2-0 0.50 2 0\r## 2 2-0 0.51 2 0\r## 3 2-0 0.52 2 0\r## 4 2-0 0.53 2 0\r## 5 2-0 0.54 2 0\rNext, apply the formula from earlier.\ndata % mutate(p_outcome = # number of combinations\r(factorial(n_win + n_loss - 1) / (factorial(n_win - 1) * factorial(n_loss))) *\r# binomial probability\r(p_win**n_win * (1 - p_win)**n_loss)\r)\r# Preview first few rows\rdata %% head(5)\r## score p_win n_win n_loss p_outcome\r## 1 2-0 0.50 2 0 0.2500\r## 2 2-0 0.51 2 0 0.2601\r## 3 2-0 0.52 2 0 0.2704\r## 4 2-0 0.53 2 0 0.2809\r## 5 2-0 0.54 2 0 0.2916\rFinally, plot!\ndata %% ggplot(aes(x = p_win, y = p_outcome, colour = score)) + geom_path() + scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +\rscale_y_continuous(labels = scales::percent_format(accuracy = 1)) + labs(x = 'Probability of Team A winning each game',\ry = 'Probability of series outcome',\rcolour = 'Series outcome') + theme_bw()\rSimilar to what we saw in the Best of 5 series, here we see that for the stronger team, a 2-0 result is always more likely than a 2-1 result (except if the two teams are evenly matched).\n\rRefining the code for a Best of 7 series and beyond\rLet’s see now how we might make the code flexible enough to accept any odd series length.\nThe only tricky part will be initialising the dataframe of series outcomes and probabilities.\nbest_of_outcomes % # Combine wins and losses to form series score\rmutate(score = paste0(n_win, '-', n_loss))\r# Return first few rows\rreturn(data %% head(5))\r}\r# Test with Best of 7\rbest_of_outcomes(7)\r## n_win n_loss p_win score\r## 1 4 0 0.50 4-0\r## 2 4 0 0.51 4-0\r## 3 4 0 0.52 4-0\r## 4 4 0 0.53 4-0\r## 5 4 0 0.54 4-0\rWe can then extend the function to calculate the probabilities and plot!\nbest_of_outcomes % ggplot(aes(x = p_win, y = p_outcome, colour = score)) + geom_path() + scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +\rscale_y_continuous(labels = scales::percent_format(accuracy = 1)) + labs(x = 'Probability of Team A winning each game',\ry = 'Probability of series outcome',\rcolour = 'Series outcome') + theme_bw()\r# Return plot\rreturn(plot)\r}\r# Test with Best of 7\rbest_of_outcomes(7)\rJust for good measure, we can do the same with a Best of 9!\nbest_of_outcomes(9)\r\rConcluding thoughts\rThis was a fun exercise of starting with a specific question in mind (how likely is each series outcome in a 3-2 series) and expanding the answer to be flexible for any odd series length.\nNow that we have the general solution for this, in the next post, we will see how we can combine this information with betting odds to maximise the expected value of our choices.\n1 An alternative (and possibly simpler) way to calculate the number of combinations is via the \\(nCr\\) formula, where \\(n = n_{win} + n{loss} - 1\\) and \\(r = n_{win} - 1\\). ↩︎\n\r",
+  "wordCount" : "1404",
+  "inLanguage": "en",
+  "datePublished": "2021-08-18T00:00:00Z",
+  "dateModified": "2021-08-18T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Nathan Wang-Ly"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nathanwangly.github.io/post/2021-08-18-predicting-outcomes-in-best-of-series-part-2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nathan Wang-Ly",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nathanwangly.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    
+</head>
+
+<body class="" id="top">
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://nathanwangly.github.io/" accesskey="h" title="NWL (Alt + H)">
+                <img src="/images/profile_photo.jpg" alt="logo" aria-label="logo"
+                    height="35">NWL</a>
+            <span class="logo-switches">
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://nathanwangly.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nathanwangly.github.io/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nathanwangly.github.io/research" title="Research">
+                    <span>Research</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nathanwangly.github.io/posts" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Predicting Outcomes in &#34;Best Of&#34; Series - Part 2
+    </h1>
+    <div class="post-description">
+      <i>XXX.</i>
+    </div>
+    <div class="post-meta">August 18, 2021&nbsp;·&nbsp;7 min
+</div>
+  </header> 
+  <div class="post-content">
+<script src="https://nathanwangly.github.io/post/2021-08-18-predicting-outcomes-in-best-of-series-part-2/index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>In the <a href="/post/2021-08-18-predicting-outcomes-in-best-of-series-part-2/">previous post</a>, we looked at the probability of different outcomes of a Best of 5 series. In this post, we’ll formulate a general solution to the probability of a series outcome regardless of its length (e.g., Best of 99, if they existed). We’ll then use this to create corresponding plots for Best of 3 and Best of 7 series.</p>
+<div id="recap-best-of-5" class="section level3">
+<h3>Recap: Best of 5</h3>
+<p>We previously calculated the probability of a Best of 5 series going 3-0, 3-1, or 3-2 as a function of the probability, <span class="math inline">\(p\)</span>, that the stronger team would win each game.</p>
+<ul>
+<li>3-0: <span class="math inline">\(p^3\)</span></li>
+<li>3-1: <span class="math inline">\(3p^3(1-p)\)</span></li>
+<li>3-2: <span class="math inline">\(6p^3(1-p)^2\)</span></li>
+</ul>
+<p>The key insight was that, assuming you knew <span class="math inline">\(p\)</span>, you could calculate the probability of the series outcome by multiplying two components: the probability of the desired wins and losses (using binomial probability) and the number of unique ways in which the series outcome could be achieved.</p>
+<p>In the case of the a 3-2 series outcome, for example, the probability of 3 wins and 2 losses would be <span class="math inline">\(p^3 \times (1-p)^2\)</span>. We would then need to know how many ways a series could end 3-2. While we counted them individually in the previous post, the number of unique possibilities would quickly grow as the length of the series increased.</p>
+<p>A better way would be to think of it as a permutations and combinations (“perms and combs”) problem. We want to know how many combinations of <em>WWWLL</em> there are. However, we want to exclude the combinations that aren’t possible. This would occur if the winning team won 3 games before losing 2. As it turns out, the only way the series can go 3-2 (or any other series outcome, for that matter), is if the final game is won by the winning team.</p>
+<p>In other words, we aren’t interested in the number of combinations of <em>WWWLL</em>. We can take one <em>W</em> away (since it has to go at the end of the sequence), and ask ourselves how many combinations of <em>WWLL</em> there are.</p>
+<p>There are <span class="math inline">\(4!=24\)</span> ways to arrange 4 elements (i.e., <em>W</em> or <em>L</em>). However, if we swap the position of two <em>W</em>’s or two <em>L</em>’s, the sequence is not unique. So we have to divide this by the number of ways we can rearrange the <em>W</em>’s (<span class="math inline">\(2!\)</span>) and the <em>L</em>’s (<span class="math inline">\(2!\)</span> as well). Thus, the final number of unique combinations is <span class="math inline">\(\frac{4!}{2! \times 2!} = 6\)</span>, which matches what we counted before<sup id="a1"><a href="#f1">1</a></sup>.</p>
+</div>
+<div id="finding-a-general-solution" class="section level3">
+<h3>Finding a general solution</h3>
+<p>Let’s now generalise this to any series length and outcome. Suppose that we want a series with <span class="math inline">\(n_{win}\)</span> wins and <span class="math inline">\(n_{loss}\)</span> losses. For now, we’ll focus on series where our team of interest is the winner – so <span class="math inline">\(n_{win} &gt; n_{loss}\)</span>. We also assume that the series has an odd length (e.g., 3, 5, or 7)).</p>
+<p>The binomial probability component of this outcome would be:</p>
+<p><span class="math display">\[p^{n_{win}} \times (1-p)^{n_{loss}}\]</span></p>
+<p>What about the number of unique (valid) combinations of the series outcome? Just like in the example earlier, we know that the last match would have to be a win. So we are really interested in the number of unique combinations that can be formed with a sequence of <span class="math inline">\(n_{win}-1\)</span> wins and <span class="math inline">\(n_{loss}\)</span> losses.</p>
+<p>Again, following the earlier example, we would need to start with the factorial of the total number of wins and losses: <span class="math inline">\((n_{win} + n_{loss} - 1)!\)</span>. We would then need to divide by the number of ways the wins and losses could be rearranged amongst themselves: <span class="math inline">\((n_{win}-1)!\)</span> and <span class="math inline">\(n_{loss}!\)</span> respectively.</p>
+<p>This leaves us with:</p>
+<p><span class="math display">\[\frac{(n_{win} + n_{loss} - 1)!}{(n_{win}-1)! \times n_{loss}!}\]</span></p>
+<p>Multiplying this with the binomial probability component gives us our final answer:
+<span class="math display">\[\frac{(n_{win} + n_{loss} - 1)!}{(n_{win}-1)! \times n_{loss}!} \times p^{n_{win}} \times (1-p)^{n_{loss}}\]</span>.</p>
+<p>We can easily test whether this formula makes sense by substituting <span class="math inline">\(n_{win} = 3\)</span> and <span class="math inline">\(n_{loss} = 2\)</span>.</p>
+<p>We would get:</p>
+<p><span class="math display">\[\frac{(3+2-1)!}{3! \times 2!} \times p^{3-1} \times (1-p)^2 = \frac{4!}{2! \times 2!} \times p^3 \times (1-p)^2 = 6p^3(1-p)^2\]</span></p>
+<p>Exactly what we had previously calculated!</p>
+</div>
+<div id="applying-this-to-best-of-3-series" class="section level3">
+<h3>Applying this to Best of 3 series</h3>
+<p>Now that we have this formula, let’s apply it to a Best of 3 series. The formula tells us that we only need to specify how many wins and losses occur in the series.
+As with the previous post, we’ll create and plot the dataset using R.</p>
+<p>First, create the dataframe of series outcomes and probabilities, <span class="math inline">\(p\)</span>, of interest.</p>
+<pre class="r"><code>data &lt;- data.frame(
+  # repeat each outcome 51 times
+  score = rep(c(&#39;2-0&#39;, &#39;2-1&#39;), each = 51),
+  # repeat the sequence of probabilities from 0.5-1 (in 0.01 increments) once for each outcome
+  p_win = rep(seq(0.5, 1, 0.01), times = 2)
+) %&gt;% 
+  # extract the number of wins and losses per series score
+  mutate(n_win = as.numeric(substring(score, 1, 1)),
+         n_loss = as.numeric(substring(score, 3, 3)))
+
+# Preview of first few rows
+data %&gt;% 
+  head(5)</code></pre>
+<pre><code>##   score p_win n_win n_loss
+## 1   2-0  0.50     2      0
+## 2   2-0  0.51     2      0
+## 3   2-0  0.52     2      0
+## 4   2-0  0.53     2      0
+## 5   2-0  0.54     2      0</code></pre>
+<p>Next, apply the formula from earlier.</p>
+<pre class="r"><code>data &lt;- data %&gt;% 
+  mutate(p_outcome = 
+           # number of combinations
+           (factorial(n_win + n_loss - 1) / (factorial(n_win - 1) * factorial(n_loss))) *
+           # binomial probability
+           (p_win**n_win * (1 - p_win)**n_loss)
+  )
+
+# Preview first few rows
+data %&gt;% 
+  head(5)</code></pre>
+<pre><code>##   score p_win n_win n_loss p_outcome
+## 1   2-0  0.50     2      0    0.2500
+## 2   2-0  0.51     2      0    0.2601
+## 3   2-0  0.52     2      0    0.2704
+## 4   2-0  0.53     2      0    0.2809
+## 5   2-0  0.54     2      0    0.2916</code></pre>
+<p>Finally, plot!</p>
+<pre class="r"><code>data %&gt;% 
+  ggplot(aes(x = p_win, y = p_outcome, colour = score)) + 
+  geom_path() + 
+  scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) + 
+  labs(x = &#39;Probability of Team A winning each game&#39;,
+       y = &#39;Probability of series outcome&#39;,
+       colour = &#39;Series outcome&#39;) + 
+  theme_bw()</code></pre>
+<p><img src="https://nathanwangly.github.io/post/2021-08-18-predicting-outcomes-in-best-of-series-part-2/index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Similar to what we saw in the Best of 5 series, here we see that for the stronger team, a 2-0 result is always more likely than a 2-1 result (except if the two teams are evenly matched).</p>
+</div>
+<div id="refining-the-code-for-a-best-of-7-series-and-beyond" class="section level3">
+<h3>Refining the code for a Best of 7 series and beyond</h3>
+<p>Let’s see now how we might make the code flexible enough to accept any odd series length.</p>
+<p>The only tricky part will be initialising the dataframe of series outcomes and probabilities.</p>
+<pre class="r"><code>best_of_outcomes &lt;- function(series_length) {
+  
+  # Calculate number of wins needed to win series
+  wins_needed &lt;- (series_length + 1) / 2
+  
+  # Create vector of possible losses in series
+  possible_losses &lt;- seq(0, wins_needed - 1, 1) # caps out at 1 below wins needed
+  
+  # Create dataframe
+  data &lt;- data.frame(
+    n_win = wins_needed, # same for all series outcomes
+    n_loss = rep(possible_losses, each = 51), # repeat for each probability
+    p_win = rep(seq(0.5, 1, 0.01), times = length(possible_losses)) # repeat for each possible series outcome
+  ) %&gt;% 
+    # Combine wins and losses to form series score
+    mutate(score = paste0(n_win, &#39;-&#39;, n_loss))
+  
+  # Return first few rows
+  return(data %&gt;% head(5))
+  
+}
+
+# Test with Best of 7
+best_of_outcomes(7)</code></pre>
+<pre><code>##   n_win n_loss p_win score
+## 1     4      0  0.50   4-0
+## 2     4      0  0.51   4-0
+## 3     4      0  0.52   4-0
+## 4     4      0  0.53   4-0
+## 5     4      0  0.54   4-0</code></pre>
+<p>We can then extend the function to calculate the probabilities and plot!</p>
+<pre class="r"><code>best_of_outcomes &lt;- function(series_length) {
+  
+  # Use same code from above chunk
+  (...) 
+  
+  # Create ggplot object
+  plot &lt;- data %&gt;% 
+    ggplot(aes(x = p_win, y = p_outcome, colour = score)) + 
+    geom_path() + 
+    scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) + 
+    labs(x = &#39;Probability of Team A winning each game&#39;,
+         y = &#39;Probability of series outcome&#39;,
+         colour = &#39;Series outcome&#39;) + 
+    theme_bw()
+  
+  # Return plot
+  return(plot)
+  
+}
+
+# Test with Best of 7
+best_of_outcomes(7)</code></pre>
+<p><img src="https://nathanwangly.github.io/post/2021-08-18-predicting-outcomes-in-best-of-series-part-2/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Just for good measure, we can do the same with a Best of 9!</p>
+<pre class="r"><code>best_of_outcomes(9)</code></pre>
+<p><img src="https://nathanwangly.github.io/post/2021-08-18-predicting-outcomes-in-best-of-series-part-2/index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="concluding-thoughts" class="section level3">
+<h3>Concluding thoughts</h3>
+<p>This was a fun exercise of starting with a specific question in mind (how likely is each series outcome in a 3-2 series) and expanding the answer to be flexible for any odd series length.</p>
+<p>Now that we have the general solution for this, in the next post, we will see how we can combine this information with betting odds to maximise the expected value of our choices.</p>
+<hr />
+<p><b id="f1">1</b> An alternative (and possibly simpler) way to calculate the number of combinations is via the <span class="math inline">\(nCr\)</span> formula, where <span class="math inline">\(n = n_{win} + n{loss} - 1\)</span> and <span class="math inline">\(r = n_{win} - 1\)</span>. <a href="#a1">↩︎</a></p>
+</div>
+
+
+  </div>
+  <footer class="post-footer">
+<nav class="paginav">
+  <a class="next" href="https://nathanwangly.github.io/post/2021-08-17-predicting-outcomes-in-best-of-series-part-1/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span>Predicting Outcomes in &#34;Best Of&#34; Series - Part 1</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    <footer class="footer">
+    <span>&copy; 2021 <a href="https://nathanwangly.github.io/">Nathan Wang-Ly</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+</body>
+
+</html>
