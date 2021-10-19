@@ -1,39 +1,99 @@
-<!doctype html><html lang=en dir=auto>
-<head><meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=robots content="index, follow">
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
 <title>Superannuation Comparison Tool | Nathan Wang-Ly</title>
-<meta name=keywords content>
-<meta name=description content="A tool for comparing different super funds or contribution amounts.">
-<meta name=author content="Nathan Wang-Ly">
-<link rel=canonical href=https://nathanwangly.github.io/post/2020-12-19-superannuation-comparison-tool/>
-<meta name=google-site-verification content="XYZabc">
-<meta name=yandex-verification content="XYZabc">
-<meta name=msvalidate.01 content="XYZabc">
-<link crossorigin=anonymous href=/assets/css/stylesheet.min.6e80bd6394a4c444579a121285e0db06671d69c036f96745f781f10a8989fd32.css integrity="sha256-boC9Y5SkxERXmhISheDbBmcdacA2+WdF94HxComJ/TI=" rel="preload stylesheet" as=style>
-<link rel=preload href=/images/cow_logo.jpg as=image>
-<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
-<link rel=icon href=https://nathanwangly.github.io/favicon/favicon.ico>
-<link rel=icon type=image/png sizes=16x16 href=https://nathanwangly.github.io/favicon/favicon-16x16.png>
-<link rel=mask-icon href=https://nathanwangly.github.io/favicon/safari-pinned-tab.svg>
-<meta name=theme-color content="#2e2e33">
-<meta name=msapplication-TileColor content="#2e2e33">
-<meta name=generator content="Hugo 0.87.0">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-123-45','auto'),ga('send','pageview'))</script><meta property="og:title" content="Superannuation Comparison Tool">
-<meta property="og:description" content="A tool for comparing different super funds or contribution amounts.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://nathanwangly.github.io/post/2020-12-19-superannuation-comparison-tool/"><meta property="og:image" content="https://nathanwangly.github.io/images/profile_photo.jpg"><meta property="article:section" content="post">
-<meta property="article:published_time" content="2020-12-19T00:00:00+00:00">
-<meta property="article:modified_time" content="2020-12-19T00:00:00+00:00"><meta property="og:site_name" content="Nathan Wang-Ly">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://nathanwangly.github.io/images/profile_photo.jpg">
-<meta name=twitter:title content="Superannuation Comparison Tool">
-<meta name=twitter:description content="A tool for comparing different super funds or contribution amounts.">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://nathanwangly.github.io/post/"},{"@type":"ListItem","position":2,"name":"Superannuation Comparison Tool","item":"https://nathanwangly.github.io/post/2020-12-19-superannuation-comparison-tool/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Superannuation Comparison Tool","name":"Superannuation Comparison Tool","description":"A tool for comparing different super funds or contribution amounts.","keywords":[],"articleBody":"\r\rBackground\rThe idea for this tool came after I recently spent some time deliberating over my choice of superannuation fund and wondering whether the fund (and its investment option) was the right one for me. I found this process incredibly painful; the time and effort required to read through different Product Disclosure Statements left me frustrated and no closer to being confident in my choice.\nOn top of this, I struggled to put into perspective how much the differences between funds mattered. For example:\n\rWe know that higher returns are better, but what difference does an average return of 5.5% p.a. make compared to 6.0% p.a.? Would I be willing to trade off a lower long-term return on my superannuation balance if it meant my money was allocated towards ethical investments?\rLikewise, some super funds charge flat fees, while others charge a percentage of your balance. How much of a difference does this make in the long run?\r\rWith this in mind, I sought to create a tool that would help me visualise and understand the answers to these types of questions. The problem is I knew exactly what I wanted to build but no idea how to build it. I had previously dabbled in JavaScript and HTML for some of my PhD experiments, but hadn’t really needed to build something from scratch. Fortunately, I was able to draw inspiration from a different calculator tool I had previously come across (meaning I “borrowed” lots of its code to get me started) and went through a long process of trial-and-error to land upon a workable version!\nThe remainder of this post dives a bit deeper into the design of the tool, but if that is not of interest, feel free to skip right ahead to the tool itself: Superannuation Comparison Tool\n\rAbout the Tool\rThe main challenge in building this tool was balancing accuracy and flexibility. I wanted to build a general-purpose tool that could be used by most people (who might vary in how frequently they contribute to their super) but could also compare between different superannuation funds (which might vary in fee structures). Achieving this goal meant that I needed to make a series of simplifying assumptions, meaning the final projected balance may not be exactly accurate; however, the hope is that the tool would at least facilitate a relative comparison of super options.\nAssumptions that I’ve made (and the thought process behind them)\n\r\r\r\rAssumption\rRationale\r\r\r\rContribution amounts remain consistent across your working life.\rThis is unlikely to be the case, as your contributions will (hopefully) increase as your salary increases further into your career. However, making this assumption keeps the calculation simple. If you were to enter your current contributions (with the expectation that your income will increase in the future), then you can think of the calculated result as the lower bound projection.\r\rInvestment returns are calculated once per year at the end of the year.\rWhile this will lead to systematic underestimation of super balances (compared to a daily compounding rate), it avoids the need for complicated calculations when users have contributions and fees of varying frequencies (e.g., monthly contributions and weekly flat fees).\r\rPercentage fees are applied at the same time as your investment returns are calculated. In other words, they are deducted from the inputted estimated return to calculate the growth rate.\rSimilar to above, it keeps the calculation simple. It also avoids instances where having the same investment return rate and fee rate actually lead to a slightly smaller balance (e.g., 10% returns and 10% fees would lead to \\$100 \\(\\times\\) 1.1 \\(\\times\\) 0.9 = \\$99).\r\rAll super contributions fall under the concessional cap (i.e., they are taxed at 15%).\rThis is true for the first $25,000 of contributions made per financial year; otherwise, they are taxed at the user’s marginal rate. That would overly complicate things as I don’t know your tax situation! Fortunately (or unfortunately?), this shouldn’t be an issue for most Australians as you would need to be earning around \\$260,000 (\\$25,000 \\(\\div\\) 9.5%) to reach the cap, assuming no voluntary contributions are made.\r\rInflation occurs at an average rate of 2% p.a.\rAllows the tool to estimate balances in real terms and keeps things simple!\r\r\r\rCalculating projected balances\nAfter making these assumptions, the underlying formula to calculate a projected balance becomes fairly straightforward.\nCalculate the total amount of contributions made per year based on the amount and frequency.\rTax this contribution by 15% and then subtract any flat fees (annualised). This gives the net annual contribution amount.\rCalculate the annual growth rate by subtracting any percentage fees and the inflation rate from the estimated investment return rates.\rCalculate the total value of these contributions using the annuity formula.\rAdd the starting balance (factoring in the annual growth rate).\r\rIn a single formula, it looks like this:\n\\(B_n = (B_0 \\times r_{growth}^n) + (C_{annual} \\times \\frac{r_{growth}^n - 1}{r_{growth} - 1})\\)\nWhere:\n\r\\(B_n\\) is the projected balance after n years\r\\(C_{annual}\\) is the net annual contribution\r\\(r_{growth}\\) is the annual growth rate (as a multiplier; e.g., 5% returns would correspond to a 1.05 growth rate)\r\\(n\\) is the number of years from today\r\rSidenote\nIt is worth noting that there are two scenarios that I have not designed the tool to be able to handle, again for simplicity.\nInsurance costs: These could be factored into the tool manually by adding it to the fees section (e.g., additional weekly fee of \\$10). However, insurance costs will increase over your lifetime - and the rate of increase will depend largely on your personal circumstances - which makes it difficult to include in a calculator.\rStepped fee structures: Some super funds charge different fees based on your balance. To avoid overcomplicating things, I have not incorporated this into the calculator.\r\r\rExample Use Case\rTo conclude this post, I’ve included an example use case for where this tool could be helpful. Suppose that you are a fresh graduate who is about to start a new job that will pay \\$70,000 per year. This means that each year, you can expect to contribute \\$6,650 to your super (9.5% of your annual salary).\nYou currently have \\$5,000 in your super account after working some part-time jobs while studying, and you are trying to decide whether or not to change funds before you start your new job.\n\r\r\r\rOption\rRationale\rEstimated Returns*\rFlat Fees\rPercentage Fees\r\r\r\rUniSuper - Balanced\rWhen you first started working, you had no idea what superannuation was and went with the default option offered by your employer. Sticking with this option could reduce the hassle of switching.\r8.50% p.a.\r\\$96 p.a. admin fee\r0.40% investment fees, 0.06% other fees\r\rHostPlus - Indexed Balanced\rHaving read The Barefoot Investor, you felt that a compelling case had been made to invest in the index and keep fees to a minimum.\r8.40% p.a.\r\\$78 p.a. admin fee\r0.02% p.a. investment fees, 0.04% p.a. other fees\r\rAustralianSuper - Socially Aware\rYou like the idea of ‘ethical investing’ and support the ESG criteria used by AustralianSuper.\r8.23% p.a.\r\\$117 p.a. admin fee\r0.11% p.a. admin fee, 0.67% investment fee\r\r\r\r* Estimated returns based on average performance over the previous 10 years. Note that past performance may not necessarily indicate future performance.\nPutting these values into the calculator, we can see how different the projections would be over 40 years of working.\nFinal results!\n\rHostPlus Indexed Balanced: \\$998,507\rUniSuper Balanced: \\$920,839\rAustralianSuper Socially Aware: \\$788,643\r\rBased on the values we’ve inputted, it appears that HostPlus’ Indexed Balanced option would result in the highest future balance. This is not too surprising given the three options we compared had similar estimated returns, but the HostPlus option had significantly lower fees.\nAustralianSuper’s Socially Aware option performs the worst because of the 0.78% p.a. percentage fees. This makes a huge difference over the 40-year period; you would potentially end up with \\$200,000 less in super. If you really wanted to invest in an ethical super option, you would potentially want to look elsewhere for a lower-fee fund (or choose this one if you are willing to trade off the future returns).\n\rConclusion\rThe motivation behind this post was to create a tool that others might find useful in navigating their super decisions (and to teach myself some JS/HTML along the way!). In its current state, I personally find it helpful to visualise the trajectories of my future super under different potential scenarios. In saying that, the tool is by no means perfect, so I am always open to suggestions for how it can be improved!\n\r","wordCount":"1430","inLanguage":"en","datePublished":"2020-12-19T00:00:00Z","dateModified":"2020-12-19T00:00:00Z","author":{"@type":"Person","name":"Nathan Wang-Ly"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://nathanwangly.github.io/post/2020-12-19-superannuation-comparison-tool/"},"publisher":{"@type":"Organization","name":"Nathan Wang-Ly","logo":{"@type":"ImageObject","url":"https://nathanwangly.github.io/favicon/favicon.ico"}}}</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-<script type=text/x-mathjax-config>
+<meta name="keywords" content="" />
+<meta name="description" content="A tool for comparing different super funds or contribution amounts.">
+<meta name="author" content="Nathan Wang-Ly">
+<link rel="canonical" href="https://nathanwangly.github.io/post/2020-12-19-superannuation-comparison-tool/" />
+<meta name="google-site-verification" content="XYZabc" />
+<meta name="yandex-verification" content="XYZabc" />
+<meta name="msvalidate.01" content="XYZabc" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.6e80bd6394a4c444579a121285e0db06671d69c036f96745f781f10a8989fd32.css" integrity="sha256-boC9Y5SkxERXmhISheDbBmcdacA2&#43;WdF94HxComJ/TI=" rel="preload stylesheet" as="style">
+<link rel="preload" href="/images/cow_logo.jpg" as="image">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://nathanwangly.github.io/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nathanwangly.github.io/favicon/favicon-16x16.png">
+<link rel="mask-icon" href="https://nathanwangly.github.io/favicon/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.87.0" />
+<meta property="og:title" content="Superannuation Comparison Tool" />
+<meta property="og:description" content="A tool for comparing different super funds or contribution amounts." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nathanwangly.github.io/post/2020-12-19-superannuation-comparison-tool/" /><meta property="og:image" content="https://nathanwangly.github.io/images/profile_photo.jpg"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-12-19T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-12-19T00:00:00&#43;00:00" /><meta property="og:site_name" content="Nathan Wang-Ly" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nathanwangly.github.io/images/profile_photo.jpg"/>
+
+<meta name="twitter:title" content="Superannuation Comparison Tool"/>
+<meta name="twitter:description" content="A tool for comparing different super funds or contribution amounts."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://nathanwangly.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Superannuation Comparison Tool",
+      "item": "https://nathanwangly.github.io/post/2020-12-19-superannuation-comparison-tool/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Superannuation Comparison Tool",
+  "name": "Superannuation Comparison Tool",
+  "description": "A tool for comparing different super funds or contribution amounts.",
+  "keywords": [
+    
+  ],
+  "articleBody": "\r\rBackground\rThe idea for this tool came after I recently spent some time deliberating over my choice of superannuation fund and wondering whether the fund (and its investment option) was the right one for me. I found this process incredibly painful; the time and effort required to read through different Product Disclosure Statements left me frustrated and no closer to being confident in my choice.\nOn top of this, I struggled to put into perspective how much the differences between funds mattered. For example:\n\rWe know that higher returns are better, but what difference does an average return of 5.5% p.a. make compared to 6.0% p.a.? Would I be willing to trade off a lower long-term return on my superannuation balance if it meant my money was allocated towards ethical investments?\rLikewise, some super funds charge flat fees, while others charge a percentage of your balance. How much of a difference does this make in the long run?\r\rWith this in mind, I sought to create a tool that would help me visualise and understand the answers to these types of questions. The problem is I knew exactly what I wanted to build but no idea how to build it. I had previously dabbled in JavaScript and HTML for some of my PhD experiments, but hadn’t really needed to build something from scratch. Fortunately, I was able to draw inspiration from a different calculator tool I had previously come across (meaning I “borrowed” lots of its code to get me started) and went through a long process of trial-and-error to land upon a workable version!\nThe remainder of this post dives a bit deeper into the design of the tool, but if that is not of interest, feel free to skip right ahead to the tool itself: Superannuation Comparison Tool\n\rAbout the Tool\rThe main challenge in building this tool was balancing accuracy and flexibility. I wanted to build a general-purpose tool that could be used by most people (who might vary in how frequently they contribute to their super) but could also compare between different superannuation funds (which might vary in fee structures). Achieving this goal meant that I needed to make a series of simplifying assumptions, meaning the final projected balance may not be exactly accurate; however, the hope is that the tool would at least facilitate a relative comparison of super options.\nAssumptions that I’ve made (and the thought process behind them)\n\r\r\r\rAssumption\rRationale\r\r\r\rContribution amounts remain consistent across your working life.\rThis is unlikely to be the case, as your contributions will (hopefully) increase as your salary increases further into your career. However, making this assumption keeps the calculation simple. If you were to enter your current contributions (with the expectation that your income will increase in the future), then you can think of the calculated result as the lower bound projection.\r\rInvestment returns are calculated once per year at the end of the year.\rWhile this will lead to systematic underestimation of super balances (compared to a daily compounding rate), it avoids the need for complicated calculations when users have contributions and fees of varying frequencies (e.g., monthly contributions and weekly flat fees).\r\rPercentage fees are applied at the same time as your investment returns are calculated. In other words, they are deducted from the inputted estimated return to calculate the growth rate.\rSimilar to above, it keeps the calculation simple. It also avoids instances where having the same investment return rate and fee rate actually lead to a slightly smaller balance (e.g., 10% returns and 10% fees would lead to \\$100 \\(\\times\\) 1.1 \\(\\times\\) 0.9 = \\$99).\r\rAll super contributions fall under the concessional cap (i.e., they are taxed at 15%).\rThis is true for the first $25,000 of contributions made per financial year; otherwise, they are taxed at the user’s marginal rate. That would overly complicate things as I don’t know your tax situation! Fortunately (or unfortunately?), this shouldn’t be an issue for most Australians as you would need to be earning around \\$260,000 (\\$25,000 \\(\\div\\) 9.5%) to reach the cap, assuming no voluntary contributions are made.\r\rInflation occurs at an average rate of 2% p.a.\rAllows the tool to estimate balances in real terms and keeps things simple!\r\r\r\rCalculating projected balances\nAfter making these assumptions, the underlying formula to calculate a projected balance becomes fairly straightforward.\nCalculate the total amount of contributions made per year based on the amount and frequency.\rTax this contribution by 15% and then subtract any flat fees (annualised). This gives the net annual contribution amount.\rCalculate the annual growth rate by subtracting any percentage fees and the inflation rate from the estimated investment return rates.\rCalculate the total value of these contributions using the annuity formula.\rAdd the starting balance (factoring in the annual growth rate).\r\rIn a single formula, it looks like this:\n\\(B_n = (B_0 \\times r_{growth}^n) + (C_{annual} \\times \\frac{r_{growth}^n - 1}{r_{growth} - 1})\\)\nWhere:\n\r\\(B_n\\) is the projected balance after n years\r\\(C_{annual}\\) is the net annual contribution\r\\(r_{growth}\\) is the annual growth rate (as a multiplier; e.g., 5% returns would correspond to a 1.05 growth rate)\r\\(n\\) is the number of years from today\r\rSidenote\nIt is worth noting that there are two scenarios that I have not designed the tool to be able to handle, again for simplicity.\nInsurance costs: These could be factored into the tool manually by adding it to the fees section (e.g., additional weekly fee of \\$10). However, insurance costs will increase over your lifetime - and the rate of increase will depend largely on your personal circumstances - which makes it difficult to include in a calculator.\rStepped fee structures: Some super funds charge different fees based on your balance. To avoid overcomplicating things, I have not incorporated this into the calculator.\r\r\rExample Use Case\rTo conclude this post, I’ve included an example use case for where this tool could be helpful. Suppose that you are a fresh graduate who is about to start a new job that will pay \\$70,000 per year. This means that each year, you can expect to contribute \\$6,650 to your super (9.5% of your annual salary).\nYou currently have \\$5,000 in your super account after working some part-time jobs while studying, and you are trying to decide whether or not to change funds before you start your new job.\n\r\r\r\rOption\rRationale\rEstimated Returns*\rFlat Fees\rPercentage Fees\r\r\r\rUniSuper - Balanced\rWhen you first started working, you had no idea what superannuation was and went with the default option offered by your employer. Sticking with this option could reduce the hassle of switching.\r8.50% p.a.\r\\$96 p.a. admin fee\r0.40% investment fees, 0.06% other fees\r\rHostPlus - Indexed Balanced\rHaving read The Barefoot Investor, you felt that a compelling case had been made to invest in the index and keep fees to a minimum.\r8.40% p.a.\r\\$78 p.a. admin fee\r0.02% p.a. investment fees, 0.04% p.a. other fees\r\rAustralianSuper - Socially Aware\rYou like the idea of ‘ethical investing’ and support the ESG criteria used by AustralianSuper.\r8.23% p.a.\r\\$117 p.a. admin fee\r0.11% p.a. admin fee, 0.67% investment fee\r\r\r\r* Estimated returns based on average performance over the previous 10 years. Note that past performance may not necessarily indicate future performance.\nPutting these values into the calculator, we can see how different the projections would be over 40 years of working.\nFinal results!\n\rHostPlus Indexed Balanced: \\$998,507\rUniSuper Balanced: \\$920,839\rAustralianSuper Socially Aware: \\$788,643\r\rBased on the values we’ve inputted, it appears that HostPlus’ Indexed Balanced option would result in the highest future balance. This is not too surprising given the three options we compared had similar estimated returns, but the HostPlus option had significantly lower fees.\nAustralianSuper’s Socially Aware option performs the worst because of the 0.78% p.a. percentage fees. This makes a huge difference over the 40-year period; you would potentially end up with \\$200,000 less in super. If you really wanted to invest in an ethical super option, you would potentially want to look elsewhere for a lower-fee fund (or choose this one if you are willing to trade off the future returns).\n\rConclusion\rThe motivation behind this post was to create a tool that others might find useful in navigating their super decisions (and to teach myself some JS/HTML along the way!). In its current state, I personally find it helpful to visualise the trajectories of my future super under different potential scenarios. In saying that, the tool is by no means perfect, so I am always open to suggestions for how it can be improved!\n\r",
+  "wordCount" : "1430",
+  "inLanguage": "en",
+  "datePublished": "2020-12-19T00:00:00Z",
+  "dateModified": "2020-12-19T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Nathan Wang-Ly"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nathanwangly.github.io/post/2020-12-19-superannuation-comparison-tool/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nathan Wang-Ly",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nathanwangly.github.io/favicon/favicon.ico"
+    }
+  }
+}
+</script>
+
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    
+    <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -50,58 +110,72 @@
         }
     });
     </script>
+    
 </head>
-<body id=top>
+
+<body class="" id="top">
 <noscript>
-<style type=text/css>#theme-toggle,.top-link{display:none}</style>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
 </noscript>
-<header class=header>
-<nav class=nav>
-<div class=logo>
-<a href=https://nathanwangly.github.io/ accesskey=h title=NWL>
-<img src=/images/cow_logo.jpg alt=logo aria-label=logo height=35>NWL</a>
-<span class=logo-switches>
-</span>
-</div>
-<ul id=menu>
-<li>
-<a href=https://nathanwangly.github.io/about/ title=About>
-<span>About</span>
-</a>
-</li>
-<li>
-<a href=https://nathanwangly.github.io/cv/ title=CV>
-<span>CV</span>
-</a>
-</li>
-<li>
-<a href=https://nathanwangly.github.io/research title=Research>
-<span>Research</span>
-</a>
-</li>
-<li>
-<a href=https://nathanwangly.github.io/posts title=Posts>
-<span>Posts</span>
-</a>
-</li>
-</ul>
-</nav>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://nathanwangly.github.io/" accesskey="h" title="NWL">
+                <img src="/images/cow_logo.jpg" alt="logo" aria-label="logo"
+                    height="35">NWL</a>
+            <span class="logo-switches">
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://nathanwangly.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nathanwangly.github.io/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nathanwangly.github.io/research" title="Research">
+                    <span>Research</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nathanwangly.github.io/posts" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
-<main class=main>
-<article class=post-single>
-<header class=post-header>
-<h1 class=post-title>
-Superannuation Comparison Tool
-</h1>
-<div class=post-description>
-<i>A tool for comparing different super funds or contribution amounts.</i>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Superannuation Comparison Tool
+    </h1>
+    <div class="post-description">
+      <i>A tool for comparing different super funds or contribution amounts.</i>
+    </div>
+    <div class="post-meta">December 19, 2020&nbsp;·&nbsp;7 min
 </div>
-<div class=post-meta>December 19, 2020&nbsp;·&nbsp;7 min
-</div>
-</header>
-<div class=post-content>
-<script src=https://nathanwangly.github.io/post/2020-12-19-superannuation-comparison-tool/index_files/header-attrs/header-attrs.js></script>
-<div id=background class="section level3">
+  </header> 
+  <div class="post-content">
+<script src="https://nathanwangly.github.io/post/2020-12-19-superannuation-comparison-tool/index_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="background" class="section level3">
 <h3>Background</h3>
 <p>The idea for this tool came after I recently spent some time deliberating over my choice of superannuation fund and wondering whether the fund (and its investment option) was the right one for me. I found this process incredibly painful; the time and effort required to read through different Product Disclosure Statements left me frustrated and no closer to being confident in my choice.</p>
 <p>On top of this, I struggled to put into perspective how much the differences between funds mattered. For example:</p>
@@ -109,40 +183,42 @@ Superannuation Comparison Tool
 <li>We know that higher returns are better, but what difference does an average return of 5.5% p.a. make compared to 6.0% p.a.? Would I be willing to trade off a lower long-term return on my superannuation balance if it meant my money was allocated towards ethical investments?</li>
 <li>Likewise, some super funds charge flat fees, while others charge a percentage of your balance. How much of a difference does this make in the long run?</li>
 </ul>
-<p>With this in mind, I sought to create a tool that would help me visualise and understand the answers to these types of questions. The problem is I knew exactly what I wanted to build but no idea how to build it. I had previously dabbled in JavaScript and HTML for some of my PhD experiments, but hadn’t really needed to build something from scratch. Fortunately, I was able to draw inspiration from a <a href=https://investcalc.github.io>different calculator tool</a> I had previously come across (meaning I “borrowed” lots of its code to get me started) and went through a long process of trial-and-error to land upon a workable version!</p>
-<p>The remainder of this post dives a bit deeper into the design of the tool, but if that is not of interest, feel free to skip right ahead to the tool itself: <a href=/post/2020-12-19-superannuation-comparison-tool/index_files/super_tool.html>Superannuation Comparison Tool</a></p>
+<p>With this in mind, I sought to create a tool that would help me visualise and understand the answers to these types of questions. The problem is I knew exactly what I wanted to build but no idea how to build it. I had previously dabbled in JavaScript and HTML for some of my PhD experiments, but hadn’t really needed to build something from scratch. Fortunately, I was able to draw inspiration from a <a href="https://investcalc.github.io">different calculator tool</a> I had previously come across (meaning I “borrowed” lots of its code to get me started) and went through a long process of trial-and-error to land upon a workable version!</p>
+<p>The remainder of this post dives a bit deeper into the design of the tool, but if that is not of interest, feel free to skip right ahead to the tool itself: <a href="/post/2020-12-19-superannuation-comparison-tool/index_files/super_tool.html">Superannuation Comparison Tool</a></p>
 </div>
-<div id=about-the-tool class="section level3">
+<div id="about-the-tool" class="section level3">
 <h3>About the Tool</h3>
 <p>The main challenge in building this tool was balancing accuracy and flexibility. I wanted to build a general-purpose tool that could be used by most people (who might vary in how frequently they contribute to their super) but could also compare between different superannuation funds (which might vary in fee structures). Achieving this goal meant that I needed to make a series of simplifying assumptions, meaning the final projected balance may not be exactly accurate; however, the hope is that the tool would at least facilitate a relative comparison of super options.</p>
 <p><strong>Assumptions that I’ve made (and the thought process behind them)</strong></p>
 <table>
-<col width=52%>
-<col width=47%>
+<colgroup>
+<col width="52%" />
+<col width="47%" />
+</colgroup>
 <thead>
-<tr class=header>
+<tr class="header">
 <th>Assumption</th>
 <th>Rationale</th>
 </tr>
 </thead>
 <tbody>
-<tr class=odd>
+<tr class="odd">
 <td>Contribution amounts remain consistent across your working life.</td>
 <td>This is unlikely to be the case, as your contributions will (hopefully) increase as your salary increases further into your career. However, making this assumption keeps the calculation simple. If you were to enter your current contributions (with the expectation that your income will increase in the future), then you can think of the calculated result as the lower bound projection.</td>
 </tr>
-<tr class=even>
+<tr class="even">
 <td>Investment returns are calculated once per year at the end of the year.</td>
 <td>While this will lead to systematic underestimation of super balances (compared to a daily compounding rate), it avoids the need for complicated calculations when users have contributions and fees of varying frequencies (e.g., monthly contributions and weekly flat fees).</td>
 </tr>
-<tr class=odd>
+<tr class="odd">
 <td>Percentage fees are applied at the same time as your investment returns are calculated. In other words, they are deducted from the inputted estimated return to calculate the growth rate.</td>
 <td>Similar to above, it keeps the calculation simple. It also avoids instances where having the same investment return rate and fee rate actually lead to a slightly smaller balance (e.g., 10% returns and 10% fees would lead to \$100 <span class="math inline">\(\times\)</span> 1.1 <span class="math inline">\(\times\)</span> 0.9 = \$99).</td>
 </tr>
-<tr class=even>
+<tr class="even">
 <td>All super contributions fall under the concessional cap (i.e., they are taxed at 15%).</td>
 <td>This is true for the first $25,000 of contributions made per financial year; otherwise, they are taxed at the user’s marginal rate. That would overly complicate things as I don’t know your tax situation! Fortunately (or unfortunately?), this shouldn’t be an issue for <em>most</em> Australians as you would need to be earning around \$260,000 (\$25,000 <span class="math inline">\(\div\)</span> 9.5%) to reach the cap, assuming no voluntary contributions are made.</td>
 </tr>
-<tr class=odd>
+<tr class="odd">
 <td>Inflation occurs at an average rate of 2% p.a.</td>
 <td>Allows the tool to estimate balances in real terms and keeps things simple!</td>
 </tr>
@@ -150,7 +226,7 @@ Superannuation Comparison Tool
 </table>
 <p><strong>Calculating projected balances</strong></p>
 <p>After making these assumptions, the underlying formula to calculate a projected balance becomes fairly straightforward.</p>
-<ol style=list-style-type:decimal>
+<ol style="list-style-type: decimal">
 <li>Calculate the total amount of contributions made per year based on the amount and frequency.</li>
 <li>Tax this contribution by 15% and then subtract any flat fees (annualised). This gives the <em>net annual contribution amount</em>.</li>
 <li>Calculate the <em>annual growth rate</em> by subtracting any percentage fees and the inflation rate from the estimated investment return rates.</li>
@@ -168,23 +244,25 @@ Superannuation Comparison Tool
 </ul>
 <p><strong>Sidenote</strong></p>
 <p>It is worth noting that there are two scenarios that I have not designed the tool to be able to handle, again for simplicity.</p>
-<ol style=list-style-type:decimal>
+<ol style="list-style-type: decimal">
 <li><em>Insurance costs:</em> These could be factored into the tool manually by adding it to the fees section (e.g., additional weekly fee of \$10). However, insurance costs will increase over your lifetime - and the rate of increase will depend largely on your personal circumstances - which makes it difficult to include in a calculator.</li>
 <li><em>Stepped fee structures:</em> Some super funds charge different fees based on your balance. To avoid overcomplicating things, I have not incorporated this into the calculator.</li>
 </ol>
 </div>
-<div id=example-use-case class="section level3">
+<div id="example-use-case" class="section level3">
 <h3>Example Use Case</h3>
 <p>To conclude this post, I’ve included an example use case for where this tool could be helpful. Suppose that you are a fresh graduate who is about to start a new job that will pay \$70,000 per year. This means that each year, you can expect to contribute \$6,650 to your super (9.5% of your annual salary).</p>
 <p>You currently have \$5,000 in your super account after working some part-time jobs while studying, and you are trying to decide whether or not to change funds before you start your new job.</p>
 <table>
-<col width=10%>
-<col width=15%>
-<col width=31%>
-<col width=15%>
-<col width=26%>
+<colgroup>
+<col width="10%" />
+<col width="15%" />
+<col width="31%" />
+<col width="15%" />
+<col width="26%" />
+</colgroup>
 <thead>
-<tr class=header>
+<tr class="header">
 <th>Option</th>
 <th>Rationale</th>
 <th>Estimated Returns*</th>
@@ -193,21 +271,21 @@ Superannuation Comparison Tool
 </tr>
 </thead>
 <tbody>
-<tr class=odd>
+<tr class="odd">
 <td>UniSuper - Balanced</td>
 <td>When you first started working, you had no idea what superannuation was and went with the default option offered by your employer. Sticking with this option could reduce the hassle of switching.</td>
 <td>8.50% p.a.</td>
 <td>\$96 p.a. admin fee</td>
 <td>0.40% investment fees, 0.06% other fees</td>
 </tr>
-<tr class=even>
+<tr class="even">
 <td>HostPlus - Indexed Balanced</td>
 <td>Having read The Barefoot Investor, you felt that a compelling case had been made to invest in the index and keep fees to a minimum.</td>
 <td>8.40% p.a.</td>
 <td>\$78 p.a. admin fee</td>
 <td>0.02% p.a. investment fees, 0.04% p.a. other fees</td>
 </tr>
-<tr class=odd>
+<tr class="odd">
 <td>AustralianSuper - Socially Aware</td>
 <td>You like the idea of ‘ethical investing’ and support the ESG criteria used by AustralianSuper.</td>
 <td>8.23% p.a.</td>
@@ -218,8 +296,8 @@ Superannuation Comparison Tool
 </table>
 <p><em>* Estimated returns based on average performance over the previous 10 years. Note that past performance may not necessarily indicate future performance.</em></p>
 <p>Putting these values into the calculator, we can see how different the projections would be over 40 years of working.</p>
-<p><img src=/post/2020-12-19-superannuation-comparison-tool/index_files/calculation_input.png></p>
-<p><img src=/post/2020-12-19-superannuation-comparison-tool/index_files/projected_balances.png></p>
+<p><img src="/post/2020-12-19-superannuation-comparison-tool/index_files/calculation_input.png" /></p>
+<p><img src="/post/2020-12-19-superannuation-comparison-tool/index_files/projected_balances.png" /></p>
 <p><strong>Final results!</strong></p>
 <ul>
 <li>HostPlus Indexed Balanced: \$998,507</li>
@@ -229,35 +307,81 @@ Superannuation Comparison Tool
 <p>Based on the values we’ve inputted, it appears that HostPlus’ Indexed Balanced option would result in the highest future balance. This is not too surprising given the three options we compared had similar estimated returns, but the HostPlus option had significantly lower fees.</p>
 <p>AustralianSuper’s Socially Aware option performs the worst because of the 0.78% p.a. percentage fees. This makes a huge difference over the 40-year period; you would potentially end up with \$200,000 less in super. If you really wanted to invest in an ethical super option, you would potentially want to look elsewhere for a lower-fee fund (or choose this one if you are willing to trade off the future returns).</p>
 </div>
-<div id=conclusion class="section level3">
+<div id="conclusion" class="section level3">
 <h3>Conclusion</h3>
 <p>The motivation behind this post was to create a tool that others might find useful in navigating their super decisions (and to teach myself some JS/HTML along the way!). In its current state, I personally find it helpful to visualise the trajectories of my future super under different potential scenarios. In saying that, the tool is by no means perfect, so I am always open to suggestions for how it can be improved!</p>
 </div>
-</div>
-<footer class=post-footer>
-<nav class=paginav>
-<a class=next href=https://nathanwangly.github.io/post/2020-12-01-how-consumers-budget/>
-<span class=title>Next Page »</span>
-<br>
-<span>How Consumers Budget</span>
-</a>
+
+
+  </div>
+  <footer class="post-footer">
+<nav class="paginav">
+  <a class="next" href="https://nathanwangly.github.io/post/2020-12-01-how-consumers-budget/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span>How Consumers Budget</span>
+  </a>
 </nav>
-</footer>
+
+  </footer>
 </article>
-</main>
-<footer class=footer>
-<span>&copy; 2021 <a href=https://nathanwangly.github.io/>Nathan Wang-Ly</a></span>
-<span>
-Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
-</span>
+    </main>
+    <footer class="footer">
+    <span>&copy; 2021 <a href="https://nathanwangly.github.io/">Nathan Wang-Ly</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
-<a href=#top aria-label="go to top" title="Go to Top (Alt + G)">
-<button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
-</button>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
 </a>
-<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
-<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
 </body>
+
 </html>
