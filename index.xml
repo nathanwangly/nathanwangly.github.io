@@ -65,23 +65,39 @@ Examples of previous work:
  Leading a program of work aimed at leveraging behavioural science insights to improve the bank’s approach to scams and fraud.</description>
     </item>
     
-    
     <item>
-      <title>Research</title>
-      <link>https://nathanwangly.github.io/research/</link>
+      <title>Everything Else</title>
+      <link>https://nathanwangly.github.io/stuff/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://nathanwangly.github.io/research/</guid>
-      <description>Published workAllowing Early Access to Retirement Savings: Lessons from Australia
-(with Ben R. Newell)
-Economic Analysis and Policy, 2022
-Web PDF
-Defaults, Disclosures, Advice and Calculators: One Size Does Not Fit All
-(with Hazel Bateman, Loretti I. Dobrescu, Ben R. Newell, and Susan Thorp)
-Journal of Behavioral and Experimental Finance, 2022
-Web PDF
-How Consumers Budget
-(with C. Yiwei Zhang, Abigail B. Sussman, and Jennifer K. Lyu)</description>
+      <guid>https://nathanwangly.github.io/stuff/</guid>
+      <description>This is the catch-all page for everything else on this site.
+Here you will find:
+My “Work” Reading List:
+Brief reviews of books I’ve read related to behavioural science, adjacent fields, and work more broadly.
+Blog Posts:
+For the rare times that there are thoughts I feel are worth sharing.
+Cat Central:
+A collection of my favourite photos of Chonkie and Bonkie - my two British Shorthair cats.</description>
+    </item>
+    
+    <item>
+      <title>Meet Chonkie and Bonkie</title>
+      <link>https://nathanwangly.github.io/cats/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nathanwangly.github.io/cats/</guid>
+      <description>Coming soon!</description>
+    </item>
+    
+    
+    <item>
+      <title>Reading List</title>
+      <link>https://nathanwangly.github.io/books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nathanwangly.github.io/books/</guid>
+      <description>Coming soon!</description>
     </item>
     
   </channel>
