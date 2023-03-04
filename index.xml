@@ -113,7 +113,7 @@ My “Work” Reading List:
 Brief reviews of books I’ve read related to behavioural science, adjacent fields, and work more broadly.
 Blog Posts:
 For the rare times that there are thoughts I feel are worth sharing.
-Cat Central:
+MeowTown:
 A collection of my favourite photos of Chonkie and Bonkie - my two British Shorthair cats.</description>
     </item>
     
@@ -144,15 +144,6 @@ Examples of previous work:
     </item>
     
     <item>
-      <title>Meet Chonkie and Bonkie</title>
-      <link>https://nathanwangly.github.io/cats/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nathanwangly.github.io/cats/</guid>
-      <description>Coming soon!</description>
-    </item>
-    
-    <item>
       <title>Other Books</title>
       <link>https://nathanwangly.github.io/books/misc-reading-list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -179,6 +170,16 @@ The list is organised by rating (highest to lowest). The same rating system appl
 I enjoy reading books that are directly related to behavioural science, related to an adjacent field (e.g., design thinking, data science), or that share interesting ideas and perspectives.
 My goal in maintaining this list is to motivate myself to note my thoughts after each book, which I can always come back to reference in the future.
 2023 Books Below, you’ll find the books I’m currently reading or have read this year.</description>
+    </item>
+    
+    <item>
+      <title>Welcome to MeowTown</title>
+      <link>https://nathanwangly.github.io/cats/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nathanwangly.github.io/cats/</guid>
+      <description>    My favourite pics of Chonkie (cream bicolour) and Bonkie (blue bicolour).
+ {&#34;x&#34;:{&#34;path&#34;:[&#34;/images/cats/chonkie_nowork.jpg&#34;,&#34;/images/cats/chonkie_cattower.jpg&#34;,&#34;/images/cats/chonkie_sleepchair2.jpg&#34;,&#34;/images/cats/chonkie_sleepchair.jpg&#34;,&#34;/images/cats/chonkie_lifechoices.jpg&#34;,&#34;/images/cats/chonkie_inabox.jpg&#34;,&#34;/images/cats/chonkie_day1.jpg&#34;],&#34;caption&#34;:[&#34;Upset with me for focusing on work and not her&#34;,&#34;Busy exploring her new cat tower&#34;,&#34;Fell asleep after thinking too hard&#34;,&#34;One of her favourite sleeping spots&#34;,&#34;Conserving her energy&#34;,&#34;Claiming a cardboard box as hers&#34;,&#34;Our first day with Chonkie&#34;],&#34;dim&#34;:&#34;200px&#34;,&#34;gap&#34;:&#34;6px&#34;,&#34;shuffle&#34;:false,&#34;type&#34;:&#34;grid&#34;},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]} </description>
     </item>
     
   </channel>
