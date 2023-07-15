@@ -49,20 +49,6 @@ I’m also in my final year of my PhD at UNSW Sydney, with my research centred a
     </item>
     
     <item>
-      <title>Cool Stuff</title>
-      <link>https://nathanwangly.github.io/stuff/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nathanwangly.github.io/stuff/</guid>
-      <description>This is the catch-all page for everything else on this site.
-Here you will find:
-My “Work” Reading List:
-Ratings of books I’ve read on about behavioural science or related fields.
-MeowTown:
-A collection of my favourite photos of Chonkie and Bonkie - my two British Shorthair cats.</description>
-    </item>
-    
-    <item>
       <title>CV</title>
       <link>https://nathanwangly.github.io/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -70,7 +56,7 @@ A collection of my favourite photos of Chonkie and Bonkie - my two British Short
       <guid>https://nathanwangly.github.io/cv/</guid>
       <description>Click here for a PDF copy of my most recently updated resume.
 Last updated: Mar 2023
-EmploymentSenior Behavioural Scientist, ANZ
+ExperienceSenior Behavioural Scientist, ANZ
 Feb 2023 - Present
 Behavioural Scientist, Commonwealth Bank of Australia
 Nov 2018 - Feb 2023
@@ -79,29 +65,6 @@ Examples of previous work:
 Leading a program of work aimed at leveraging behavioural science insights to improve the bank’s approach to scams and fraud.</description>
     </item>
     
-    <item>
-      <title>For Bubby</title>
-      <link>https://nathanwangly.github.io/bub/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nathanwangly.github.io/bub/</guid>
-      <description>A page just for you :)</description>
-    </item>
-    
-    
-    <item>
-      <title>Reading List</title>
-      <link>https://nathanwangly.github.io/books/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nathanwangly.github.io/books/</guid>
-      <description>Below, you will find a list of books I have read related to behavioural science, adjacent fields, or work more generally.
-At the bottom of this page, you’ll also find an explainer on my very rigorous rating system.
-  Currently Reading   Mixed Signals: How Incentives Really Work
-Uri Gneezy
-ABC of Behaviour Change Theories: An Essential Resource for Researchers, Policy Makers and Practitioners
-Susan Michie, Robert West, Rona Campbell, Jamie Brown, Heather Gainforth</description>
-    </item>
     
     <item>
       <title>Research</title>
@@ -109,29 +72,21 @@ Susan Michie, Robert West, Rona Campbell, Jamie Brown, Heather Gainforth</descri
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nathanwangly.github.io/research/</guid>
-      <description>Nudges for People who Think
+      <description>How Income Volatility Influences Saving Decisions: Evidence from the Lab
+(with Ben R. Newell)
+in prep
+Web PDF
+Uncertain Goals and Savings Adequacy: Contrasting Economic and Psychological Perspectives
+(with Ben R. Newell)
+in prep
+Web PDF
+Nudges for People who Think
 (with Aba Szollosi and Ben R. Newell)
 in prep
 Web PDF
 Allowing Early Access to Retirement Savings: Lessons from Australia
 (with Ben R. Newell)
-Economic Analysis and Policy, 2022
-Web PDF
-Defaults, Disclosures, Advice and Calculators: One Size Does Not Fit All
-(with Hazel Bateman, Loretti I. Dobrescu, Ben R. Newell, and Susan Thorp)
-Journal of Behavioral and Experimental Finance, 2022
-Web PDF
-How Consumers Budget</description>
-    </item>
-    
-    <item>
-      <title>Welcome to MeowTown</title>
-      <link>https://nathanwangly.github.io/cats/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nathanwangly.github.io/cats/</guid>
-      <description>My favourite pics of Chonkie (female cream bicolour) and Bonkie (male blue bicolour).
- {&#34;x&#34;:{&#34;path&#34;:[&#34;/images/cats/bonkie_sleepface.jpg&#34;,&#34;/images/cats/chonkbonk_balcony.jpg&#34;,&#34;/images/cats/bonkie_meerkat.jpg&#34;,&#34;/images/cats/bonkie_funnyface.jpg&#34;,&#34;/images/cats/bonkie_deepsleep.jpg&#34;,&#34;/images/cats/chonkie_sassy.jpg&#34;,&#34;/images/cats/chonkbonk_shower.jpg&#34;,&#34;/images/cats/chonkie_corestrength.jpg&#34;,&#34;/images/cats/bonkie_keyboard.jpg&#34;,&#34;/images/cats/chonkbonk_bedsheets.jpg&#34;,&#34;/images/cats/chonkie_rubs.jpg&#34;,&#34;/images/cats/chonkie_catbasket.jpg&#34;,&#34;/images/cats/chonkbonk_sharechair.jpg&#34;,&#34;/images/cats/chonkbonk_wrestling.jpg&#34;,&#34;/images/cats/chonkie_weirdposition2.jpg&#34;,&#34;/images/cats/chonkie_annoyed.jpg&#34;,&#34;/images/cats/chonkbonk_sleepchair.jpg&#34;,&#34;/images/cats/chonkie_weight.jpg&#34;,&#34;/images/cats/bonkie_confused.jpg&#34;,&#34;/images/cats/bonkie_crazyface.jpg&#34;,&#34;/images/cats/bonkie_weirdposition.jpg&#34;,&#34;/images/cats/chonkie_cattunnel.jpg&#34;,&#34;/images/cats/chonkbonk_annoyingbonk.jpg&#34;,&#34;/images/cats/bonkie_laundry.jpg&#34;,&#34;/images/cats/chonkbonk_bestfriends.jpg&#34;,&#34;/images/cats/chonkie_bookcase.jpg&#34;,&#34;/images/cats/chonkbonk_bedledge.jpg&#34;,&#34;/images/cats/bonkie_rainyday.jpg&#34;,&#34;/images/cats/bonkie_cattower.jpg&#34;,&#34;/images/cats/chonkbonk_sleeptogether.jpg&#34;,&#34;/images/cats/bonkie_sleeppaw.jpg&#34;,&#34;/images/cats/chonkie_weirdposition.jpg&#34;,&#34;/images/cats/chonkie_baby.jpg&#34;,&#34;/images/cats/bonkie_sleepy.jpg&#34;,&#34;/images/cats/bonkie_sploot.jpg&#34;,&#34;/images/cats/chonkie_sad.jpg&#34;,&#34;/images/cats/chonkbonk_cattower.jpg&#34;,&#34;/images/cats/bonkie_catwand.jpg&#34;,&#34;/images/cats/bonkie_welcome.jpg&#34;,&#34;/images/cats/chonkie_sleepy.jpg&#34;,&#34;/images/cats/chonkie_duckbox.jpg&#34;,&#34;/images/cats/chonkie_hippo.jpg&#34;,&#34;/images/cats/chonkie_deepthought.jpg&#34;,&#34;/images/cats/chonkie_nowork2.jpg&#34;,&#34;/images/cats/chonkie_cattower2.jpg&#34;,&#34;/images/cats/chonkie_unhelpful.jpg&#34;,&#34;/images/cats/chonkie_long.jpg&#34;,&#34;/images/cats/chonkie_peoplewatch.jpg&#34;,&#34;/images/cats/chonkie_avocado.jpg&#34;,&#34;/images/cats/chonkie_nowork.jpg&#34;,&#34;/images/cats/chonkie_cattower.jpg&#34;,&#34;/images/cats/chonkie_sleepchair2.jpg&#34;,&#34;/images/cats/chonkie_sleepchair.jpg&#34;,&#34;/images/cats/chonkie_lifechoices.jpg&#34;,&#34;/images/cats/chonkie_inabox.jpg&#34;,&#34;/images/cats/chonkie_day1.jpg&#34;],&#34;caption&#34;:[&#34;Always making the cutest sleep faces&#34;,&#34;Impatiently waiting for the balcony renovations to be over&#34;,&#34;Doing his best meerkat impression&#34;,&#34;Looking silly while sleeping&#34;,&#34;Deep deep asleep&#34;,&#34;Being her sassy self&#34;,&#34;Checking up on each other after a traumatic bath&#34;,&#34;Showing off her core strength&#34;,&#34;His way of demanding attention&#34;,&#34;Providing moral support while the bedsheets are changed&#34;,&#34;Kindly requesting belly rubs&#34;,&#34;Proving to us she isn&#39;t too big for the cat basket&#34;</description>
+Economic Analysis and Policy, 2022</description>
     </item>
     
   </channel>
