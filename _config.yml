@@ -1,0 +1,10 @@
+title: Your Name
+email: your@email.com
+description: Personal website and blog.
+baseurl: "" 
+url: "https://yourusername.github.io"
+
+# Build settings
+remote_theme: pages-themes/minimal@v0.2.0 # A pre-built minimalist starter
+plugins:
+  - jekyll-feed
