@@ -3,11 +3,18 @@ layout: default
 title: Home
 ---
 
-![Profile Picture](assets/images/profile.jpg)
+<div class="home-content">
 
-## Hello, I'm [Your Name]
-I am a builder and writer based in [City]. 
+  <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Profile Picture" class="profile-pic">
 
-- [GitHub](https://github.com/yourusername)
-- [Twitter/X](https://twitter.com/yourusername)
-- [LinkedIn](https://linkedin.com/in/yourusername)
+  <h1>Hi, I'm [Your Name]</h1>
+
+  <p>I am a [Your Profession] based in [Location]. I spend my time building projects and writing about the intersection of technology and design.</p>
+
+  <ul class="social-links">
+    <li><a href="https://linkedin.com/in/yourusername">LinkedIn</a></li>
+    <li><a href="https://github.com/yourusername">GitHub</a></li>
+    <li><a href="mailto:your@email.com">Email</a></li>
+  </ul>
+
+</div>
