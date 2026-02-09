@@ -1,10 +1,9 @@
-title: Your Name
-email: your@email.com
-description: Personal website and blog.
+title: Nathan Wang-Ly
+email: nathanwangly@gmail.com
+description: Personal website
 baseurl: "" 
-url: "https://yourusername.github.io"
+url: "https://nathanwangly.github.io"
 
 # Build settings
-remote_theme: pages-themes/minimal@v0.2.0 # A pre-built minimalist starter
 plugins:
   - jekyll-feed
