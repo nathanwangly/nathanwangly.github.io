@@ -1,0 +1,55 @@
+work:
+- title: Online Program Director
+  company: UNSW
+  years: 2023 — Present
+  date_end: 9999
+  description: 
+    - Leading development of online postgraduate programs in Business Psychology and Climate Risk
+    - Operating as a hybrid Academic/Product Manager to ensure programs are intellectually rigorous, commercially viable, and aligned with industry demand
+
+- title: Behavioural Science Consultant
+  company: Independent Consulting
+  years: 2025 — Present
+  date_end: 9999
+  description: 
+    - Partnering with organisations to apply psychological insights to product and people challenges
+    - <b>Irrational Labs:</b> Senior Behavioural Scientist (2025 — Present)
+
+- company: ANZ
+  date_end: 2025
+  roles:
+    - title: Director, Customer Decision Science
+      years: 2024 — 2025
+      description:
+        - Led a cross-functional team of 8 specialists across behavioural science, analytics, and experimentation
+        - Scaled evidence-based decision making by developing financial health metrics and embedding behavioural insights into core product design
+        - Oversaw strategic initiatives to mature the bank's experimentation culture and long-term financial wellbeing strategy
+    - title: Lead Behavioural Scientist
+      years: 2023 - 2024
+      description:
+        - Senior individual contributor role bridging behavioural science, UX research, and product innovation
+
+- title: Manager, Behavioural Science
+  company: Commonwealth Bank of Australia
+  years: 2018 — 2023
+  date_end: 2023
+  description: 
+    - Delivered end-to-end behavioural interventions—from problem diagnosis and design to large-scale randomized controlled trials (RCTs)
+    - Co-designed an internal Behavioural Design course for Product Managers in partnership with UTS
+    - Managed research collaborations between academic partners and industry stakeholders to translate theory into practice
+
+education:
+- title: PhD in Psychology
+  company: University of New South Wales
+  years: 2020 — 2023
+  date_end: 2023
+  description: 
+    - Received Dean's Award for Outstanding PhD Theses (top 10%)
+    - "Thesis title: <i>Saving decisions under uncertainty</i>"
+
+- title: Bachelor of Psychology (Honours)
+  company: University of New South Wales
+  years: 2015 — 2018
+  date_end: 2018
+  description: 
+    - Graduated with First Class Honours
