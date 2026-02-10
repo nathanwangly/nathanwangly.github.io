@@ -45,6 +45,33 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+.hero-pic {
+  width: 70%;           
+  max-width: 800px; 
+  height: auto;
+  display: block;
+  margin-left: auto; 
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 800px; /* Match this to your image's max-width */
+  margin: 0 auto 1.5rem auto;
+  text-align: center; /* Centers the caption text */
+}
+
+.image-container figcaption {
+  font-size: 0.85rem;    /* Makes it small */
+  font-style: italic;    /* Makes it italics */
+  color: #666;           /* A soft grey */
+  margin-top: -0.5rem;    /* Small gap between image and text */
+  line-height: 1.4;
+}
+
 .home-content {
   text-align: center; 
 }

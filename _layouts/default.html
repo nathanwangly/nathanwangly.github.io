@@ -21,5 +21,20 @@
     <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
   </footer>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('.secure-email').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const user = this.getAttribute('data-user');
+          const domain = this.getAttribute('data-domain');
+          if (user && domain) {
+            window.location.href = `mailto:${user}@${domain}`;
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
