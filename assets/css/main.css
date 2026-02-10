@@ -1,0 +1,241 @@
+/* Minimalist Base */
+body {
+  /* Light neutral background */
+  background-color: #f9f9f7; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+1}
+
+.nav-link {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover { 
+  color: #000; 
+}
+
+/* Profile Picture Logic */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.home-content {
+  text-align: center; 
+}
+
+/* Update the H1 inside home-content to remove default browser margin */
+.home-content h1 {
+  margin-top: 0;        /* Removes top gap near profile pic */
+  margin-bottom: 0.5rem; /* Precise control over gap to subtitle */
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.home-subtitle {
+  color: #888;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0;        /* Reset this; the H1 margin-bottom now handles the gap */
+  margin-bottom: 1.5rem; /* Creates space between subtitle and social buttons */
+}
+
+/* Ensure the bio text itself is styled correctly as a class */
+.home-bio {
+  max-width: 550px;
+  margin: 3rem auto;       
+  text-align: left;        
+  display: block;
+  font-size: 1.1rem;      
+  line-height: 1.8;       
+  color: #555;
+}
+
+.home-bio p {
+  margin: 0;
+  font-size: 1.1rem;       /* Slightly larger for better presence as solo text */
+  line-height: 1.8;       /* Increased line-height to reduce mental load/clutter */
+  color: #555;
+}
+
+/* If you still use multiple paragraphs, this adds space between them */
+.home-bio p + p {
+  margin-top: 1.5rem;
+}
+
+.social-links {
+  margin-top: 0.75rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows buttons to wrap on mobile screens */
+  gap: 12px;       /* Tightens the space between buttons */
+}
+
+.social-links li {
+  display: inline-block;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 500;
+  
+  /* The "Button" Styling */
+  background-color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 50px; /* Makes them pill-shaped */
+  border: 1px solid #e1e1e1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* Hover Effect */
+.social-links a:hover {
+  background-color: #f0f0f0;
+  color: #000;
+  border-color: #d1d1d1;
+  transform: translateY(-1px); /* Subtle lift effect */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.social-links i {
+  font-size: 1rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 4rem;
+}
+
+/* Styling for Information Pages (About, Research, etc.) */
+.page-header {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  color: #222;
+  margin: 0;
+}
+
+.content-area h2 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-top: 2.5rem;
+  border-left: 3px solid #666; /* Subtle accent */
+  padding-left: 1rem;
+}
+
+.content-area p {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.content-area ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.content-area li {
+  margin-bottom: 0.5rem;
+}
+
+/* Container for each paper entry */
+.pub-item {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.pub-type {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.pub-title {
+  font-size: 1.1rem;
+  color: #222;
+  display: block;
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.pub-journal {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* Row for Web, PDF, and Abstract Toggle */
+.pub-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+/* Minimalist Text-Based Links */
+.text-link {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.2s ease;
+}
+
+.text-link:hover {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+/* Year Header Adjustments */
+.year-header {
+  margin: 3rem 0 1.2rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111;
+}

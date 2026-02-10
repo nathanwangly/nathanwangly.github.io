@@ -7,9 +7,9 @@ title: Home
 
   <img src="{{ '/assets/images/profile_photo.jpg' | relative_url }}" alt="Profile Picture" class="profile-pic">
 
-  <h1>Hi, I'm Nathan Wang-Ly</h1>
-  
-  <p class="home-subtitle">Online Program Director @ UNSW | Applied Behavioural Scientist</p>
+  <h1>Nathan Wang-Ly</h1>
+
+  <p class="home-subtitle">Behavioural science, design, and everyday problems</p>
 
   <ul class="social-links">
     <li><a href="https://linkedin.com/in/nathanwangly"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
@@ -17,13 +17,6 @@ title: Home
     <li><a href="https://github.com/nathanwangly"><i class="fab fa-github"></i> GitHub</a></li>
   </ul>
 
-  <div class="home-bio">
-  <h3>About Me</h3>
-  <p>I am currently an Online Program Director at UNSW, leading the development of postgraduate programs in Business Psychology and Climate Risk.</p>
-
-  <p>With a background at the intersection of behavioural science and banking, I previously led the Customer Decision Science team at ANZ. Today, I balance my academic work with independent behavioural science consulting, helping organisations apply psychological insights to complex challenges.</p>
-
-  <p>In my spare time, I enjoy running, lazing at home with my two British Shorthair cats (Chonkie & Bonkie), and tinkering on niche passion projects when inspiration strikes.</p>
-  </div>
+  <p class="home-bio">I’m a behavioural scientist who is interested in making life a little less complicated. This is a space to share personal projects and thoughts when inspiration strikes.</p>
 
 </div>
