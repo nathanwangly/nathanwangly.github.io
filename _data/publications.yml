@@ -1,0 +1,49 @@
+academic: 
+- title: "Nudges for people who think"
+  year: 2025
+  authors: "Szollosi A., Newell, B. R., & Wang-Ly, N."
+  journal: "Psychonomic Bulletin & Review"
+  link_web: "https://link.springer.com/article/10.3758/s13423-024-02613-1"
+  link_pdf: "/assets/pdfs/Nudges_for_Thinkers_Published.pdf"
+
+- title: "Income volatility and saving decisions: Experimental evidence"
+  year: 2024
+  authors: "Wang-Ly, N. & Newell, B. R."
+  journal: "Journal of Behavioral and Experimental Finance"
+  link_web: "https://doi.org/10.1016/j.jbef.2024.100941"
+  link_pdf: "/assets/pdfs/Income_Volatility_Published.pdf"
+
+- title: "How consumers budget"
+  year: 2022
+  authors: "Zhang, C. Y., Sussman, A. B., Wang-Ly, N., & Lyu, J. K."
+  journal: "Journal of Economic Behavior and Organization"
+  link_web: "https://doi.org/10.1016/j.jebo.2022.09.025"
+  link_pdf: "/assets/pdfs/How_Consumers_Budget_Published.pdf"
+
+- title: "Allowing early access to retirement savings: Lessons from Australia"
+  year: 2022
+  authors: "Wang-Ly, N. & Newell, B.R."
+  journal: "Economic Analysis and Policy"
+  link_web: "https://doi.org/10.1016/j.eap.2022.07.002"
+  link_pdf: "/assets/pdfs/Early_Release_Super_Published.pdf"
+
+- title: "Defaults, disclosures, advice and calculators: One size does not fit all"
+  year: 2022
+  authors: "Wang-Ly, N., Bateman, H., Dobrescu, I., Newell, B. R., & Thorp, S."
+  journal: "Journal of Behavioral and Experimental Finance"
+  link_web: "https://doi.org/10.1016/j.jbef.2022.100690"
+  link_pdf: "/assets/pdfs/Super_Complexity_Published.pdf"
+
+other: 
+- type: "News Article"
+  title: "Not all beer and pokies: what Australians did with their super when COVID struck"
+  year: 2022
+  authors: "Wang-Ly, N., & Newell, B. R."
+  link_web: "https://theconversation.com/not-all-beer-and-pokies-what-australians-did-with-their-super-when-covid-struck-190911"
+
+- type: "Industry Report"
+  title: "Using tax refunds for debt repayment: A study with Commonwealth Bank of Australia"
+  year: 2020
+  authors: "Johnson, H., & Wang-Ly, N."
+  link_web: "https://finhealthnetwork.org/research/financial-health-solutions-using-tax-refunds-for-debt-repayment/"
+  link_pdf: "/assets/pdfs/Tax_for_Debt_Repayments_Published.pdf"
