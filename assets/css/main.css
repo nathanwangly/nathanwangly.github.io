@@ -33,6 +33,11 @@ body {
   color: #000; 
 }
 
+.nav-link.active {
+  color: #000;
+  border-bottom: 2px solid #000; /* Subtle underline for the current page */
+}
+
 /* Profile Picture Logic */
 .profile-pic {
   width: 180px;

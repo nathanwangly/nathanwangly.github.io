@@ -1,7 +1,7 @@
 <nav class="site-nav">
-  <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
-  <a href="{{ '/about' | relative_url }}" class="nav-link">About</a>
-  <a href="{{ '/cv' | relative_url }}" class="nav-link">CV</a>
-  <a href="{{ '/research' | relative_url }}" class="nav-link">Research</a>
-  <a href="{{ '/projects' | relative_url }}" class="nav-link">Projects</a>
+  <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
+  <a href="{{ '/about' | relative_url }}" class="nav-link {% if page.url contains 'about' %}active{% endif %}">About</a>
+  <a href="{{ '/cv' | relative_url }}" class="nav-link {% if page.url contains 'cv' %}active{% endif %}">CV</a>
+  <a href="{{ '/research' | relative_url }}" class="nav-link {% if page.url contains 'research' %}active{% endif %}">Research</a>
+  <a href="{{ '/projects' | relative_url }}" class="nav-link {% if page.url contains 'projects' %}active{% endif %}">Projects</a>
 </nav>
