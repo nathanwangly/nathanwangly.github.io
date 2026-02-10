@@ -314,3 +314,15 @@ footer {
   padding-left: 1.2rem;
   list-style-type: disc;
 }
+
+@media (max-width: 480px) {
+  .cv-header {
+    flex-direction: column; /* Stacks title and date vertically */
+    align-items: flex-start; /* Aligns them to the left */
+    gap: 4px; /* Creates that buffer/space between them */
+  }
+
+  .cv-years {
+    white-space: normal; /* Allows date to wrap if it's very long */
+  }
+}
