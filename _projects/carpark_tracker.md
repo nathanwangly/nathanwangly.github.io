@@ -6,9 +6,12 @@ permalink: /projects/parknride-tracker/
 
 <link rel="stylesheet" href="{{ '/assets/css/carpark_tracker.css' | relative_url }}">
 
+
+
 <div class="tracker-intro">
     <p>This tool predicts when Sydney's Park&Ride car parks typically fill up based on historical data. Select a car park and day below to plan your commute.</p>
     <p>For real-time availability data, visit the <a href="https://transportnsw.info/travel-info/ways-to-get-around/drive/parking/transport-parkride-car-parks">Transport for NSW website.</a></p>
+    <p><b><i>Disclaimer: Data only started being collected in mid-Feb 2026, so it may take at least a few weeks to get useful predictions.</i></b></p>
 </div>
 
 <div class="tracker-container">
@@ -70,7 +73,7 @@ permalink: /projects/parknride-tracker/
     </div>
     <div class="footer-column">
         <h4>Disclaimer</h4>
-        <p>Data is provided for informational purposes only. Factors like special events, trackwork, or weather can significantly impact daily availability. For more on this tool, check out the <a href="{% post_url 2026-02-12-parknride-tracker %}">project deep-dive</a>.</p>
+        <p>Data is provided for informational purposes only. Factors like special events, trackwork, or weather can significantly impact daily availability. For more on this tool, check out the <a href="{% post_url 2026-02-12-parknride-tracker %}">project deep dive</a>.</p>
     </div>
 </div>
 
