@@ -1,4 +1,8 @@
 /* Minimalist Base */
+* {
+    box-sizing: border-box;
+}
+
 body {
   /* Light neutral background */
   background-color: #fafaf8; 

@@ -71,20 +71,17 @@ label {
     gap: 6px;
 }
 
+.input-group select {
+    width: 100%;
+    box-sizing: border-box; /* Prevents select box from pushing past container */
+    max-width: 100%; /* Safety cap */
+}
+
 .facility-group { flex: 2 1 250px; }
 .day-group { flex: 1 1 150px; }
 .holiday-group { 
     flex: 0 0 auto; 
     padding-bottom: 8px; /* Fine-tune to align toggle with select boxes */
-}
-
-/* Responsive Stacking */
-@media (max-width: 768px) {
-    .controls-row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .holiday-group { padding-bottom: 0; }
 }
 
 /* Ensure the Day dropdown takes full width of its 300px container */
@@ -140,10 +137,9 @@ label {
     transform: translateX(20px);
 }
 
-.chart-box { 
-    height: 450px; 
-    margin-bottom: 30px; 
-    position: relative; 
+.chart-box {
+    height: auto; 
+    min-height: 300px; /* Keep some height for the canvas */
 }
 
 /* Overview Card Styling */
@@ -227,9 +223,9 @@ label {
 
 #noDataCard {
     display: none; 
-    position: absolute; 
+    position: relative; 
     top: 0; left: 0; 
-    width: 100%; height: 20%; 
+    width: 100%; height: auto; 
     align-items: center; justify-content: center; 
     background: #f9fafb; 
     border: 2px dashed #d1d5db; 
@@ -333,9 +329,39 @@ label {
 }
 
 /* Mobile Responsive Footer */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+    /* 1. Stack the controls (Car Park, Day, Holiday) */
+    .controls-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px; /* Tighter spacing for mobile */
+    }
+
+    .facility-group, .day-group {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .holiday-group {
+        padding-bottom: 0;
+        margin-top: 8px;
+    }
+
+    /* 2. Fix the Footer Grid */
     .tracker-footer {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr; /* Stack the two columns */
+        gap: 24px;
+        padding: 0 16px;
+    }
+
+    /* 3. Adjust the Chart Height for smaller screens */
+    .chart-box {
+        height: 300px; /* Shorter height so it fits on phone screens */
+    }
+
+    /* 4. Ensure Intro text isn't too large */
+    .tracker-intro {
+        font-size: 1rem;
+        padding: 0 10px;
     }
 }

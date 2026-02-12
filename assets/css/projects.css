@@ -26,9 +26,11 @@
 /* --- Typography & Header --- */
 .project-meta-row {
     display: flex;
+    justify-content: flex-start; /* Ensure items stay left */
     align-items: center;
-    gap: 10px;
-    margin-bottom: 20px; 
+    gap: 8px;
+    margin-bottom: 12px; 
+    flex-wrap: wrap; /* Allow badge to wrap on very small screens */
 }
 
 .project-tag {
@@ -148,7 +150,8 @@
     }
     
     .btn {
-        justify-content: center; /* Center text when stacked */
+        justify-content: center;
         width: 100%;
+        box-sizing: border-box; /* Crucial: includes padding in the 100% width */
     }
 }
