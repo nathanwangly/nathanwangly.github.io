@@ -3,6 +3,8 @@ layout: page
 title: CV
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}">
+
 ## Work
 
 {% assign work_list = site.data.experience.work %}

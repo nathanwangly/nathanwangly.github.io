@@ -1,0 +1,154 @@
+/* --- Container & Card Layout --- */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column; /* Changed to column to support buttons at bottom */
+    padding: 24px;
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+/* Static card styling for projects without any links */
+.project-card.no-links {
+    cursor: default;
+    background: #fafafa;
+    opacity: 0.9;
+}
+
+/* --- Typography & Header --- */
+.project-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px; 
+}
+
+.project-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.project-name {
+    margin-top: 0;     
+    margin-bottom: 10px;  
+    padding-top: 0;   
+    
+    font-size: 1.25rem;
+    color: #111827;
+    line-height: 1.1;  
+}
+
+.project-description {
+    margin: 0;
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* --- Status Badges (Case Insensitive Matching) --- */
+.status-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    border: 1px solid #d1d5db;
+    color: #6b7280;
+    line-height: 1;
+}
+
+/* Logic for specific statuses */
+.status-badge[data-status="Live"] {
+    color: #10b981;
+    border-color: #10b981;
+    background-color: rgba(16, 185, 129, 0.05);
+}
+
+.status-badge[data-status="Live - Testing"] {
+    color: #6366f1;
+    border-color: #6366f1;
+    background-color: rgba(99, 102, 241, 0.05);
+}
+
+.status-badge[data-status="Building"] {
+    color: #f59e0b;
+    border-color: #f59e0b;
+    background-color: rgba(245, 158, 11, 0.05);
+}
+
+.status-badge[data-status="Archived"] {
+    color: #9ca3af;
+    border-color: #d1d5db;
+    background-color: #f9fafb;
+}
+
+/* --- Action Buttons --- */
+.project-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #1f2937;
+    color: white;
+    border: 1px solid #1f2937;
+}
+
+.btn-primary:hover {
+    background-color: #374151;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 98, 255, 0.15);
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+    transform: translateY(-1px);
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 640px) {
+    .project-card {
+        padding: 20px;
+    }
+    
+    .project-actions {
+        flex-direction: column; /* Stack buttons on small screens */
+    }
+    
+    .btn {
+        justify-content: center; /* Center text when stacked */
+        width: 100%;
+    }
+}

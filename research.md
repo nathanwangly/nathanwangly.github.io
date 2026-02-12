@@ -3,6 +3,8 @@ layout: page
 title: Research
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
+
 A collection of my research publications, mostly published during my PhD years. 
 
 My research interests primarily centre around understanding and improving how people make complex decisions under uncertainty.

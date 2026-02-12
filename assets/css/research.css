@@ -1,0 +1,54 @@
+/* Container for each paper entry */
+.pub-item {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.pub-type {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.pub-title {
+  font-size: 1.1rem;
+  color: #222;
+  display: block;
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.pub-journal {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* Row for Web, PDF, and Abstract Toggle */
+.pub-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+/* Minimalist Text-Based Links */
+.text-link {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.2s ease;
+}
+
+.text-link:hover {
+  color: #000;
+  border-bottom-color: #000;
+}

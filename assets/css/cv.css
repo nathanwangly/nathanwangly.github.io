@@ -1,0 +1,54 @@
+.cv-item {
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+/* The Organisation (Top Level) */
+.cv-org {
+  display: block;
+  font-size: 0.85rem;           /* Smaller than the title */
+  font-weight: 700;
+  text-transform: uppercase;    /* Distinguishes from sentence-case titles */
+  letter-spacing: 1px;          /* Adds a professional "brand" feel */
+  color: #666;                  /* Muted color so the title pops */
+  margin-bottom: 4px;
+}
+
+/* The Role Title & Years (Second Level) */
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.cv-title {
+  font-weight: 800;             /* Extra bold for high contrast */
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.cv-years {
+  font-size: 0.9rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+/* The Role Description */
+.cv-desc-list {
+  margin-top: 10px;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+@media (max-width: 480px) {
+  .cv-header {
+    flex-direction: column; /* Stacks title and date vertically */
+    align-items: flex-start; /* Aligns them to the left */
+    gap: 4px; /* Creates that buffer/space between them */
+  }
+
+  .cv-years {
+    white-space: normal; /* Allows date to wrap if it's very long */
+  }
+}
