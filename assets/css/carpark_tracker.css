@@ -1,0 +1,341 @@
+/* assets/css/carpark_tracker.css */
+
+.tracker-container { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    max-width: 900px; 
+    margin: auto; 
+}
+
+.controls { 
+    margin-bottom: 24px; 
+    padding: 20px; 
+    background: #f9fafb; 
+    border-radius: 12px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 16px;
+    border: 1px solid #f3f4f6;
+}
+
+/* Dropdown Styling */
+select { 
+    font-family: inherit;
+    font-size: 1.1rem !important; 
+    font-weight: 500; 
+    color: #1f2937; 
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 10px 40px 10px 12px; /* Extra padding on the right for the arrow */
+    background-color: white;
+
+    /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Add custom SVG arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m19 9-7 7-7-7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 1.25rem;
+}
+
+label { 
+    font-size: 0.9rem; 
+    font-weight: 600;
+    color: #4b5563; 
+    margin-bottom: 4px;
+}
+
+/* Container for the whole white box */
+.controls { 
+    margin-bottom: 24px; 
+    padding: 16px; 
+    background: #f9fafb; 
+    border-radius: 12px; 
+    border: 1px solid #f3f4f6;
+}
+
+/* The new single-row engine */
+.controls-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+/* Individual columns (Car Park, Day, etc.) */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.facility-group { flex: 2 1 250px; }
+.day-group { flex: 1 1 150px; }
+.holiday-group { 
+    flex: 0 0 auto; 
+    padding-bottom: 8px; /* Fine-tune to align toggle with select boxes */
+}
+
+/* Responsive Stacking */
+@media (max-width: 768px) {
+    .controls-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .holiday-group { padding-bottom: 0; }
+}
+
+/* Ensure the Day dropdown takes full width of its 300px container */
+#daySelect {
+    width: 100%;
+}
+
+/* Container for the toggle */
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Hide the actual checkbox */
+.toggle-wrapper input {
+    display: none;
+}
+
+/* The background of the switch */
+.switch {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background-color: #d1d5db; /* Gray off-state */
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+}
+
+/* The moving "dot" inside the switch */
+.switch::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+/* Change background color when checked */
+.toggle-wrapper input:checked + .switch {
+    background-color: #0062ff; /* Your theme blue */
+}
+
+/* Move the dot when checked */
+.toggle-wrapper input:checked + .switch::after {
+    transform: translateX(20px);
+}
+
+.chart-box { 
+    height: 450px; 
+    margin-bottom: 30px; 
+    position: relative; 
+}
+
+/* Overview Card Styling */
+.overview-card {
+    margin-bottom: 24px;
+    padding: 12px 16px 0px 16px;
+    background: #ffffff;
+    border: 1px solid #f3f4f6;
+    border-radius: 8px;
+    /* This ensures the card "hugs" the content even if there's only one line */
+    height: auto; 
+}
+
+.overview-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em; /* Slightly more spacing for a premium feel */
+    color: #6b7280;
+    
+    /* The Horizontal Divider */
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 8px;
+}
+
+.insight-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.insight-list li {
+    padding: 4px 0; /* Reduced vertical space between points */
+    font-size: 0.95rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+}
+
+.insight-list li::before {
+    content: "•";
+    color: #0062ff;
+    font-weight: bold;
+    margin-right: 12px;
+    /* Keeps the bullet aligned with the first line of text */
+    flex-shrink: 0; 
+}
+
+/* Make the dynamic bold parts stand out */
+.insight-list li strong {
+    color: #111827;
+}
+
+.dot-label {
+    font-weight: 600;
+    color: #374151;
+    margin-right: 8px;
+}
+
+.dot-value {
+    color: #111827;
+    font-weight: 500;
+}
+
+/* Minimalist Warning */
+.warning { 
+    color: #9a3412; 
+    background: #fffbeb; 
+    padding: 12px; 
+    border-radius: 8px; 
+    margin-top: 16px; 
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #fef3c7;
+}
+
+#noDataCard {
+    display: none; 
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 100%; height: 20%; 
+    align-items: center; justify-content: center; 
+    background: #f9fafb; 
+    border: 2px dashed #d1d5db; 
+    border-radius: 12px; 
+    text-align: center; 
+    padding: 20px; 
+    z-index: 10;
+}
+
+/* Container for the toggle */
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Hide the actual checkbox */
+.toggle-wrapper input {
+    display: none;
+}
+
+/* The background of the switch */
+.switch {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background-color: #d1d5db; /* Gray off-state */
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+}
+
+/* The moving "dot" inside the switch */
+.switch::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+/* Change background color when checked */
+.toggle-wrapper input:checked + .switch {
+    background-color: #0062ff; /* Your theme blue */
+}
+
+/* Move the dot when checked */
+.toggle-wrapper input:checked + .switch::after {
+    transform: translateX(20px);
+}
+
+/* Intro Styling */
+.tracker-intro {
+    max-width: 900px;
+    margin: 0 auto 24px auto;
+    color: #4b5563; /* Muted text */
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+/* Footer & Methodology Section */
+.section-divider {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin: 40px auto 20px auto;
+    max-width: 900px;
+}
+
+.tracker-footer {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    font-size: 0.85rem;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.tracker-footer h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.tracker-footer a {
+    color: #0062ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.tracker-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive Footer */
+@media (max-width: 640px) {
+    .tracker-footer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
