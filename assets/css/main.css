@@ -14,9 +14,10 @@ body {
 }
 
 .container {
-  max-width: 650px;
+  max-width: 90%;  
+  width: 1000px;     
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 /* Navigation */
@@ -104,7 +105,7 @@ body {
 
 /* Ensure the bio text itself is styled correctly as a class */
 .home-bio {
-  max-width: 550px;
+  max-width: 800px;   
   margin: 3rem auto;       
   text-align: left;        
   display: block;
@@ -211,4 +212,86 @@ footer {
 
 .content-area li {
   margin-bottom: 0.5rem;
+}
+
+/* Container for the code block */
+pre {
+  background-color: #f6f8fa; /* Light grey background */
+  border: 1px solid #d0d7de;   /* Subtle border */
+  border-radius: 6px;        /* Rounded corners */
+  padding: 16px;             /* Space inside the box */
+  overflow: auto;            /* Adds scrollbars if code is too wide */
+  line-height: 1.45;         /* Improves readability */
+  margin-bottom: 16px;       /* Space after the block */
+  
+  /* Optional: adds a slight shadow for a "card" feel */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+/* Ensures the font inside stays consistent */
+pre code {
+  background: transparent;
+  padding: 0;
+  word-break: normal;
+  white-space: pre;
+}
+
+/* If your highlighter adds a class like .language-python */
+figure.highlight {
+  position: relative;
+}
+
+figure.highlight::before {
+  content: "Code";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #6e7781;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;     /* Restores generous padding on larger screens */
+  }
+  
+  /* If you want the text to stay a bit more readable/centered 
+     even when the container is 1000px wide */
+  .content-area {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+}
+
+/* Table Base Styling */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Removes the double-border look */
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  border-bottom: 2px solid #eee; /* Clean finishing line at the bottom */
+}
+
+/* Header Row (Filled) */
+th {
+  background-color: #f4f4f2; /* Light grey/beige to match your theme */
+  color: #222;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+/* Table Body Cells */
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee; /* Light horizontal dividers */
+  color: #555;
+}
+
+/* Responsive Table: Allows horizontal scrolling on small phones */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
