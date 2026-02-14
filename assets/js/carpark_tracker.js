@@ -1,5 +1,4 @@
  const DATA_URL = "https://nathanwangly.github.io/nsw-park-ride-tracker/data/processed/insights.json?v=" + new Date().getTime();
-//const DATA_URL = "/dummy_insights.json";
 
 let chartInstance = null;
 let allData = [];
@@ -114,7 +113,7 @@ function updateSummary(item) {
 
 function renderChart(item) {
     const ctx = document.getElementById('occupancyChart').getContext('2d');
-    const z = 2.576; 
+    const z = 1.645; // z-score for 90% confidence interval 
 
     const labels = item.series.map(d => d.label);
     const means = item.series.map(d => d.avg);
