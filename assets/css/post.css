@@ -1,0 +1,61 @@
+/* TL;DR Section Card */
+.summary-card {
+  background-color: #f3f3f1; /* Slightly darker than body for subtle contrast */
+  border-left: 4px solid #333; /* Stronger accent than H2s to signify a callout */
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.summary-title {
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  margin-bottom: 0.75rem;
+  color: #222;
+  font-size: 0.85rem;
+}
+
+.summary-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #555;
+}
+
+.summary-card p {
+  margin: 0;
+  color: #555;
+}
+
+/* Container for the dates and reading time */
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;       /* Prevents overlap on mobile screens */
+  align-items: center;   /* Keeps icons and text perfectly aligned */
+  gap: 1rem;             /* Sets a base gap between all items */
+  font-size: 0.9rem;     /* Slightly smaller for a "meta" feel */
+  color: #666;           /* Professional, muted tone [cite: 82] */
+  margin-bottom: 0.5rem;
+}
+
+/* Enhancing the dividers */
+.meta-divider {
+  color: #ccc;           /* Lighter color so they don't distract */
+  margin: 0 0.25rem;     /* Extra padding to prevent crowding */
+  user-select: none;     /* Prevents selecting bars when copying text */
+}
+
+/* Icon spacing */
+.meta-row i {
+  margin-right: 0.4rem;  /* Pushes the icon slightly away from the text */
+  opacity: 0.8;
+}
+
+/* Optional: Description spacing */
+.post-description {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #444;           /* Slightly darker for the "Short Version" summary [cite: 9] */
+}
