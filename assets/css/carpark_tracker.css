@@ -300,34 +300,6 @@ label {
     max-width: 900px;
 }
 
-.tracker-footer {
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    font-size: 0.85rem;
-    color: #6b7280;
-    line-height: 1.6;
-}
-
-.tracker-footer h4 {
-    margin-top: 0;
-    margin-bottom: 8px;
-    color: #374151;
-    font-size: 0.95rem;
-}
-
-.tracker-footer a {
-    color: #0062ff;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.tracker-footer a:hover {
-    text-decoration: underline;
-}
-
 /* Mobile Responsive Footer */
 @media (max-width: 768px) {
     /* 1. Stack the controls (Car Park, Day, Holiday) */
@@ -347,13 +319,6 @@ label {
         margin-top: 8px;
     }
 
-    /* 2. Fix the Footer Grid */
-    .tracker-footer {
-        grid-template-columns: 1fr; /* Stack the two columns */
-        gap: 24px;
-        padding: 0 16px;
-    }
-
     /* 3. Adjust the Chart Height for smaller screens */
     .chart-box {
         height: 300px; /* Shorter height so it fits on phone screens */
@@ -363,5 +328,79 @@ label {
     .tracker-intro {
         font-size: 1rem;
         padding: 0 10px;
+    }
+}
+
+/* FAQ Accordion Styling */
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.faq-card[open] {
+    border-color: #d1d5db;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.faq-card summary {
+    list-style: none; /* Removes default arrow in some browsers */
+    padding: 16px;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+/* Custom indicator arrow */
+.faq-card summary::after {
+    content: "+";
+    font-size: 1.2rem;
+    color: #0062ff;
+    transition: transform 0.2s ease;
+}
+
+.faq-card[open] summary::after {
+    content: "−"; /* Using a proper minus sign */
+    transform: rotate(180deg);
+}
+
+/* Remove default Safari arrow */
+.faq-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-content {
+    padding: 0 16px 16px 16px;
+    color: #6b7280;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 12px;
+}
+
+.faq-content p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+/* Mobile Tweak */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 0 16px;
     }
 }
