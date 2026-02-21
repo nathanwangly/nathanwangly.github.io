@@ -2,7 +2,7 @@
 layout: post
 title: "Estimating Park&Ride car park availability"
 date: 2026-02-14
-last_updated: 2026-02-21
+last_updated: 2026-02-22
 description: "A deeper dive into the Park&Ride Availability Predictor tool."
 reading_time: 8
 ---
@@ -97,7 +97,7 @@ To automate things, I used a combination of Cron-job.org and Github Actions.
 
 ## Final reflections
 
-The code itself wasn't the hard part — it was figuring out when to start. Because the project's value depends on accumulating data over time, there was real pressure to get going quickly. But starting without thinking things through risked throwing out weeks of collection midway. I learned this the first time around - a design decision I hadn't properly thought through cost me a few days of data before I caught it and restarted.
+The code itself wasn't the hard part — it was finding the balance between planning carefully versus getting started quickly and iterating over time. Because the project's value depends on accumulating data over time, there was real pressure to get going as soon as possible. But starting without thinking things through risked throwing out weeks of collection midway. I learned this the first time around - a design decision I hadn't properly thought through cost me a few days of data before I caught it and restarted.
 
 Working with an API and setting up automated workflows were also new territory for me — the kind of thing I might have written off as too complicated before AI tools made it easier to pick up on the fly. A project that took roughly two weeks might otherwise have taken months to get off the ground.
 
