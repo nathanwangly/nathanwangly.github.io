@@ -2,7 +2,7 @@
 layout: post
 title: "Estimating Park&Ride car park availability"
 date: 2026-02-14
-last_updated: 2026-02-14
+last_updated: 2026-02-21
 description: "A deeper dive into the Park&Ride Availability Predictor tool."
 reading_time: 8
 ---
@@ -24,9 +24,9 @@ reading_time: 8
 
 ## Background: The problem to be solved
 
-Sydney's 'Park&Ride' car parks offer all-day parking near train stations for public transport users. Unsurprisingly, these car parks are incredibly popular among commuters who need somewhere to park all day while they are away at work - meaning these car parks often fill up quickly.
+Sydney's 'Park&Ride' car parks offer all-day parking near train stations for public transport users. Unsurprisingly, these car parks are popular with commuters - and fill up quickly.
 
-Occasionally, I will find myself in a situation where it would be convenient to park at my nearest Park&Ride car park. Particularly if it's a weekday, I worry about whether there will be any spots available by the time I arrive. While the <a href="https://transportnsw.info/travel-info/ways-to-get-around/drive/parking/transport-parkride-car-parks">Transport for NSW website</a> shows you real-time data on how many spots are still available, the problem is that these are only ever at a point-in-time; what if they're gone by the time I get there?
+Occasionally, I will find myself in a situation where it would be convenient to park at my nearest Park&Ride car park. Particularly if it's a weekday, I worry about whether there will be any spots available by the time I arrive. While the <a href="https://transportnsw.info/travel-info/ways-to-get-around/drive/parking/transport-parkride-car-parks">Transport for NSW website</a> shows you real-time data on how many spots are still available, the problem is that availability can change between checking and arriving - what if the spots are gone by the time I get there?
 
 In the past, I would just avoid the stress by making less convenient travel plans that didn't involve the Park&Ride car park. But it got me thinking: could I track the real-time data to estimate when the car parks typically fill up by?
 
@@ -43,8 +43,6 @@ I started with ```fetch_occupancy_data.py``` to pull key data from the API: time
 
 As part of the script, the data is stored in CSV files that are organised into YYYY-MM formats (e.g., ```2026-02.csv```) to avoid any one file becoming too large. 
 
-<i>(Note: I later realised that the API also provides historical data, which would have made this project much simpler. Nonetheless, I enjoyed the learning process of taking real-time data and building an automated pipeline).</i>
-
 ## Step 2: Deciding what insights are needed
 
 I worked backwards from my end goal to determine which insights were actually necessary. To keep things simple, I focused on three goals:
@@ -58,7 +56,7 @@ With a clear set of goals in mind, I created two scripts to get from raw data to
 
 First, ```process_raw_data.py``` merges the raw CSV files and cleans the data. This includes:
 - Filtering out invalid rows (e.g., number of occupied spots occasionally shows up as negative).
-- Converting timestamps from UTC to Sydney time, and allocates them to 10-min bins.
+- Converting timestamps from UTC to Sydney time, and allocating them to 10-min bins.
 - Checking whether the timestamp is within the school holiday period (checking against a manually updated JSON file).
 - Calculating aggregate statistics for each unique key: <b>car park</b> x <b>day of week</b> x <b>time bin</b> x <b>regular vs school holiday</b>.
 
@@ -85,7 +83,7 @@ These insights are all stored in an ```insights.json``` file that is used to gen
 
 ## Step 5: Automate the process
 
-The final step was to automate Steps 1-4 so that data would accumulate on its own and the predictions would become more accurate over time.
+The final step was to automate the pipeline so that data would accumulate on its own and the predictions would become more accurate over time.
 
 To automate things, I used a combination of Cron-job.org and Github Actions.
 
@@ -99,15 +97,8 @@ To automate things, I used a combination of Cron-job.org and Github Actions.
 
 ## Final reflections
 
-This was a fun 2-ish week project to work on. The code itself wasn't complex, but managing ongoing data collection was a new challenge.
+The code itself wasn't the hard part — it was figuring out when to start. Because the project's value depends on accumulating data over time, there was real pressure to get going quickly. But starting without thinking things through risked throwing out weeks of collection midway. I learned this the first time around - a design decision I hadn't properly thought through cost me a few days of data before I caught it and restarted.
 
-I struggled to find the right balance between over-planning and immediate execution. On the one hand, I recognised that the greatest bottleneck for this project would be the time needed to collect enough data, so I wanted to get started as quickly as possible. On the other hand, I realised that if I wasn't thoughtful about what data I collected and how it would be used, I could end up having to throw things out midway and start again (which did end up happening once - thankfully only after a few days of starting to collect data).
+Working with an API and setting up automated workflows were also new territory for me — the kind of thing I might have written off as too complicated before AI tools made it easier to pick up on the fly. A project that took roughly two weeks might otherwise have taken months to get off the ground.
 
-<b>Things I learned on this project:</b>
-- How to call an API
-- How to automate workflows using Cron-job.org and Github Actions
-- Pros and cons of different ways of managing historical data
-
-Finally, this project was once again a reminder of how much more I can do with the assistance of AI tools. Pre-AI, I may have dismissed this project idea before even starting (fearing that it would be too complicated to work with APIs or automated workflows). Or, with some persistence, it might have taken me a few months to set up.
-
-My biggest constraint is no longer technical; it's simply the scale of the problems I can identify.
+I now have the tool I was after. Its predictions should only get more reliable as the dataset grows — which gives me something to look forward to each time I open it.
