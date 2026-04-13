@@ -11,8 +11,7 @@ permalink: /projects/parknride-tracker/
 <div class="tracker-intro">
     <p>This tool estimates how many spots are typically available at Sydney's Park&Ride car parks throughout the week. Select a car park below to plan your commute.</p>
     <p>For real-time availability data, visit the <a href="https://transportnsw.info/travel-info/ways-to-get-around/drive/parking/transport-parkride-car-parks">Transport for NSW website.</a></p>
-    <p><b><i>Disclaimer: Data only started being collected in mid-Feb 2026, so it may take at least a few weeks to get useful predictions.</i></b></p>
-</div>
+    </div>
 
 <div class="tracker-container">
     <div class="controls">
