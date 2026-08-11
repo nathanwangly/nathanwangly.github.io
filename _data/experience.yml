@@ -1,18 +1,24 @@
 work:
+- title: Strategy Manager
+  company: Canva
+  years: Jun 2026 - Present
+  description:
+    - Part of the Foundational Goals Strategy team, supporting initiatives around Canva's product and growth strategy
+
 - title: Online Program Director
   company: UNSW
-  years: Dec 2025 — Present
-  date_end: 9999
+  years: Dec 2025 — Jun 2026
+  date_end: 2026
   description: 
-    - Leading development of online postgraduate programs in Business Psychology and Climate Risk
-    - Operating as a hybrid Academic/Product Manager to ensure programs are intellectually rigorous, commercially viable, and aligned with industry demand
+    - Led development of online postgraduate programs in Business Psychology and Climate Risk
+    - Operated as a hybrid Academic/Product Manager to ensure programs are intellectually rigorous, commercially viable, and aligned with industry demand
 
 - title: Senior Behavioural Scientist
   company: Irrational Labs
-  years: Dec 2025 — Present
-  date_end: 9999
+  years: Dec 2025 — Jun 2026
+  date_end: 2026
   description:
-    - Contracting for a US-based behavioural design consultancy applying behavioural science to product strategy, experimentation, and customer experience design
+    - Contracted for a US-based behavioural design consultancy applying behavioural science to product strategy, experimentation, and customer experience design
 
 - company: ANZ
   date_end: 2025
