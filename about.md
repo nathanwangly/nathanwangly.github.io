@@ -7,7 +7,9 @@ title: About
 
 I'm currently an Online Program Director at UNSW, leading the development of postgraduate programs in Business Psychology and Climate Risk.
 
-With a background at the intersection of behavioural science and banking, I previously led the Customer Decision Science team at ANZ—with the goal of improving financial decision making and outcomes for consumers. Nowadays, I balance my academic role with behavioural science consulting, helping organisations apply psychological insights to all sorts of people-related challenges.
+I'm currently a Strategy Manager at Canva, working on improving our product experiences and growing the business.
+
+My background is in behavioural science and I have a strong interest in helping organisations apply psychological insights to people-related challenges. Previously, I led the early development of two online postgraduate programs at UNSW (one in Business Psychology, another in Climate Risk). Before that, I led the Customer Decision Science team at ANZ—with the goal of improving financial decision making and outcomes for consumers.
 
 In my spare time, I enjoy exercising (mostly running & the gym), lounging at home with my two British Shorthair cats (Chonkie & Bonkie), and tinkering on passion projects that solve niche pain points I've encountered.
 
