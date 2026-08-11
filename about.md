@@ -7,7 +7,9 @@ title: About
 
 I'm currently a Strategy Manager at Canva, working on improving our product experiences and growing the business.
 
-My background is in behavioural science and I have a strong interest in helping organisations apply psychological insights to people-related challenges. Previously, I led the early development of two online postgraduate programs at UNSW (one in Business Psychology, another in Climate Risk). Before that, I led the Customer Decision Science team at ANZ—with the goal of improving financial decision making and outcomes for consumers.
+With a background in behavioural science, I have a strong interest in helping organisations apply psychological insights to people-related challenges. 
+
+Previously, I led the early development of two online postgraduate programs at UNSW (one in Business Psychology, another in Climate Risk). Before that, I led the Customer Decision Science team at ANZ—with the goal of improving financial decision making and outcomes for consumers.
 
 In my spare time, I enjoy exercising (mostly running & the gym), lounging at home with my two British Shorthair cats (Chonkie & Bonkie), and tinkering on passion projects that solve niche pain points I've encountered.
 
