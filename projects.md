@@ -20,13 +20,13 @@ permalink: /projects/
       
       <div class="project-actions">
         {% if project.project_url and project.project_url != "" %}
-          <a href="{{ project.project_url | relative_url }}" class="btn btn-primary">
+          <a href="{{ project.project_url | relative_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
             <i class="fa-solid fa-external-link"></i> View Project
           </a>
         {% endif %}
 
         {% if project.post_url and project.post_url != "" %}
-          <a href="{{ project.post_url | relative_url }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+          <a href="{{ project.post_url | relative_url }}" class="btn btn-secondary">
             <i class="fa-solid fa-book-open"></i> Read More
           </a>
         {% endif %}
