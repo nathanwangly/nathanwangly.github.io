@@ -26,7 +26,7 @@ permalink: /projects/
         {% endif %}
 
         {% if project.post_url and project.post_url != "" %}
-          <a href="{{ project.post_url | relative_url }}" class="btn btn-secondary">
+          <a href="{{ project.post_url | relative_url }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
             <i class="fa-solid fa-book-open"></i> Read More
           </a>
         {% endif %}
