@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CV
+description: Nathan Wang-Ly's work in behavioural science and strategy, and his education in psychology.
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}">

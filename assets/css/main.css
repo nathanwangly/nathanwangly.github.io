@@ -1,69 +1,131 @@
-/* Minimalist Base */
+:root {
+  --color-page: #f8f7f3;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f1f2ed;
+  --color-ink: #24332e;
+  --color-text: #39443e;
+  --color-muted: #65736b;
+  --color-line: #dcded7;
+  --color-accent: #a9533c;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --radius-card: 14px;
+  --shadow-card: 0 8px 28px rgba(36, 51, 46, 0.05);
+}
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  /* Light neutral background */
-  background-color: #fafaf8; 
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+  background-color: var(--color-page);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  color: var(--color-text);
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 90%;  
-  width: 1000px;     
+  width: min(100% - 2rem, 1000px);
   margin: 0 auto;
-  padding: 2rem 1rem;
 }
 
-/* Navigation */
+main.container {
+  padding-block: clamp(2rem, 5vw, 4.5rem);
+}
+
+a {
+  color: var(--color-accent);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: 1.4rem;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.site-brand {
+  flex: none;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  text-decoration: none;
+}
+
+.brand-dot {
+  color: var(--color-accent);
+}
+
 .site-nav {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.7rem;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #666;
+  color: var(--color-muted);
+  font-size: 0.92rem;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .nav-link:hover { 
-  color: #000; 
+  color: var(--color-ink);
 }
 
 .nav-link.active {
-  color: #000;
-  border-bottom: 2px solid #000; /* Subtle underline for the current page */
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.45rem;
 }
 
 /* Profile Picture Logic */
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: clamp(140px, 22vw, 180px);
+  height: clamp(140px, 22vw, 180px);
   border-radius: 50%;
   object-fit: cover;
   display: block;
   margin: 0 auto 1.5rem auto;
-  border: 4px solid #fff;
+  border: 4px solid var(--color-surface);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .hero-pic {
-  width: 70%;           
+  width: 100%;
   max-width: 800px; 
   height: auto;
   display: block;
   margin-left: auto; 
   margin-right: auto;
   margin-bottom: 1.5rem;
-  border-radius: 12px;
+  border-radius: var(--radius-card);
   object-fit: cover;
 }
 
@@ -75,10 +137,10 @@ body {
 }
 
 .image-container figcaption {
-  font-size: 0.85rem;    /* Makes it small */
+  font-size: 0.85rem;
   font-style: italic;    /* Makes it italics */
-  color: #666;           /* A soft grey */
-  margin-top: -0.5rem;    /* Small gap between image and text */
+  color: var(--color-muted);
+  margin-top: -0.5rem;
   line-height: 1.4;
 }
 
@@ -88,15 +150,19 @@ body {
 
 /* Update the H1 inside home-content to remove default browser margin */
 .home-content h1 {
-  margin-top: 0;        /* Removes top gap near profile pic */
-  margin-bottom: 0.5rem; /* Precise control over gap to subtitle */
-  font-size: 2.2rem;
-  color: #222;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  color: var(--color-ink);
 }
 
 .home-subtitle {
-  color: #888;
-  font-size: 1.2rem;
+  color: var(--color-muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 500;
   text-align: center;
   margin-top: 0;        /* Reset this; the H1 margin-bottom now handles the gap */
@@ -111,14 +177,14 @@ body {
   display: block;
   font-size: 1.1rem;      
   line-height: 1.8;       
-  color: #555;
+  color: var(--color-text);
 }
 
 .home-bio p {
   margin: 0;
   font-size: 1.1rem;       /* Slightly larger for better presence as solo text */
   line-height: 1.8;       /* Increased line-height to reduce mental load/clutter */
-  color: #555;
+  color: var(--color-text);
 }
 
 /* If you still use multiple paragraphs, this adds space between them */
@@ -142,27 +208,27 @@ body {
 
 .social-links a {
   text-decoration: none;
-  color: #555;
+  color: var(--color-ink);
   font-size: 0.9rem;
   font-weight: 500;
   
   /* The "Button" Styling */
-  background-color: #ffffff;
+  background-color: var(--color-surface);
   padding: 8px 16px;
   border-radius: 50px; /* Makes them pill-shaped */
-  border: 1px solid #e1e1e1;
+  border: 1px solid var(--color-line);
   display: flex;
   align-items: center;
   gap: 8px;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  box-shadow: var(--shadow-card);
 }
 
 /* Hover Effect */
 .social-links a:hover {
-  background-color: #f0f0f0;
-  color: #000;
-  border-color: #d1d1d1;
+  background-color: #f0f1eb;
+  color: var(--color-ink);
+  border-color: var(--color-muted);
   transform: translateY(-1px); /* Subtle lift effect */
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
@@ -171,37 +237,44 @@ body {
   font-size: 1rem;
 }
 
-footer {
+.site-footer {
   text-align: center;
   font-size: 0.8rem;
-  color: #999;
-  margin-top: 4rem;
+  color: var(--color-muted);
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--color-line);
 }
 
 /* Styling for Information Pages (About, Research, etc.) */
 .page-header {
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid var(--color-line);
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
 
 .page-header h1 {
-  font-size: 2rem;
-  color: #222;
+  font-family: var(--font-display);
+  font-size: clamp(2.35rem, 5vw, 3.6rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--color-ink);
   margin: 0;
 }
 
 .content-area h2 {
-  font-size: 1.5rem;
-  color: #222;
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 3vw, 1.9rem);
+  font-weight: 400;
+  color: var(--color-ink);
   margin-top: 2.5rem;
-  border-left: 3px solid #666; /* Subtle accent */
+  border-left: 3px solid var(--color-accent);
   padding-left: 1rem;
 }
 
 .content-area p {
   font-size: 1.05rem;
-  color: #444;
+  color: var(--color-text);
   margin-bottom: 1.5rem;
 }
 
@@ -252,15 +325,43 @@ figure.highlight::before {
 }
 
 @media (min-width: 768px) {
-  .container {
-    padding: 2rem;     /* Restores generous padding on larger screens */
-  }
-  
-  /* If you want the text to stay a bit more readable/centered 
-     even when the container is 1000px wide */
   .content-area {
     max-width: 850px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    display: block;
+    padding-block: 1rem;
+  }
+
+  .site-brand {
+    display: inline-block;
+    margin-bottom: 0.9rem;
+  }
+
+  .site-nav {
+    justify-content: space-between;
+    gap: 0.55rem 0.85rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding-block: 0.2rem;
+  }
+
+  .home-bio {
+    margin-block: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
 

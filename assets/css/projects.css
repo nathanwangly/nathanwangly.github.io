@@ -10,17 +10,16 @@
     display: flex;
     flex-direction: column; /* Changed to column to support buttons at bottom */
     padding: 24px;
-    background: #f9fafb;
-    border: 1px solid #d1d5db;
-    border-radius: 12px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
     transition: all 0.2s ease;
 }
 
 /* Static card styling for projects without any links */
 .project-card.no-links {
     cursor: default;
-    background: #fafafa;
-    opacity: 0.9;
 }
 
 /* --- Typography & Header --- */
@@ -37,7 +36,7 @@
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #6b7280;
+    color: var(--color-muted);
     font-weight: 600;
 }
 
@@ -47,13 +46,13 @@
     padding-top: 0;   
     
     font-size: 1.25rem;
-    color: #111827;
+    color: var(--color-ink);
     line-height: 1.1;  
 }
 
 .project-description {
     margin: 0;
-    color: #4b5563;
+    color: var(--color-text);
     font-size: 0.95rem;
     line-height: 1.5;
 }
@@ -116,9 +115,9 @@
 }
 
 .btn-primary {
-    background-color: #1f2937;
+    background-color: var(--color-ink);
     color: white;
-    border: 1px solid #1f2937;
+    border: 1px solid var(--color-ink);
 }
 
 .btn-primary:hover {
@@ -128,9 +127,9 @@
 }
 
 .btn-secondary {
-    background-color: #ffffff;
-    color: #374151;
-    border: 1px solid #d1d5db;
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    border: 1px solid var(--color-line);
 }
 
 .btn-secondary:hover {

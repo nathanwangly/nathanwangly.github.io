@@ -16,7 +16,7 @@ reading_time: 8
       <ol>
         <li>Collect real-time occupancy data via the TfNSW Car park API throughout the day (every 10 min between 5am-10pm) and store in CSV files.</li>
         <li>Once per week, analyse the historical data to calculate insights for each car park (e.g., average available spots at different times of the day), which are stored in a JSON file.</li>
-        <li>Generate visualisations based on the insights data, which are presented in the <a href="/projects/parknride-tracker/">tool</a>.</li>
+        <li>Generate visualisations based on the insights data, which are presented in the <a href="{{ '/projects/parknride-tracker/' | relative_url }}">tool</a>.</li>
       </ol>
     <li><b>Project repo:</b> <a href="https://github.com/nathanwangly/nsw-park-ride-tracker">https://github.com/nathanwangly/nsw-park-ride-tracker</a>.</li>
   </ul>
@@ -31,7 +31,7 @@ Occasionally, I will find myself in a situation where it would be convenient to 
 In the past, I would just avoid the stress by making less convenient travel plans that didn't involve the Park&Ride car park. But it got me thinking: could I track the real-time data to estimate when the car parks typically fill up by?
 
 <figure class="image-container">
-  <img src="/assets/images/TfNSW_realtime_parking_data.png" class="hero-pic" alt="TfNSW Realtime Data">
+  <img src="{{ '/assets/images/TfNSW_realtime_parking_data.png' | relative_url }}" class="hero-pic" alt="Transport for NSW real-time Park&Ride availability display" width="782" height="477" loading="lazy" decoding="async">
   <figcaption>Real-time parking availability data shown on the TfNSW website.</figcaption>
 </figure>
 
@@ -77,7 +77,7 @@ In addition to this, the script calculates the 'typical' time that each car park
 These insights are all stored in an ```insights.json``` file that is used to generate the Park&Ride Availability Predictor Tool.
 
 <figure class="image-container">
-  <img src="/assets/images/parknride_tool_screenshot.png" class="hero-pic" alt="Screenshot of Park&Ride Availability Predictor Tool">
+  <img src="{{ '/assets/images/parknride_tool_screenshot.png' | relative_url }}" class="hero-pic" alt="Park&Ride Availability Predictor showing a car park availability chart" width="1754" height="1298" loading="lazy" decoding="async">
   <figcaption>Screenshot of Park&Ride Availability Predictor Tool.</figcaption>
 </figure>
 

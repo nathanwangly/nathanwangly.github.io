@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Posts
+description: Writing by Nathan Wang-Ly about personal projects and behavioural science.
 permalink: /posts/
 ---
 

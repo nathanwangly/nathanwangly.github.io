@@ -10,7 +10,7 @@
   font-weight: 700;
   text-transform: uppercase;    /* Distinguishes from sentence-case titles */
   letter-spacing: 1px;          /* Adds a professional "brand" feel */
-  color: #666;                  /* Muted color so the title pops */
+  color: var(--color-muted);
   margin-bottom: 4px;
 }
 
@@ -25,12 +25,12 @@
 .cv-title {
   font-weight: 800;             /* Extra bold for high contrast */
   font-size: 1.2rem;
-  color: #000;
+  color: var(--color-ink);
 }
 
 .cv-years {
   font-size: 0.9rem;
-  color: #888;
+  color: var(--color-muted);
   white-space: nowrap;
 }
 

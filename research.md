@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Research
+description: Research publications by Nathan Wang-Ly on decision making, saving, and financial behaviour.
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">

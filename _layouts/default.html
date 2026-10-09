@@ -3,13 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
+  {% assign page_description = page.description | default: site.description %}
+  <title>{% if page.url == '/' %}{{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page_description | strip_html | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="{% if page.collection == 'posts' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if page.url == '/' %}{{ site.title | escape }}{% else %}{{ page.title | escape }} | {{ site.title | escape }}{% endif %}">
+  <meta property="og:description" content="{{ page_description | strip_html | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/images/profile_photo.jpg' | absolute_url }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#f8f7f3">
+  <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-  <header class="container">
+  <header class="site-header container">
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Nathan Wang-Ly, home" {% if page.url == '/' %}aria-current="page"{% endif %}>NW<span class="brand-dot">.</span></a>
     {% include nav.html %}
   </header>
 
@@ -17,7 +29,7 @@
     {{ content }}
   </main>
 
-  <footer class="container">
+  <footer class="site-footer container">
     <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
   </footer>
 

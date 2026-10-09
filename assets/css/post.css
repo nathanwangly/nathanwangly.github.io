@@ -1,7 +1,7 @@
 /* TL;DR Section Card */
 .summary-card {
-  background-color: #f3f3f1; /* Slightly darker than body for subtle contrast */
-  border-left: 4px solid #333; /* Stronger accent than H2s to signify a callout */
+  background-color: var(--color-surface-soft);
+  border-left: 4px solid var(--color-accent);
   padding: 1.5rem;
   margin: 2rem 0;
   border-radius: 4px;
@@ -14,19 +14,19 @@
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   margin-bottom: 0.75rem;
-  color: #222;
+  color: var(--color-ink);
   font-size: 0.85rem;
 }
 
 .summary-card ul {
   margin: 0;
   padding-left: 1.2rem;
-  color: #555;
+  color: var(--color-text);
 }
 
 .summary-card p {
   margin: 0;
-  color: #555;
+  color: var(--color-text);
 }
 
 /* Container for the dates and reading time */

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+description: Nathan Wang-Ly's background in behavioural science, product strategy, and personal projects.
 ---
 
 <b>Hi, I'm Nathan 👋</b>
@@ -14,7 +15,7 @@ Previously, I led the early development of two online postgraduate programs at U
 In my spare time, I enjoy exercising (mostly running & the gym), lounging at home with my two British Shorthair cats (Chonkie & Bonkie), and tinkering on passion projects that solve niche pain points I've encountered.
 
 <figure class="image-container">
-  <img src="/assets/images/Chonkie_and_Bonkie.jpg" class="hero-pic" alt="Chonkie & Bonkie">
+  <img src="{{ '/assets/images/Chonkie_and_Bonkie.jpg' | relative_url }}" class="hero-pic" alt="Bonkie and Chonkie, Nathan's two British Shorthair cats" width="1400" height="788" loading="lazy" decoding="async">
   <figcaption>Bonkie (left) and Chonkie (right) posing for the camera.</figcaption>
 </figure>
 

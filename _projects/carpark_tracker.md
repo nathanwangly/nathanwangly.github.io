@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Park&Ride Availability Predictor
+description: Explore typical parking availability at Sydney Park&Ride car parks by location, day, and school holiday period.
 permalink: /projects/parknride-tracker/
 ---
 

@@ -7,7 +7,7 @@
 .pub-type {
   font-family: monospace;
   font-size: 0.75rem;
-  color: #999;
+  color: var(--color-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 2px;
@@ -16,18 +16,18 @@
 
 .pub-title {
   font-size: 1.1rem;
-  color: #222;
+  color: var(--color-ink);
   display: block;
 }
 
 .pub-authors {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--color-text);
 }
 
 .pub-journal {
   font-size: 0.95rem;
-  color: #777;
+  color: var(--color-muted);
 }
 
 /* Row for Web, PDF, and Abstract Toggle */
@@ -43,8 +43,8 @@
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #666;
-  border-bottom: 1px solid #ddd;
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-line);
   transition: all 0.2s ease;
 }
 

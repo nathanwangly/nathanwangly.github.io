@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+description: Personal projects by Nathan Wang-Ly, including the Park&Ride Availability Predictor and Offload.
 permalink: /projects/
 ---
 
