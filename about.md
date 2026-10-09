@@ -14,11 +14,11 @@ Previously, I led the early development of two online postgraduate programs at U
 
 In my spare time, I enjoy exercising (mostly running & the gym), lounging at home with my two British Shorthair cats (Chonkie & Bonkie), and tinkering on passion projects that solve niche pain points I've encountered.
 
-<figure class="image-container">
-  <img src="{{ '/assets/images/Chonkie_and_Bonkie.jpg' | relative_url }}" class="hero-pic" alt="Bonkie and Chonkie, Nathan's two British Shorthair cats" width="1400" height="788" loading="lazy" decoding="async">
-  <figcaption>Bonkie (left) and Chonkie (right) posing for the camera.</figcaption>
-</figure>
-
 For more on my professional background, you can find a summary of my previous work and education <a href="{{ '/cv' | relative_url }}">here</a>.
 
 If you would like to get in touch, reach out on <a href="https://linkedin.com/in/nathanwangly">LinkedIn</a> or via {% include email-link.html text="email" %}.
+
+<figure class="image-container about-image-container">
+  <img src="{{ '/assets/images/Chonkie_and_Bonkie.jpg' | relative_url }}" class="hero-pic" alt="Bonkie and Chonkie, Nathan's two British Shorthair cats" width="1400" height="788" loading="lazy" decoding="async">
+  <figcaption>Bonkie (left) and Chonkie (right) posing for the camera.</figcaption>
+</figure>

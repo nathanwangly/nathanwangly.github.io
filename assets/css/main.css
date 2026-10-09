@@ -138,6 +138,11 @@ a:hover {
   text-align: center; /* Centers the caption text */
 }
 
+.about-image-container .hero-pic {
+  width: 50%;
+  max-width: 50%;
+}
+
 .image-container figcaption {
   font-size: 0.85rem;
   font-style: italic;    /* Makes it italics */
