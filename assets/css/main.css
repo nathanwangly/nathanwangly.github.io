@@ -346,23 +346,39 @@ figure.highlight::before {
 
 @media (max-width: 600px) {
   .site-header {
-    display: block;
+    display: flex;
+    gap: 1.25rem;
     padding-block: 1rem;
   }
 
   .site-brand {
-    display: inline-block;
-    margin-bottom: 0.9rem;
+    display: block;
   }
 
   .site-nav {
-    justify-content: space-between;
-    gap: 0.55rem 0.85rem;
+    flex: 0 1 auto;
+    min-width: 0;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.3rem 1rem 0.3rem 0.1rem;
+    margin-right: -0.6rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    mask-image: linear-gradient(to right, #000 0%, #000 82%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 82%, transparent 100%);
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-link {
     font-size: 0.9rem;
-    padding-block: 0.2rem;
+    padding-block: 0.15rem;
+    flex: 0 0 auto;
   }
 
   .home-bio {
