@@ -11,7 +11,8 @@ permalink: /projects/
 
 <div class="projects-list">
   {% for project in site.data.projects %}
-  <div class="project-card {% if project.url == nil and project.blog_url == nil %}no-links{% endif %}">
+  {% assign project_link = project.project_url | default: project.post_url %}
+  <div class="project-card{% unless project_link %} no-links{% endunless %}">
     <div class="project-content">
       <div class="project-meta-row">
         <span class="project-tag">{{ project.tag }}</span>

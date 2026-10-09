@@ -1,4 +1,4 @@
- const DATA_URL = "https://nathanwangly.github.io/nsw-park-ride-tracker/data/processed/insights.json?v=" + new Date().getTime();
+const DATA_URL = "https://nathanwangly.github.io/nsw-park-ride-tracker/data/processed/insights.json?v=" + new Date().getTime();
 
 let chartInstance = null;
 let allData = [];
@@ -8,14 +8,16 @@ async function initTracker() {
     const facilitySelect = document.getElementById('facilitySelect');
     const daySelect = document.getElementById('daySelect');
     const holidayToggle = document.getElementById('holidayToggle');
+    const statusMessage = document.getElementById('trackerStatus');
 
-    // Robustness check: Ensure elements exist before proceeding
-    if (!facilitySelect || !daySelect || !holidayToggle) return;
+    if (!facilitySelect || !daySelect || !holidayToggle || !statusMessage) return;
 
     try {
+        if (typeof Chart === 'undefined') throw new Error('Chart.js did not load');
         const response = await fetch(DATA_URL);
         if (!response.ok) throw new Error("Network response was not ok");
         allData = await response.json();
+        if (!Array.isArray(allData) || allData.length === 0) throw new Error('No parking trends available');
 
         // 1. Get unique facilities and standard days
         const facilities = [...new Set(allData.map(item => item.facility))].sort();
@@ -39,6 +41,10 @@ async function initTracker() {
             daySelect.appendChild(opt);
         });
 
+        facilitySelect.disabled = false;
+        daySelect.disabled = false;
+        holidayToggle.disabled = false;
+
         // 4. Set default to today's day
         const today = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(new Date());
         if (days.includes(today)) daySelect.value = today;
@@ -50,9 +56,19 @@ async function initTracker() {
 
         // 6. First run
         updateSelection();
+        statusMessage.hidden = true;
 
     } catch (error) {
         console.error("Initialization Error:", error);
+        facilitySelect.replaceChildren(new Option('Unavailable', ''));
+        facilitySelect.disabled = true;
+        daySelect.disabled = true;
+        holidayToggle.disabled = true;
+        document.getElementById('resultsContainer').hidden = true;
+        document.getElementById('chartBox').hidden = true;
+        statusMessage.textContent = 'Parking trends are unavailable right now. Try reloading this page, or check real-time availability using the Transport for NSW link above.';
+        statusMessage.dataset.state = 'error';
+        statusMessage.hidden = false;
     }
 }
 
@@ -65,6 +81,7 @@ function updateSelection() {
     const canvas = document.getElementById('occupancyChart');
     const noData = document.getElementById('noDataCard');
     const results = document.getElementById('resultsContainer');
+    const chartBox = document.getElementById('chartBox');
 
     const match = allData.find(item => 
         item.facility === facility && 
@@ -73,15 +90,17 @@ function updateSelection() {
     );
 
     if (match) {
-        canvas.style.display = "block";
-        noData.style.display = "none";
-        results.style.display = "block";
+        chartBox.hidden = false;
+        canvas.hidden = false;
+        noData.hidden = true;
+        results.hidden = false;
         renderChart(match);
         updateSummary(match);
     } else {
-        canvas.style.display = "none";
-        noData.style.display = "flex";
-        results.style.display = "none";
+        chartBox.hidden = false;
+        canvas.hidden = true;
+        noData.hidden = false;
+        results.hidden = true;
     }
 }
 

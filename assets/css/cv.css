@@ -41,7 +41,7 @@
   list-style-type: disc;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .cv-header {
     flex-direction: column; /* Stacks title and date vertically */
     align-items: flex-start; /* Aligns them to the left */

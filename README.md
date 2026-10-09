@@ -37,6 +37,7 @@ For repository conventions and an agent checklist, see [AGENTS.md](AGENTS.md).
 ## Editing content
 
 - Edit CV entries in `_data/experience.yml`, project summaries in `_data/projects.yml`, and publications in `_data/publications.yml`.
+- Use `display_order` in experience data to control CV order; lower numbers appear first. Leave gaps so a new role can be inserted without renumbering every entry.
 - Add a long project page in `_projects/` only when it needs its own URL. The project list currently has separate summary data; keep both entries in sync.
 - Add posts as `_posts/YYYY-MM-DD-slug.md` with front matter matching the existing post.
 - Use `relative_url` for internal links and assets in Liquid templates and Markdown files that contain HTML. Preserve existing public URLs when reorganising files.

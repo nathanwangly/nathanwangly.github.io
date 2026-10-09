@@ -246,6 +246,10 @@ a:hover {
 }
 
 /* Styling for Information Pages (About, Research, etc.) */
+.content-area {
+  overflow-wrap: anywhere;
+}
+
 .page-header {
   border-bottom: 1px solid var(--color-line);
   padding-bottom: 1rem;
@@ -354,6 +358,14 @@ figure.highlight::before {
 
   .home-bio {
     margin-block: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .post-body table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 

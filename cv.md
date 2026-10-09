@@ -9,7 +9,7 @@ description: Nathan Wang-Ly's work in behavioural science and strategy, and his 
 ## Work
 
 {% assign work_list = site.data.experience.work %}
-{% assign sorted_work = work_list | sort: "year_end" | reversed %}
+{% assign sorted_work = work_list | sort: "display_order" %}
 
 {% for item in sorted_work %}
 <div class="cv-item">
@@ -47,7 +47,7 @@ description: Nathan Wang-Ly's work in behavioural science and strategy, and his 
 ## Education
 
 {% assign education_list = site.data.experience.education %}
-{% assign sorted_education = education_list | sort: "year_end" | reversed %}
+{% assign sorted_education = education_list | sort: "display_order" %}
 
 {% for item in sorted_education %}
 <div class="cv-item">

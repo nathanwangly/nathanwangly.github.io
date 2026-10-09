@@ -14,24 +14,26 @@ permalink: /projects/parknride-tracker/
     <p>For real-time availability data, visit the <a href="https://transportnsw.info/travel-info/ways-to-get-around/drive/parking/transport-parkride-car-parks">Transport for NSW website.</a></p>
     </div>
 
+<p id="trackerStatus" class="tracker-status" role="status" aria-live="polite">Loading parking trends…</p>
+
 <div class="tracker-container">
     <div class="controls">
         <div class="controls-row">
             <div class="input-group facility-group">
                 <label for="facilitySelect">Car Park</label>
-                <select id="facilitySelect">
+                <select id="facilitySelect" disabled>
                     <option>Loading...</option>
                 </select>
             </div>
             
             <div class="input-group day-group">
                 <label for="daySelect">Day</label>
-                <select id="daySelect"></select>
+                <select id="daySelect" disabled></select>
             </div>
             
             <div class="input-group holiday-group">
                 <label class="toggle-wrapper">
-                    <input type="checkbox" id="holidayToggle">
+                    <input type="checkbox" id="holidayToggle" disabled>
                     <div class="switch"></div>
                     <strong>School Holidays</strong>
                 </label>
@@ -39,23 +41,23 @@ permalink: /projects/parknride-tracker/
         </div>
     </div>
 
-    <div id="resultsContainer">
+    <div id="resultsContainer" hidden>
         <div id="lowDataWarning" class="warning" style="display:none;">
             <span>⚠️ <strong>Note:</strong>&nbsp;Limited historical data currently available. Estimated trends may be less accurate.</span>
         </div>
 
         <div class="overview-card">
             <h3>Insights</h3>
-            <ul class="insight-list">
+            <ul class="insight-list" aria-live="polite">
                 <li id="fillTime">--</li>
                 <li id="emptyTime">--</li>
             </ul>
         </div>
     </div>
 
-    <div class="chart-box">
-        <canvas id="occupancyChart"></canvas>
-        <div id="noDataCard">
+    <div id="chartBox" class="chart-box" hidden>
+        <canvas id="occupancyChart" role="img" aria-label="Typical available parking spaces by time of day" hidden></canvas>
+        <div id="noDataCard" role="status" hidden>
             <div style="color: #6b7280;">
                 <p>🔎 <strong>Data not yet available.</strong><br>
                 <small>Try selecting a different carpark, day or toggling the holiday status.</small></p>
@@ -94,5 +96,5 @@ permalink: /projects/parknride-tracker/
     </details>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"></script>
 <script src="{{ '/assets/js/carpark_tracker.js' | relative_url }}"></script>
