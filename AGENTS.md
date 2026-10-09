@@ -2,6 +2,17 @@
 
 This is a Jekyll site for GitHub Pages. Preserve its restrained, readable portfolio style and existing public URLs. Work on the requested scope and keep content claims faithful to the source.
 
+## Site guidance
+
+Before making a change, consult the relevant source-of-truth documents in [`docs/website/`](docs/website/):
+
+- [`intent.md`](docs/website/intent.md) for the site's purpose and audience.
+- [`visual-design.md`](docs/website/visual-design.md) for visual preferences.
+- [`product-principles.md`](docs/website/product-principles.md) for UX, structure, and implementation preferences.
+- [`decisions.md`](docs/website/decisions.md) for the history and rationale of decisions; current guidance lives in the other documents.
+
+Treat these files as Nathan's preferences only where he has filled them in or explicitly confirmed them. Do not infer preferences from scaffold prompts. Follow the current request and the constraints in this file; if relevant guidance conflicts or leaves an important choice unresolved, ask Nathan before making that choice.
+
 ## Author-owned content
 
 - All site copy and content must be personally written by Nathan. Do not create, rewrite, polish, expand, or otherwise change copy without his express permission for that specific content change.
