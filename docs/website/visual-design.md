@@ -17,6 +17,7 @@ No specific external visual references are prescribed.
 - **Layout and imagery:** Combine text with images or other visual structures where they help visitors scan and read the page. Keep these elements supportive of the content.
 - **Responsive behaviour:** The site should work just as well on desktop and mobile.
 - **Accessibility details:** No specific visual accessibility preferences have been established beyond the expectation of a good desktop and mobile experience.
+- **Brand mark:** Use the supplied square NWL image in the top-left navigation position and as the browser tab icon. Preserve its square proportions in both places; resize without cropping or stretching it.
 
 ## Current page-level direction
 

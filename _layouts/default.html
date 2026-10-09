@@ -14,7 +14,7 @@
   <meta property="og:image" content="{{ '/assets/images/profile_photo.jpg' | absolute_url }}">
   <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#f8f7f3">
-  <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="icon" href="{{ '/assets/images/NWL-logo.png' | relative_url }}" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
 <body>
 
   <header class="site-header container">
-    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Nathan Wang-Ly, home" {% if page.url == '/' %}aria-current="page"{% endif %}>NWL<span class="brand-dot">.</span></a>
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Nathan Wang-Ly, home" {% if page.url == '/' %}aria-current="page"{% endif %}><img src="{{ '/assets/images/NWL-logo.png' | relative_url }}" alt="" width="48" height="48"></a>
     {% include nav.html %}
   </header>
 
