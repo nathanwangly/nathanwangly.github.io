@@ -9,7 +9,6 @@ Before making a change, consult the relevant source-of-truth documents in [`docs
 - [`intent.md`](docs/website/intent.md) for the site's purpose and audience.
 - [`visual-design.md`](docs/website/visual-design.md) for visual preferences.
 - [`product-principles.md`](docs/website/product-principles.md) for UX, structure, and implementation preferences.
-- [`decisions.md`](docs/website/decisions.md) for the history and rationale of decisions; current guidance lives in the other documents.
 
 Treat these files as Nathan's preferences only where he has filled them in or explicitly confirmed them. Do not infer preferences from scaffold prompts. Follow the current request and the constraints in this file; if relevant guidance conflicts or leaves an important choice unresolved, ask Nathan before making that choice.
 
@@ -17,6 +16,7 @@ Treat these files as Nathan's preferences only where he has filled them in or ex
 
 - All site copy and content must be personally written by Nathan. Do not create, rewrite, polish, expand, or otherwise change copy without his express permission for that specific content change.
 - This applies to page and section headings, titles, navigation labels, project descriptions, CV and research copy, posts, captions, alt text, metadata, and any other user-facing wording or claims.
+- Agents may create and edit project guidance and other non-user-facing documentation in `docs/` without separate permission. Keep it faithful to Nathan's stated preferences and the repository's current decisions; do not treat it as published site copy.
 - For UI or structural work, preserve existing wording exactly. Use neutral placeholders only when necessary, and make them clearly identifiable as placeholders rather than publishable copy.
 - If a requested design or implementation change appears to require new or revised wording, leave the wording untouched and ask for express permission before changing it. Suggestions may be offered separately, but must not be inserted into the site.
 
@@ -43,6 +43,6 @@ bundle exec jekyll build
 python3 scripts/check_site_links.py _site
 ```
 
-For layout work, also inspect Home, About, CV, Projects, Research, and the Park&Ride tool in a browser at phone and desktop widths. Check keyboard navigation and the browser console. If browser inspection is unavailable, report that limit plainly.
+For layout work, inspect Home, About, CV, Projects, Research, and the Park&Ride tool in the browser available within Codex at phone and desktop widths. Do not launch or control Nathan's personal Safari or another personal browser. Check keyboard navigation and the browser console. If the Codex browser is unavailable, report that limit plainly.
 
 `.github/workflows/verify.yml` runs the build and local-link check in CI. Deployment is controlled separately in GitHub Pages settings.
