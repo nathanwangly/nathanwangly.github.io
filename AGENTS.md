@@ -4,13 +4,19 @@ This is a Jekyll site for GitHub Pages. Preserve its restrained, readable portfo
 
 ## Site guidance
 
-Before making a change, consult the relevant source-of-truth documents in [`docs/website/`](docs/website/):
+Before making a change, consult the relevant source-of-truth documents in [`docs/website/`](docs/website/README.md):
 
 - [`intent.md`](docs/website/intent.md) for the site's purpose and audience.
 - [`visual-design.md`](docs/website/visual-design.md) for visual preferences.
 - [`product-principles.md`](docs/website/product-principles.md) for UX, structure, and implementation preferences.
+- [`cv.md`](docs/website/cv.md) when working on the CV or its preview.
+- [`about.md`](docs/website/about.md), [`projects.md`](docs/website/projects.md), [`posts.md`](docs/website/posts.md), or [`research.md`](docs/website/research.md) when working on those sections.
 
 Treat these files as Nathan's preferences only where he has filled them in or explicitly confirmed them. Do not infer preferences from scaffold prompts. Follow the current request and the constraints in this file; if relevant guidance conflicts or leaves an important choice unresolved, ask Nathan before making that choice.
+
+When Nathan confirms or changes a preference during a task, update the relevant `docs/website/` guidance in that task. Replace superseded guidance rather than adding a running history. Mark experiments and unresolved choices as provisional; do not turn an agent proposal or a temporary preview into a settled preference.
+
+If enduring context for a section or component has no suitable topic file, create a short, focused Markdown file in `docs/website/` and link it from this section and `docs/website/README.md`. Distinguish the current implementation from Nathan's confirmed preferences, and leave unresolved choices open. Do not create a file for a one-off task detail.
 
 ## Author-owned content
 

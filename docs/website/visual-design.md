@@ -18,6 +18,8 @@ No specific external visual references are prescribed.
 - **Responsive behaviour:** The site should work just as well on desktop and mobile.
 - **Accessibility details:** No specific visual accessibility preferences have been established beyond the expectation of a good desktop and mobile experience.
 
-## Examples to preserve or change
+## Current page-level direction
 
-No specific parts of the current site have been identified as examples to preserve or reconsider.
+- Avoid repeating navigation labels as large page titles. The accent-coloured title treatment can instead be used for smaller section headings.
+- Keep the navigation layout visually consistent across narrow and wide viewports, with space between the site logo and links.
+- For the evolving CV layout, see `cv.md`.
