@@ -57,7 +57,7 @@
     line-height: 1.5;
 }
 
-/* --- Status Badges (Case Insensitive Matching) --- */
+/* --- Status Badges --- */
 .status-badge {
     font-size: 0.65rem;
     font-weight: 700;
@@ -70,25 +70,25 @@
 }
 
 /* Logic for specific statuses */
-.status-badge[data-status="Live"] {
+.status-badge[data-status="live"] {
     color: #10b981;
     border-color: #10b981;
     background-color: rgba(16, 185, 129, 0.05);
 }
 
-.status-badge[data-status="Live - Testing"] {
+.status-badge[data-status="live - testing"] {
     color: #6366f1;
     border-color: #6366f1;
     background-color: rgba(99, 102, 241, 0.05);
 }
 
-.status-badge[data-status="Building"] {
+.status-badge[data-status="building"] {
     color: #f59e0b;
     border-color: #f59e0b;
     background-color: rgba(245, 158, 11, 0.05);
 }
 
-.status-badge[data-status="Archived"] {
+.status-badge[data-status="archived"] {
     color: #9ca3af;
     border-color: #d1d5db;
     background-color: #f9fafb;
@@ -122,6 +122,7 @@
 
 .btn-primary:hover {
     background-color: #374151;
+    color: white;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 98, 255, 0.15);
 }
