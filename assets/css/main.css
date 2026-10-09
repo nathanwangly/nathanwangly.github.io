@@ -1,14 +1,16 @@
 :root {
   --color-page: #f8f7f3;
   --color-surface: #ffffff;
-  --color-surface-soft: #f1f2ed;
+  --color-surface-soft: #e7eee8;
+  --color-surface-warm: #f4e8df;
   --color-ink: #24332e;
   --color-text: #39443e;
   --color-muted: #65736b;
-  --color-line: #dcded7;
-  --color-accent: #a9533c;
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-display: var(--font-body);
+  --color-muted-tint: #536158;
+  --color-line: #d5ddd6;
+  --color-accent: #9b4934;
+  --font-body: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -119,7 +121,7 @@ a:hover {
 
 .hero-pic {
   width: 100%;
-  max-width: 800px; 
+  max-width: 100%;
   height: auto;
   display: block;
   margin-left: auto; 
@@ -131,7 +133,7 @@ a:hover {
 
 .image-container {
   width: 100%;
-  max-width: 800px; /* Match this to your image's max-width */
+  max-width: 100%;
   margin: 0 auto 1.5rem auto;
   text-align: center; /* Centers the caption text */
 }
@@ -171,7 +173,7 @@ a:hover {
 
 /* Ensure the bio text itself is styled correctly as a class */
 .home-bio {
-  max-width: 800px;   
+  max-width: 68ch;
   margin: 3rem auto;       
   text-align: left;        
   display: block;
@@ -226,7 +228,7 @@ a:hover {
 
 /* Hover Effect */
 .social-links a:hover {
-  background-color: #f0f1eb;
+  background-color: var(--color-surface-soft);
   color: var(--color-ink);
   border-color: var(--color-muted);
   transform: translateY(-1px); /* Subtle lift effect */
@@ -293,8 +295,8 @@ a:hover {
 
 /* Container for the code block */
 pre {
-  background-color: #f6f8fa; /* Light grey background */
-  border: 1px solid #d0d7de;   /* Subtle border */
+  background-color: var(--color-surface-soft);
+  border: 1px solid var(--color-line);
   border-radius: 6px;        /* Rounded corners */
   padding: 16px;             /* Space inside the box */
   overflow: auto;            /* Adds scrollbars if code is too wide */
@@ -325,12 +327,12 @@ figure.highlight::before {
   right: 10px;
   font-size: 10px;
   text-transform: uppercase;
-  color: #6e7781;
+  color: var(--color-muted);
 }
 
 @media (min-width: 768px) {
   .content-area {
-    max-width: 850px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 }
@@ -388,19 +390,19 @@ table {
 
 /* Header Row (Filled) */
 th {
-  background-color: #f4f4f2; /* Light grey/beige to match your theme */
-  color: #222;
+  background-color: var(--color-surface-soft);
+  color: var(--color-ink);
   font-weight: 600;
   text-align: left;
   padding: 12px 15px;
-  border-bottom: 2px solid #e1e1e1;
+  border-bottom: 2px solid var(--color-line);
 }
 
 /* Table Body Cells */
 td {
   padding: 12px 15px;
-  border-bottom: 1px solid #eee; /* Light horizontal dividers */
-  color: #555;
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-text);
 }
 
 /* Responsive Table: Allows horizontal scrolling on small phones */

@@ -212,9 +212,9 @@ function renderChart(item) {
                     boxWidth: 10,        // Forces consistent width
                     boxHeight: 10,       // Forces consistent height
                     backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                    titleColor: '#1f2937',
-                    bodyColor: '#1f2937',
-                    borderColor: '#d1d5db',
+                    titleColor: '#24332e',
+                    bodyColor: '#39443e',
+                    borderColor: '#d5ddd6',
                     borderWidth: 1,
                     filter: function(tooltipItem) {
                         return tooltipItem.datasetIndex < 2; 
@@ -242,10 +242,10 @@ function renderChart(item) {
                 y: {
                     beginAtZero: true,
                     title: { display: true, text: 'Available Spots', font: { weight: 'bold' } },
-                    grid: { color: '#e5e7eb' }
+                    grid: { color: '#d5ddd6' }
                 },
                 x: {
-                    grid: { color: '#f3f4f6' },
+                    grid: { color: '#e7eee8' },
                     ticks: { autoSkip: true, maxTicksLimit: 8 }
                 }
             }
