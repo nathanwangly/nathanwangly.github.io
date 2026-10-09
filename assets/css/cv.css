@@ -1,54 +1,129 @@
+.cv-section + .cv-section {
+  margin-top: 3.5rem;
+}
+
+.cv-section > h2 {
+  margin-bottom: 1.5rem;
+}
+
 .cv-item {
-  margin-bottom: 2.5rem;
-  width: 100%;
+  padding: 0 0 1.8rem;
+  margin: 0 0 1.8rem;
+  border-bottom: 1px solid var(--color-line);
 }
 
-/* The Organisation (Top Level) */
-.cv-org {
-  display: block;
-  font-size: 0.85rem;           /* Smaller than the title */
-  font-weight: 700;
-  text-transform: uppercase;    /* Distinguishes from sentence-case titles */
-  letter-spacing: 1px;          /* Adds a professional "brand" feel */
-  color: var(--color-muted);
-  margin-bottom: 4px;
+.cv-item:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
 }
 
-/* The Role Title & Years (Second Level) */
-.cv-header {
+.cv-organisation {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  width: 100%;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.15rem;
 }
 
-.cv-title {
-  font-weight: 800;             /* Extra bold for high contrast */
-  font-size: 1.2rem;
+.cv-org-logo {
+  flex: 0 0 3.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
+  border: 1px solid var(--color-line);
+  border-radius: 0.7rem;
+  background: var(--color-surface);
+  object-fit: contain;
+  box-shadow: var(--shadow-card);
+}
+
+.cv-org {
   color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.cv-entry {
+  display: grid;
+  grid-template-columns: minmax(9.5rem, 0.28fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  padding-left: 3.45rem;
+}
+
+.cv-entry + .cv-entry {
+  margin-top: 1.35rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--color-line);
 }
 
 .cv-years {
-  font-size: 0.9rem;
+  padding-top: 0.15rem;
   color: var(--color-muted);
-  white-space: nowrap;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
 }
 
-/* The Role Description */
+.cv-title {
+  color: var(--color-ink);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
 .cv-desc-list {
-  margin-top: 10px;
+  margin: 0.55rem 0 0;
   padding-left: 1.2rem;
-  list-style-type: disc;
+  list-style: disc;
+}
+
+.cv-desc-list li {
+  margin-bottom: 0.45rem;
+}
+
+.cv-desc-list li:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 640px) {
-  .cv-header {
-    flex-direction: column; /* Stacks title and date vertically */
-    align-items: flex-start; /* Aligns them to the left */
-    gap: 4px; /* Creates that buffer/space between them */
+  .cv-section + .cv-section {
+    margin-top: 2.75rem;
+  }
+
+  .cv-entry {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+    padding-left: 0;
+  }
+
+  .cv-entry + .cv-entry {
+    padding-top: 1.1rem;
   }
 
   .cv-years {
-    white-space: normal; /* Allows date to wrap if it's very long */
+    grid-row: 2;
+    font-size: 0.85rem;
+  }
+
+  .cv-entry-content {
+    display: contents;
+  }
+
+  .cv-title {
+    grid-row: 1;
+  }
+
+  .cv-desc-list {
+    grid-row: 3;
+  }
+
+  .cv-organisation {
+    gap: 0.7rem;
+  }
+
+  .cv-org-logo {
+    flex-basis: 3.25rem;
+    width: 3.25rem;
+    height: 3.25rem;
   }
 }

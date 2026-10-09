@@ -1,6 +1,7 @@
 work:
 - title: Strategy Manager
   company: Canva
+  logo: /assets/images/logo-canva.webp
   display_order: 10
   years: Jun 2026 - Present
   description:
@@ -8,6 +9,7 @@ work:
 
 - title: Online Program Director
   company: UNSW
+  logo: /assets/images/logo-unsw.webp
   display_order: 20
   years: Dec 2025 — Jun 2026
   date_end: 2026
@@ -17,6 +19,7 @@ work:
 
 - title: Senior Behavioural Scientist
   company: Irrational Labs
+  logo: /assets/images/logo-irrational-labs.webp
   display_order: 30
   years: Dec 2025 — Jun 2026
   date_end: 2026
@@ -24,6 +27,7 @@ work:
     - Contracted for a US-based behavioural design consultancy applying behavioural science to product strategy, experimentation, and customer experience design
 
 - company: ANZ
+  logo: /assets/images/logo-anz.webp
   display_order: 40
   date_end: 2025
   roles:
@@ -40,6 +44,7 @@ work:
 
 - title: Manager, Behavioural Science
   company: Commonwealth Bank of Australia
+  logo: /assets/images/logo-commbank.webp
   display_order: 50
   years: Oct 2018 — Feb 2023
   date_end: 2023
@@ -51,6 +56,7 @@ work:
 education:
 - title: PhD in Psychology
   company: University of New South Wales
+  logo: /assets/images/logo-unsw.webp
   display_order: 10
   years: 2020 — 2023
   date_end: 2023
@@ -60,6 +66,7 @@ education:
 
 - title: Bachelor of Psychology (Honours)
   company: University of New South Wales
+  logo: /assets/images/logo-unsw.webp
   display_order: 20
   years: 2015 — 2018
   date_end: 2018
