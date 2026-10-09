@@ -26,6 +26,13 @@ If enduring context for a section or component has no suitable topic file, creat
 - For UI or structural work, preserve existing wording exactly. Use neutral placeholders only when necessary, and make them clearly identifiable as placeholders rather than publishable copy.
 - If a requested design or implementation change appears to require new or revised wording, leave the wording untouched and ask for express permission before changing it. Suggestions may be offered separately, but must not be inserted into the site.
 
+## Human-editable content
+
+- Give Nathan one obvious source for the content of each page or repeatable section. Use Markdown (and its front matter) for prose pages, and `_data/*.yml` for structured lists, cards, and other repeated content. Keep presentation logic in layouts and includes.
+- When building or revising a data-driven section, put its editable wording, dates, links, image paths, and meaningful alt text in that section's content source. Avoid scattering page-specific copy through Liquid markup, CSS, or JavaScript. Keep generated text in scripts only when the interaction requires it, and document where Nathan edits it.
+- Prefer one canonical source for content reused across views. If a provisional preview intentionally has independent copy, give it a clearly named source and document that distinction. Do not silently synchronize or rewrite Nathan's wording.
+- Update `README.md`'s editing map when a content source is added or moved. Keep the relevant `docs/website/` guidance current when Nathan confirms a lasting preference.
+
 ## Before editing
 
 1. Read `README.md` and inspect the page, data file, layout, and CSS affected by the task.
@@ -35,6 +42,7 @@ If enduring context for a section or component has no suitable topic file, creat
 ## Conventions
 
 - Content lives in Markdown and `_data/*.yml`; shared structure belongs in `_layouts/` and `_includes/`.
+- The `/cv-preview/` content is in `_data/cv_preview.yml`; the published `/cv/` content is in `_data/experience.yml`. They are independent while the preview is under review.
 - Shared colours, typography, and spacing tokens belong in `assets/css/main.css`. Page CSS should use these tokens where practical.
 - Use `relative_url` for local links and assets, and `absolute_url` for canonical/social metadata. Keep external URLs explicit.
 - Preserve the permalinks of published pages and posts. If a URL must change, plan a redirect before removal.

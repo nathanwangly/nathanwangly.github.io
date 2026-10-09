@@ -12,7 +12,7 @@ Pages should feel like parts of the same site. Keep navigation, typography, and 
 
 ## Implementation preferences
 
-Implementation preferences and trade-offs remain open.
+Nathan wants direct control over site content through an obvious, easy-to-edit source. Use Markdown for prose and a single clearly named YAML file for structured page content such as cards and lists. Keep page-specific wording, dates, links, and meaningful image text out of presentation templates where practical. Document the editing path when adding a section. This preference concerns content ownership and maintainability; other implementation trade-offs remain open.
 
 ## Change boundaries
 
