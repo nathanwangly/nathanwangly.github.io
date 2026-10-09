@@ -1,0 +1,81 @@
+# Editable overview and experience content for /cv/.
+# The page title and description are in cv.md front matter.
+
+overview:
+  label: Overview
+  summary_heading: Summary
+  summary:
+    - Broad expertise across behavioural science, product strategy, UX design, experimentation, and growth.
+    - Experience spanning technology, financial services, and higher education.
+    - PhD in Psychology, specialising in financial decision making.
+  current:
+    label: Current role
+    title: Strategy Manager, Growth
+    company_line: Canva · 2026–now
+    logo: /assets/images/logo-canva.webp
+    logo_alt: Canva logo
+  previous:
+    label: Previous companies
+    logos_label: UNSW, Irrational Labs, ANZ and Commonwealth Bank
+    # The four most recent companies are shown; keep this list in reverse chronological order.
+    logos:
+      - path: /assets/images/logo-unsw.webp
+        alt: UNSW logo
+      - path: /assets/images/logo-irrational-labs.webp
+        alt: Irrational Labs logo
+      - path: /assets/images/logo-anz.webp
+        alt: ANZ logo
+      - path: /assets/images/logo-commbank.webp
+        alt: Commonwealth Bank logo
+  education:
+    label: Education
+    logo: /assets/images/logo-unsw.webp
+    logo_alt: UNSW logo
+    degrees: BPsych (Honours) · PhD
+  skills_label: Skills and interests
+  skills:
+    - Behavioural science
+    - Product strategy
+    - UX design
+    - Experimentation
+
+experience:
+  heading: Experience
+  rail_label: Work experience, most recent first
+  roles:
+    - company: Canva
+      logo: /assets/images/logo-canva.webp
+      years: 2026 — now
+      title: Strategy Manager
+      teaser: Product and growth strategy in the Foundational Goals team.
+      current: true
+
+    - company: UNSW
+      logo: /assets/images/logo-unsw.webp
+      years: 2025 — 26
+      title: Online Program Director
+      teaser: Program leadership for postgraduate courses in Business Psychology and Climate Risk.
+
+    - company: Irrational Labs
+      logo: /assets/images/logo-irrational-labs.webp
+      years: 2025 — 26
+      title: Senior Behavioural Scientist
+      teaser: Consulting role applying behavioural science across product strategy, experimentation, and user experience.
+
+    - company: ANZ
+      logo: /assets/images/logo-anz.webp
+      years: 2024 — 25
+      title: Director, Customer Decision Science
+      teaser: Team leadership across behavioural science, experimentation, and measurement capabilities.
+
+    - company: ANZ
+      logo: /assets/images/logo-anz.webp
+      years: 2023 — 24
+      title: Lead Behavioural Scientist
+      teaser: Senior IC bridging behavioural science, UX research and product innovation.
+
+    - company: Commonwealth Bank
+      logo: /assets/images/logo-commbank.webp
+      years: 2018 — 23
+      title: Manager, Behavioural Science
+      teaser: Behavioural intervention design, research partnerships, and internal capability programs.

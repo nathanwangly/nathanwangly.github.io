@@ -26,7 +26,7 @@ The build writes to `_site/`, which is ignored by Git. The link check covers loc
 | --- | --- |
 | Shared page shell and navigation | `_layouts/`, `_includes/` |
 | Main pages | `index.md`, `about.md`, `cv.md`, `projects.md`, `research.md` |
-| CV, project list, publications | `_data/*.yml` |
+| CV, project list, publications | `_data/cv.yml`, `_data/projects.yml`, `_data/publications.yml` |
 | Project detail pages and posts | `_projects/`, `_posts/` |
 | Shared and page-specific styles | `assets/css/` |
 | Park&Ride interactive tool | `_projects/carpark_tracker.md`, `assets/js/carpark_tracker.js` |
@@ -36,8 +36,8 @@ For repository conventions and an agent checklist, see [AGENTS.md](AGENTS.md).
 
 ## Editing content
 
-- Edit CV entries in `_data/experience.yml`, project summaries in `_data/projects.yml`, and publications in `_data/publications.yml`.
-- Use `display_order` in experience data to control CV order; lower numbers appear first. Leave gaps so a new role can be inserted without renumbering every entry.
+- Edit the `/cv/` overview, experience cards, labels, logos, and alt text in `_data/cv.yml`. The overview shows up to four previous companies; keep them in reverse chronological order so the most recent are shown. Experience cards appear in YAML order; move entries to reorder them and use `current: true` to highlight the current role. The page title and description are in `cv.md` front matter.
+- Edit project summaries in `_data/projects.yml` and publications in `_data/publications.yml`.
 - Add a long project page in `_projects/` only when it needs its own URL. The project list currently has separate summary data; keep both entries in sync.
 - Add posts as `_posts/YYYY-MM-DD-slug.md` with front matter matching the existing post.
 - Use `relative_url` for internal links and assets in Liquid templates and Markdown files that contain HTML. Preserve existing public URLs when reorganising files.

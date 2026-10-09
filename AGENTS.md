@@ -42,7 +42,7 @@ If enduring context for a section or component has no suitable topic file, creat
 ## Conventions
 
 - Content lives in Markdown and `_data/*.yml`; shared structure belongs in `_layouts/` and `_includes/`.
-- The `/cv-preview/` content is in `_data/cv_preview.yml`; the published `/cv/` content is in `_data/experience.yml`. They are independent while the preview is under review.
+- The published `/cv/` content is in `_data/cv.yml`.
 - Shared colours, typography, and spacing tokens belong in `assets/css/main.css`. Page CSS should use these tokens where practical.
 - Use `relative_url` for local links and assets, and `absolute_url` for canonical/social metadata. Keep external URLs explicit.
 - Preserve the permalinks of published pages and posts. If a URL must change, plan a redirect before removal.

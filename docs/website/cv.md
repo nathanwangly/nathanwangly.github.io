@@ -1,6 +1,6 @@
 # CV direction
 
-This records Nathan's current direction from CV discussions and preview iterations. It is guidance for future work, not approved website copy or a final design specification.
+Nathan approved replacing `/cv/` with his CV preview iteration. The page now uses `_data/cv.yml` for its overview and experience content and `cv.md` front matter for its title and description. The temporary `/cv-preview/` page has been removed.
 
 This direction supersedes the earlier date-column CV suggestion in `docs/visual-review-recommendations.md`.
 
@@ -8,16 +8,14 @@ This direction supersedes the earlier date-column CV suggestion in `docs/visual-
 
 - The CV should give a quick read on Nathan's main companies and roles without requiring a long scroll, especially on mobile. It is a lightweight portfolio page, not a conventional résumé.
 - Work experience has the highest visual priority. Education should remain visible, including the psychology bachelor's degree with honours and PhD, at a lower visual weight.
-- Show concise information first and let visitors choose to see more detail. The design should accommodate additional roles over time.
+- Show concise information in each experience card. The design should accommodate additional roles over time.
 
-## Current preview direction
+## Published layout
 
-- Keep iterating on the separate `/cv-preview/` page. Nathan has repeatedly asked that the existing `/cv/` page remain untouched while the redesign is explored. The preview is not approved as the replacement.
-- Use an **Overview** section for a compact career profile: current role and company, recent companies, education, brief background points, and skill or interest tags. Put the tags at the bottom of the card. Keep education compact and visually subordinate to work.
-- Use an **Experience** section below the overview for work details. Nathan is exploring horizontally arranged cards in reverse chronological order, with details revealed on interaction. The current preview uses flip cards; their exact interaction and final presentation remain under review.
-- The overview should use a single vertical flow on phones and desktop. Nathan explicitly rejected a two-panel desktop layout. Keep spacing compact and consistent as the viewport grows.
-
-## Content boundary and open choices
-
-- The preview contains suggested wording used only to evaluate the layout. Treat it as temporary, unapproved site copy. Nathan will personally write or expressly approve any wording for the published CV.
-- The final visual treatment, card interaction, and point at which the preview replaces `/cv/` are still open.
+- Use an overview card for a compact career profile: current role and company, recent companies, education, brief background points, and skill or interest tags. Keep the card free of a visible **Overview** heading; use **Summary** above the background points. Put the tags at the bottom of the card. Keep education compact and visually subordinate to work.
+- On wide screens, the overview places summary and skills beside the facts. On narrower screens, it stacks them. Company logos have no borders.
+- On mobile, keep at least `1.2rem` of padding inside the overview card so its content has breathing room.
+- Use an **Experience** section below the overview, with horizontally arranged cards in reverse chronological order. The cards are static and show concise main-side content.
+- Use the site's standard `h2` heading style for both **Summary** and **Experience**. Keep Summary inside the overview card and the Experience heading close to the card.
+- Label the overview facts **Current role** and **Previous companies**. Size the experience cards to the longest card's text without a fixed minimum height or excess blank space. Keep the current experience card's subtle gradient and border treatment.
+- Keep **Education** beside **Previous companies** at every viewport width, with clear whitespace and no divider. Retain the UNSW logo and keep the education wording compact.
