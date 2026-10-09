@@ -2,6 +2,13 @@
 
 This is a Jekyll site for GitHub Pages. Preserve its restrained, readable portfolio style and existing public URLs. Work on the requested scope and keep content claims faithful to the source.
 
+## Author-owned content
+
+- All site copy and content must be personally written by Nathan. Do not create, rewrite, polish, expand, or otherwise change copy without his express permission for that specific content change.
+- This applies to page and section headings, titles, navigation labels, project descriptions, CV and research copy, posts, captions, alt text, metadata, and any other user-facing wording or claims.
+- For UI or structural work, preserve existing wording exactly. Use neutral placeholders only when necessary, and make them clearly identifiable as placeholders rather than publishable copy.
+- If a requested design or implementation change appears to require new or revised wording, leave the wording untouched and ask for express permission before changing it. Suggestions may be offered separately, but must not be inserted into the site.
+
 ## Before editing
 
 1. Read `README.md` and inspect the page, data file, layout, and CSS affected by the task.
