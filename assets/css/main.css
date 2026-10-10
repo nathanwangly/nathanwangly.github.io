@@ -84,27 +84,27 @@ a:hover {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.4rem 1.7rem;
+  gap: 0.4rem 1.1rem;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--color-muted);
-  font-size: 0.92rem;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.4rem 0.65rem;
+  border-radius: 999px;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.nav-link:hover { 
+.nav-link:hover {
   color: var(--color-ink);
+  background-color: var(--color-surface-soft);
 }
 
 .nav-link.active {
   color: var(--color-ink);
-  text-decoration: underline;
-  text-decoration-color: var(--color-accent);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.45rem;
+  background-color: var(--color-surface-soft);
 }
 
 /* Profile Picture Logic */
@@ -366,7 +366,7 @@ figure.highlight::before {
     min-width: 0;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    gap: 1rem;
+    gap: 0.5rem;
     overflow-x: auto;
     overflow-y: hidden;
     padding: 0.3rem 1rem 0.3rem 0.1rem;
@@ -382,8 +382,8 @@ figure.highlight::before {
   }
 
   .nav-link {
-    font-size: 0.9rem;
-    padding-block: 0.15rem;
+    font-size: 0.95rem;
+    padding: 0.35rem 0.55rem;
     flex: 0 0 auto;
   }
 

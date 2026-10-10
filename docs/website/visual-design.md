@@ -18,6 +18,7 @@ No specific external visual references are prescribed.
 - **Responsive behaviour:** The site should work just as well on desktop and mobile.
 - **Accessibility details:** No specific visual accessibility preferences have been established beyond the expectation of a good desktop and mobile experience.
 - **Brand mark:** Use the supplied square NWL image in the top-left navigation position and as the browser tab icon. Preserve its square proportions in both places; resize without cropping or stretching it.
+- **Navigation:** Use readable, semibold links with a subtle rounded surface for the active page. A quiet soft green hover surface is also appropriate.
 
 ## Current page-level direction
 
