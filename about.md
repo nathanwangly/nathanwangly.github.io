@@ -6,7 +6,7 @@ description: Nathan Wang-Ly's background in behavioural science, product strateg
 
 <b>Hi, I'm Nathan 👋</b>
 
-I'm currently a Strategy Manager at Canva, working across many ways to improve our product experiences and grow the overall business.
+I'm currently a Strategy Manager at Canva, working broadly across initiatives that improve our product experiences and grow the overall business.
 
 With a background in behavioural science, I have a strong interest in helping organisations apply psychological insights to solve all kinds of people-related challenges. 
 
