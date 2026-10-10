@@ -7,8 +7,6 @@ permalink: /projects/
 
 <link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}">
 
-<i>Things that have been keeping me occupied</i>
-
 <div class="projects-list">
   {% for project in site.data.projects %}
   {% assign project_link = project.project_url | default: project.post_url %}
