@@ -36,7 +36,7 @@ For repository conventions and an agent checklist, see [AGENTS.md](AGENTS.md).
 
 ## Editing content
 
-- Edit the `/cv/` overview, experience cards, labels, logos, and alt text in `_data/cv.yml`. The overview shows up to four previous companies; keep them in reverse chronological order so the most recent are shown. Experience cards appear in YAML order; move entries to reorder them and use `current: true` to highlight the current role. The page title and description are in `cv.md` front matter.
+- Edit the `/cv/` overview, experience cards, labels, logos, and alt text in `_data/cv.yml`. The overview shows up to four previous companies; keep them in reverse chronological order so the most recent are shown. Experience companies appear in YAML order; each has an overall `years` range and a `roles` list in reverse chronological order. Cards share the tallest card's content-based height. For companies with multiple roles, the wider company card shows each role side by side with a horizontal connector, with title before individual dates. Use `current: true` on the company to highlight its card. The page title and description are in `cv.md` front matter.
 - Edit project summaries in `_data/projects.yml` and publications in `_data/publications.yml`.
 - Add a long project page in `_projects/` only when it needs its own URL. The project list currently has separate summary data; keep both entries in sync.
 - Add posts as `_posts/YYYY-MM-DD-slug.md` with front matter matching the existing post.

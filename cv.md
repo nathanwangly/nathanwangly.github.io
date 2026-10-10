@@ -7,10 +7,13 @@ description: Nathan Wang-Ly's work in behavioural science and strategy, and his 
 {% assign cv = site.data.cv %}
 <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}">
 
-<section class="cv-overview" aria-label="{{ cv.overview.label | escape }}">
+<section class="cv-overview" aria-labelledby="summary-heading">
+  <div class="cv-section-heading">
+    <h2 id="summary-heading">{{ cv.overview.summary_heading | escape }}</h2>
+  </div>
+
   <div class="cv-overview-card">
     <div class="cv-overview-intro">
-      <h2 class="cv-summary-heading">{{ cv.overview.summary_heading | escape }}</h2>
       <ul class="cv-background">
         {% for point in cv.overview.summary %}<li>{{ point | escape }}</li>{% endfor %}
       </ul>
@@ -50,11 +53,24 @@ description: Nathan Wang-Ly's work in behavioural science and strategy, and his 
   </div>
 
   <div class="cv-card-rail" aria-label="{{ cv.experience.rail_label | escape }}" tabindex="0">
-    {% for role in cv.experience.roles %}
-    <article class="cv-work-card{% if role.current %} cv-work-card-current{% endif %}">
-      <span class="cv-work-card-top"><span class="cv-work-company"><img src="{{ role.logo | relative_url }}" alt="" class="cv-work-logo">{{ role.company | escape }}</span><span>{{ role.years | escape }}</span></span>
-      <h3 class="cv-work-card-title">{{ role.title | escape }}</h3>
-      <p class="cv-work-card-teaser">{{ role.teaser | escape }}</p>
+    {% for company in cv.experience.companies %}
+    <article class="cv-work-card{% if company.current %} cv-work-card-current{% endif %}{% if company.roles.size > 1 %} cv-work-card-grouped{% endif %}">
+      {% assign latest_role = company.roles.first %}
+      <span class="cv-work-card-top"><span class="cv-work-company"><img src="{{ company.logo | relative_url }}" alt="" class="cv-work-logo">{{ company.company | escape }}</span><span>{{ company.years | escape }}</span></span>
+      {% if company.roles.size > 1 %}
+      <div class="cv-work-roles">
+        {% for role in company.roles %}
+        <div class="cv-work-role">
+          <h3 class="cv-work-card-title">{{ role.title | escape }}</h3>
+          <div class="cv-work-role-timeline"><span class="cv-work-role-years">{{ role.years | escape }}</span></div>
+          {% if role.teaser %}<p class="cv-work-card-teaser">{{ role.teaser | escape }}</p>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <h3 class="cv-work-card-title">{{ latest_role.title | escape }}</h3>
+      {% if latest_role.teaser %}<p class="cv-work-card-teaser">{{ latest_role.teaser | escape }}</p>{% endif %}
+      {% endif %}
     </article>
     {% endfor %}
   </div>

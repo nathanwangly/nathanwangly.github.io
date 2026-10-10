@@ -42,46 +42,48 @@ overview:
 experience:
   heading: Experience
   rail_label: Work experience, most recent first
-  roles:
+  companies:
     - company: Canva
       logo: /assets/images/logo-canva.webp
       years: 2026 — now
-      title: Strategy Manager
-      teaser: Product and growth strategy in the Foundational Goals team.
       current: true
+      roles:
+        - years: 2026 — now
+          title: Strategy Manager
+          teaser: Product and growth strategy in the Foundational Goals team.
 
     - company: UNSW
       logo: /assets/images/logo-unsw.webp
       years: 2025 — 26
-      title: Online Program Director
-      teaser: Program leadership for postgraduate courses in Business Psychology and Climate Risk.
+      roles:
+        - years: 2025 — 26
+          title: Online Program Director
+          teaser: Program leadership for postgraduate courses in Business Psychology and Climate Risk.
 
     - company: Irrational Labs
       logo: /assets/images/logo-irrational-labs.webp
       years: 2025 — 26
-      title: Senior Behavioural Scientist
-      teaser: Consulting role applying behavioural science across product strategy, experimentation, and user experience.
+      roles:
+        - years: 2025 — 26
+          title: Sr. Behavioural Scientist
+          teaser: Consulting role applying behavioural science across product strategy, experimentation, and user experience.
 
     - company: ANZ
       logo: /assets/images/logo-anz.webp
-      years: 2024 — 25
-      title: Director, Customer Decision Science
-      teaser: Team leadership across behavioural science, experimentation, and measurement capabilities.
-
-    - company: ANZ
-      logo: /assets/images/logo-anz.webp
-      years: 2023 — 24
-      title: Lead Behavioural Scientist
-      teaser: Senior IC bridging behavioural science, UX research and product innovation.
+      years: 2023 — 25
+      roles:
+        - years: 2024 — 25
+          title: Director, Decision Science
+          teaser: Team leadership across behavioural science, experimentation, and measurement capabilities.
+        - years: 2023 — 24
+          title: Lead Behavioural Scientist
 
     - company: Commonwealth Bank
       logo: /assets/images/logo-commbank.webp
       years: 2018 — 23
-      title: Manager, Behavioural Science
-      teaser: Behavioural intervention design, research partnerships, and internal capability programs.
-
-    - company: Commonwealth Bank
-      logo: /assets/images/logo-commbank.webp
-      years: 2018 — 23
-      title: Manager, Behavioural Science
-      teaser: Behavioural intervention design, research partnerships, and internal capability programs.
+      roles:
+        - years: 2019 — 23
+          title: Manager, Behavioural Science
+          teaser: Behavioural intervention design, research partnerships, and internal capability programs.
+        - years: 2018 — 29
+          title: Research Analyst

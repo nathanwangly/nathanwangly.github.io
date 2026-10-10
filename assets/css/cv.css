@@ -3,18 +3,12 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0 0.75rem;
 }
 
 .cv-section-heading h2 { margin: 0; }
-.content-area .cv-overview-intro h2.cv-summary-heading {
-  align-self: flex-start;
-  width: fit-content;
-  max-width: 100%;
-  margin: 0 0 0.55rem;
-}
 
-.cv-overview { margin-bottom: 1rem; }
+.cv-overview { margin-bottom: 0; }
 .cv-overview-card { display: grid; grid-template-areas: "intro" "facts" "skills"; grid-template-columns: minmax(0, 1fr); align-content: start; gap: 0.45rem; padding: 1.1rem; border: 1px solid var(--color-line); border-radius: 1.1rem; background: var(--color-surface); box-shadow: var(--shadow-card); }
 .cv-overview-intro { grid-area: intro; display: flex; flex-direction: column; justify-content: flex-start; min-width: 0; }
 .content-area .cv-background { display: grid; width: 100%; gap: 0.35rem; margin: 0; padding-left: 1.2rem; color: var(--color-ink); font-family: var(--font-display); font-size: 0.95rem; font-weight: 500; letter-spacing: -0.025em; line-height: 1.4; }
@@ -39,6 +33,7 @@
 
 .cv-card-rail {
   display: flex;
+  align-items: stretch;
   gap: 1rem;
   overflow-x: auto;
   margin: 0 -1rem;
@@ -120,14 +115,33 @@
   line-height: 1.45;
 }
 
+.cv-work-card-grouped { flex-basis: clamp(34rem, 54vw, 38rem); }
+.cv-work-roles { --role-gap: 1rem; display: grid; width: 100%; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); grid-template-rows: auto auto auto; column-gap: var(--role-gap); margin-top: 0.8rem; }
+.cv-work-role { display: grid; grid-row: span 3; grid-template-rows: subgrid; min-width: 0; }
+.cv-work-role .cv-work-card-title { grid-row: 1; }
+.cv-work-role-timeline { position: relative; margin-top: 0.55rem; padding-top: 0.55rem; }
+.cv-work-role-timeline { grid-row: 2; }
+.cv-work-role-timeline::before { position: absolute; top: 0; right: calc(-1 * var(--role-gap)); left: 0; height: 1px; background: var(--color-line); content: ""; }
+.cv-work-role:first-child .cv-work-role-timeline::after { position: absolute; top: -0.22rem; left: 0; width: 0.45rem; height: 0.45rem; border: 1px solid var(--color-accent); border-radius: 50%; background: var(--color-surface); content: ""; }
+.cv-work-role:not(:first-child) .cv-work-role-timeline::before { display: none; }
+.cv-work-role:last-child .cv-work-role-timeline::after { position: absolute; top: -0.22rem; left: 0; width: 0.45rem; height: 0.45rem; border: 1px solid var(--color-accent); border-radius: 50%; background: var(--color-surface); content: ""; }
+.cv-work-role-years { display: block; color: var(--color-muted); font-size: 0.78rem; font-variant-numeric: tabular-nums; }
+.cv-work-role .cv-work-card-teaser { grid-row: 3; }
+.cv-work-roles .cv-work-card-title { margin-top: 0; font-size: 1.05rem; }
+.cv-work-roles .cv-work-card-teaser { font-size: 0.82rem; line-height: 1.35; }
+
 @media (max-width: 640px) {
   .cv-overview-card { row-gap: 0.65rem; padding: max(1.2rem, 4vw); }
   .cv-overview-facts { column-gap: 0.2rem; row-gap: 0.55rem; }
   .cv-current-role { padding: 0.7rem; }
   .cv-overview-education { padding-left: 0.2rem; }
-  .cv-section-heading { margin-bottom: 0.65rem; }
+  .cv-section-heading { margin: 0.85rem 0 0.65rem; }
   .cv-card-rail { gap: 0.75rem; }
   .cv-work-card { flex-basis: min(78vw, 19rem); padding: 0.95rem 1rem; }
+  .cv-work-card-grouped { flex-basis: min(92vw, 36rem); }
+  .cv-work-roles { --role-gap: 0.8rem; }
+  .cv-work-roles .cv-work-card-title { font-size: 0.98rem; }
+  .cv-work-roles .cv-work-card-teaser { font-size: 0.78rem; }
   .cv-work-card-title { margin-top: 0.85rem; font-size: 1.2rem; }
 }
 
