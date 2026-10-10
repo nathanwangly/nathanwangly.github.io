@@ -6,10 +6,6 @@ description: Research publications by Nathan Wang-Ly on decision making, saving,
 
 <link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
 
-A collection of my research publications, mostly published during my PhD years. 
-
-My research interests primarily centre around understanding and improving how people make complex decisions under uncertainty.
-
 ## Journal articles
 
 {% assign sorted_academic = site.data.publications.academic | sort: "year" | reverse %}
