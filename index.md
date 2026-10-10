@@ -19,6 +19,6 @@ permalink: /
     <!-- <li><a href="https://github.com/nathanwangly"><i class="fab fa-github"></i> GitHub</a></li> -->
   </ul>
 
-  <p class="home-bio">I’m a behavioural scientist who is interested in making life a little less complicated. This is a space to share personal projects and thoughts when inspiration strikes.</p>
+  <p class="home-bio">I’m a behavioural scientist interested in making life a little less complicated. This is a space to share personal projects and thoughts when inspiration strikes.</p>
 
 </div>
