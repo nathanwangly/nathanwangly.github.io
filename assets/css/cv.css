@@ -11,7 +11,7 @@
 .cv-overview { margin-bottom: 0; }
 .cv-overview-card { display: grid; grid-template-areas: "intro" "facts" "skills"; grid-template-columns: minmax(0, 1fr); align-content: start; gap: 0.45rem; padding: 1.1rem; border: 1px solid var(--color-line); border-radius: 1.1rem; background: var(--color-surface); box-shadow: var(--shadow-card); }
 .cv-overview-intro { grid-area: intro; display: flex; flex-direction: column; justify-content: flex-start; min-width: 0; }
-.content-area .cv-background { display: grid; width: 100%; gap: 0.35rem; margin: 0; padding-left: 1.2rem; color: var(--color-ink); font-family: var(--font-display); font-size: 0.95rem; font-weight: 500; letter-spacing: -0.025em; line-height: 1.4; }
+.content-area .cv-background { display: grid; width: 100%; gap: 0.35rem; margin: 0; padding-left: 1.2rem; color: var(--color-ink); font-family: var(--font-body); font-size: 0.95rem; font-weight: 500; line-height: 1.4; }
 .cv-background li { margin-bottom: 0; padding-left: 0.1rem; }
 .cv-skill-tags { grid-area: skills; display: flex; flex-wrap: wrap; align-content: flex-start; align-items: center; gap: 0.45rem; min-width: 0; }
 .cv-skill-tags span { display: inline-flex; align-items: center; padding: 0.32rem 0.65rem; border: 1px solid var(--color-line); border-radius: 999px; background: var(--color-page); color: var(--color-muted-tint); font-size: 0.78rem; line-height: 1.25; }
@@ -150,5 +150,5 @@
   .cv-overview-intro { justify-content: flex-start; }
   .cv-overview-facts { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-content: center; column-gap: 0.3rem; row-gap: 0.4rem; }
   .cv-skill-tags { align-self: end; }
-  .cv-background { gap: 0.55rem; max-width: 43ch; font-size: clamp(0.95rem, 1.4vw, 1.1rem); }
+  .cv-background { gap: 0.55rem; max-width: none; font-size: clamp(0.95rem, 1.4vw, 1.1rem); }
 }

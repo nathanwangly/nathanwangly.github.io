@@ -12,7 +12,7 @@ No specific external visual references are prescribed.
 
 ## Preferences
 
-- **Typography:** Choose readable fonts with subtle personality. Avoid styles that feel overly formal or ornate.
+- **Typography:** Choose readable fonts with subtle personality. Avoid styles that feel overly formal or ornate. Use the body font for paragraphs and other extended reading text; reserve the display font for headings and short emphasis so font changes communicate hierarchy rather than interrupting reading.
 - **Colour:** Use a neutral foundation with carefully chosen accents. Soft, pastel-style colours are a good fit when they keep the palette calm.
 - **Layout and imagery:** Combine text with images or other visual structures where they help visitors scan and read the page. Keep these elements supportive of the content.
 - **Responsive behaviour:** The site should work just as well on desktop and mobile.
